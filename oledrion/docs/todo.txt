@@ -28,5 +28,5 @@ Bugs :
        - Random lists
        - Most viewed lists
 7- Shipping price accumulate when buying multiple items. Example, if I buy two items, the addition contains 2 times the shipping price.
-
+8- Upload image in order steps on admin didnt work
 
