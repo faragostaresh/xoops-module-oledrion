@@ -70,6 +70,11 @@ class oledrion_products extends Oledrion_Object
         $this->initVar('product_property3', XOBJ_DTYPE_TXTBOX, null, false);
         $this->initVar('product_property4', XOBJ_DTYPE_TXTBOX, null, false);
         $this->initVar('product_property5', XOBJ_DTYPE_TXTBOX, null, false);
+        $this->initVar('product_property6', XOBJ_DTYPE_TXTBOX, null, false);
+        $this->initVar('product_property7', XOBJ_DTYPE_TXTBOX, null, false);
+        $this->initVar('product_property8', XOBJ_DTYPE_TXTBOX, null, false);
+        $this->initVar('product_property9', XOBJ_DTYPE_TXTBOX, null, false);
+        $this->initVar('product_property10', XOBJ_DTYPE_TXTBOX, null, false);
 
         // Pour autoriser le html
         $this->initVar('dohtml', XOBJ_DTYPE_INT, 1, false);

@@ -191,6 +191,26 @@ function xoops_module_update_oledrion($module, $version)
         oledrion_utils::addField('`product_property5` varchar(255) NOT NULL', $tableName);
     }
 
+    if (!oledrion_utils::fieldExists('product_property6', $tableName)) {
+        oledrion_utils::addField('`product_property6` varchar(255) NOT NULL', $tableName);
+    }
+
+    if (!oledrion_utils::fieldExists('product_property7', $tableName)) {
+        oledrion_utils::addField('`product_property7` varchar(255) NOT NULL', $tableName);
+    }
+
+    if (!oledrion_utils::fieldExists('product_property8', $tableName)) {
+        oledrion_utils::addField('`product_property8` varchar(255) NOT NULL', $tableName);
+    }
+
+    if (!oledrion_utils::fieldExists('product_property9', $tableName)) {
+        oledrion_utils::addField('`product_property9` varchar(255) NOT NULL', $tableName);
+    }
+
+    if (!oledrion_utils::fieldExists('product_property10', $tableName)) {
+        oledrion_utils::addField('`product_property10` varchar(255) NOT NULL', $tableName);
+    }
+
     /**
      * Nouvelle table oledrion_packing
      * @since 2.3.4 2013.03.5

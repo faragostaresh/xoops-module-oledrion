@@ -46,7 +46,7 @@ if ((isset($_POST['op']) && $_POST['op'] == 'go') || isset($_GET['start'])) { //
     oledrion_utils::setMetas(oledrion_utils::getModuleName() . ' - ' . _OLEDRION_SEARCHRESULTS, oledrion_utils::getModuleName() . ' - ' . _OLEDRION_SEARCHRESULTS);
 
     if (!isset($_GET['start'])) {
-        $sql = 'SELECT b.product_id, b.product_title, b.product_submitted, b.product_submitter, b.product_thumb_url, b.product_price, b.product_property1, b.product_property2, b.product_property3, b.product_property4, b.product_property5, b.product_stock, b.product_summary FROM ' . $xoopsDB->prefix('oledrion_products') . ' b, ' . $xoopsDB->prefix('oledrion_productsmanu') . ' a WHERE (b.product_id = a.pm_product_id AND b.product_online = 1 ';
+        $sql = 'SELECT b.product_id, b.product_title, b.product_submitted, b.product_submitter, b.product_thumb_url, b.product_price, b.product_property1, b.product_property2, b.product_property3, b.product_property4, b.product_property5, b.product_property6, b.product_property7, b.product_property8, b.product_property9, b.product_property10, b.product_stock, b.product_summary FROM ' . $xoopsDB->prefix('oledrion_products') . ' b, ' . $xoopsDB->prefix('oledrion_productsmanu') . ' a WHERE (b.product_id = a.pm_product_id AND b.product_online = 1 ';
         if (oledrion_utils::getModuleOption('show_unpublished') == 0) { // Ne pas afficher les produits qui ne sont pas publiés
             $sql .= ' AND b.product_submitted <= ' . time();
         }
@@ -140,6 +140,36 @@ if ((isset($_POST['op']) && $_POST['op'] == 'go') || isset($_GET['start'])) { //
                 $sql .= ' AND (b.product_property5 = "' . $_POST['product_property5'] . '")';
             }
         }
+    
+        if (isset($_POST['product_property6'])) {
+            if ($_POST['product_property6']) {
+                $sql .= ' AND (b.product_property6 = "' . $_POST['product_property6'] . '")';
+            }
+        }
+    
+        if (isset($_POST['product_property7'])) {
+            if ($_POST['product_property7']) {
+                $sql .= ' AND (b.product_property7 = "' . $_POST['product_property7'] . '")';
+            }
+        }
+    
+        if (isset($_POST['product_property8'])) {
+            if ($_POST['product_property8']) {
+                $sql .= ' AND (b.product_property8 = "' . $_POST['product_property8'] . '")';
+            }
+        }
+    
+        if (isset($_POST['product_property9'])) {
+            if ($_POST['product_property9']) {
+                $sql .= ' AND (b.product_property9 = "' . $_POST['product_property9'] . '")';
+            }
+        }
+    
+        if (isset($_POST['product_property10'])) {
+            if ($_POST['product_property10']) {
+                $sql .= ' AND (b.product_property10 = "' . $_POST['product_property10'] . '")';
+            }
+        }
 
         // Recherche sur du texte
         if (isset($_POST['product_text']) && xoops_trim($_POST['product_text']) != '') {
@@ -230,6 +260,11 @@ if ((isset($_POST['op']) && $_POST['op'] == 'go') || isset($_GET['start'])) { //
         $ret['product_property3'] = $myrow['product_property3'];
         $ret['product_property4'] = $myrow['product_property4'];
         $ret['product_property5'] = $myrow['product_property5'];
+        $ret['product_property6'] = $myrow['product_property6'];
+        $ret['product_property7'] = $myrow['product_property7'];
+        $ret['product_property8'] = $myrow['product_property8'];
+        $ret['product_property9'] = $myrow['product_property9'];
+        $ret['product_property10'] = $myrow['product_property10'];
         $ret['product_price'] = $myrow['product_price'];
         if ($myrow['product_price'] == 0) {
             $criteria = new CriteriaCompo ();

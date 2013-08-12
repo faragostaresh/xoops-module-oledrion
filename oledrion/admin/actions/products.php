@@ -519,6 +519,51 @@ switch ($action) {
             }
             $sform->addElement($property5select, false);
         }
+    
+        if (oledrion_utils::getModuleOption('product_property6')) {
+            $property6select = new XoopsFormSelect(oledrion_utils::getModuleOption('product_property6_title'), 'product_property6', $item->getVar('product_property6'));
+            $property6Array = explode('|', oledrion_utils::getModuleOption('product_property6'));
+            foreach ($property6Array as $property6) {
+                $property6select->addOption($property6);
+            }
+            $sform->addElement($property6select, false);
+        }
+    
+        if (oledrion_utils::getModuleOption('product_property7')) {
+            $property7select = new XoopsFormSelect(oledrion_utils::getModuleOption('product_property7_title'), 'product_property7', $item->getVar('product_property7'));
+            $property7Array = explode('|', oledrion_utils::getModuleOption('product_property7'));
+            foreach ($property7Array as $property7) {
+                $property7select->addOption($property7);
+            }
+            $sform->addElement($property7select, false);
+        }
+    
+        if (oledrion_utils::getModuleOption('product_property8')) {
+            $property8select = new XoopsFormSelect(oledrion_utils::getModuleOption('product_property8_title'), 'product_property8', $item->getVar('product_property8'));
+            $property8Array = explode('|', oledrion_utils::getModuleOption('product_property8'));
+            foreach ($property8Array as $property8) {
+                $property8select->addOption($property8);
+            }
+            $sform->addElement($property8select, false);
+        }
+    
+        if (oledrion_utils::getModuleOption('product_property9')) {
+            $property9select = new XoopsFormSelect(oledrion_utils::getModuleOption('product_property9_title'), 'product_property9', $item->getVar('product_property9'));
+            $property9Array = explode('|', oledrion_utils::getModuleOption('product_property9'));
+            foreach ($property9Array as $property9) {
+                $property9select->addOption($property95);
+            }
+            $sform->addElement($property9select, false);
+        }
+    
+        if (oledrion_utils::getModuleOption('product_property10')) {
+            $property10select = new XoopsFormSelect(oledrion_utils::getModuleOption('product_property10_title'), 'product_property10', $item->getVar('product_property10'));
+            $property10Array = explode('|', oledrion_utils::getModuleOption('product_property10'));
+            foreach ($property10Array as $property10) {
+                $property10select->addOption($property10);
+            }
+            $sform->addElement($property10select, false);
+        }
 
         $button_tray = new XoopsFormElementTray('', '');
         $submit_btn = new XoopsFormButton('', 'post', $label_submit, 'submit');

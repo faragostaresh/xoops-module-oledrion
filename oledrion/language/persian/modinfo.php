@@ -228,6 +228,11 @@ define('_MI_OLEDRION_PRODUCT_PROPERTY2', 'Product Property 2');
 define('_MI_OLEDRION_PRODUCT_PROPERTY3', 'Product Property 3');
 define('_MI_OLEDRION_PRODUCT_PROPERTY4', 'Product Property 4');
 define('_MI_OLEDRION_PRODUCT_PROPERTY5', 'Product Property 5');
+define('_MI_OLEDRION_PRODUCT_PROPERTY6', 'Product Property 6');
+define('_MI_OLEDRION_PRODUCT_PROPERTY7', 'Product Property 7');
+define('_MI_OLEDRION_PRODUCT_PROPERTY8', 'Product Property 8');
+define('_MI_OLEDRION_PRODUCT_PROPERTY9', 'Product Property 9');
+define('_MI_OLEDRION_PRODUCT_PROPERTY10', 'Product Property 10');
 define('_MI_OLEDRION_PRODUCT_PROPERTY_TITLE', 'Title');
 
 define('_MI_OLEDRION_SEARCH_CATEGORY', 'Show category');
@@ -240,6 +245,11 @@ define('_MI_OLEDRION_SEARCH_PROPERTY2', 'Show property 2');
 define('_MI_OLEDRION_SEARCH_PROPERTY3', 'Show property 3');
 define('_MI_OLEDRION_SEARCH_PROPERTY4', 'Show property 4');
 define('_MI_OLEDRION_SEARCH_PROPERTY5', 'Show property 5');
+define('_MI_OLEDRION_SEARCH_PROPERTY6', 'Show property 6');
+define('_MI_OLEDRION_SEARCH_PROPERTY7', 'Show property 7');
+define('_MI_OLEDRION_SEARCH_PROPERTY8', 'Show property 8');
+define('_MI_OLEDRION_SEARCH_PROPERTY9', 'Show property 9');
+define('_MI_OLEDRION_SEARCH_PROPERTY10', 'Show property 10');
 
 define('_MI_OLEDRION_CHECKOUT_COUNTRY', 'Show select country');
 define('_MI_OLEDRION_CHECKOUT_COUNTRY_DSC', 'if not show, use default selected country on config.php file');

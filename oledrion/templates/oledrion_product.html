@@ -212,6 +212,31 @@
 							<span class="oledrion_productdescription-contentTitles"><{$product.product_property5_title}></span>: <{$product.product_property5}>
 						</div>
 						<{/if}>
+						<{if $product.product_property6}>
+						<div class="oledrion_productdescription">
+							<span class="oledrion_productdescription-contentTitles"><{$product.product_property6_title}></span>: <{$product.product_property6}>
+						</div>
+						<{/if}>
+						<{if $product.product_property7}>
+						<div class="oledrion_productdescription">
+							<span class="oledrion_productdescription-contentTitles"><{$product.product_property7_title}></span>: <{$product.product_property7}>
+						</div>
+						<{/if}>
+						<{if $product.product_property8}>
+						<div class="oledrion_productdescription">
+							<span class="oledrion_productdescription-contentTitles"><{$product.product_property8_title}></span>: <{$product.product_property8}>
+						</div>
+						<{/if}>
+						<{if $product.product_property9}>
+						<div class="oledrion_productdescription">
+							<span class="oledrion_productdescription-contentTitles"><{$product.product_property9_title}></span>: <{$product.product_property9}>
+						</div>
+						<{/if}>
+						<{if $product.product_property10}>
+						<div class="oledrion_productdescription">
+							<span class="oledrion_productdescription-contentTitles"><{$product.product_property10_title}></span>: <{$product.product_property10}>
+						</div>
+						<{/if}>
 					</div>
 					<{if $product.product_attachment != ''}>
 						<a href="<{$smarty.const.XOOPS_UPLOAD_URL}>/<{$product.product_attachment}>" target="_blank" ><img src="<{$smarty.const.OLEDRION_IMAGES_URL}>attach.gif" alt="<{$smarty.const._OLEDRION_ATTACHED_FILE}>" width="9"  height="15" /> <{$smarty.const._OLEDRION_ATTACHED_FILE}></a>

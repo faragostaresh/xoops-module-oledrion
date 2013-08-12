@@ -256,6 +256,11 @@ define('_AM_OLEDRION_PRODUCT_PROPERTY2', 'ویژگی ۲');
 define('_AM_OLEDRION_PRODUCT_PROPERTY3', 'ویژگی ۳');
 define('_AM_OLEDRION_PRODUCT_PROPERTY4', 'ویژگی ۴');
 define('_AM_OLEDRION_PRODUCT_PROPERTY5', 'ویژگی ۵');
+define('_AM_OLEDRION_PRODUCT_PROPERTY6', 'ویژگی ۶');
+define('_AM_OLEDRION_PRODUCT_PROPERTY7', 'ویژگی ۷');
+define('_AM_OLEDRION_PRODUCT_PROPERTY8', 'ویژگی ۸');
+define('_AM_OLEDRION_PRODUCT_PROPERTY9', 'ویژگی ۹');
+define('_AM_OLEDRION_PRODUCT_PROPERTY10', 'ویژگی ۱۰');
 define('_AM_OLEDRION_PRODUCT_PROPERTY_DESC', 'گزینه های مختلف را با <span class="red">|</span> از هم جدا کنید');
 define('_AM_OLEDRION_PRODUCT_PROPERTY_TITLE', 'عنوان');
 
