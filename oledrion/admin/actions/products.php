@@ -336,7 +336,9 @@ switch ($action) {
         $downloadUrl->setDescription(_AM_OLEDRION_DOWNLOAD_EXAMPLE . ' ' . XOOPS_UPLOAD_PATH . DIRECTORY_SEPARATOR . 'image.png');
         $sform->addElement($downloadUrl, false);
 
-        $sform->addElement(new XoopsFormText(_AM_OLEDRION_URL_HLP, 'product_url', 50, 255, $item->getVar('product_url', 'e')), false);
+        $sform->addElement(new XoopsFormText(_AM_OLEDRION_URL_HLP1, 'product_url', 50, 255, $item->getVar('product_url', 'e')), false);
+        $sform->addElement(new XoopsFormText(_AM_OLEDRION_URL_HLP2, 'product_url2', 50, 255, $item->getVar('product_url2', 'e')), false);
+        $sform->addElement(new XoopsFormText(_AM_OLEDRION_URL_HLP3, 'product_url3', 50, 255, $item->getVar('product_url3', 'e')), false);
 
         // Images *************************************************************
         if ($action == 'edit' && $item->pictureExists()) {

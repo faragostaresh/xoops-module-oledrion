@@ -37,6 +37,8 @@ class oledrion_products extends Oledrion_Object
         $this->initVar('product_length', XOBJ_DTYPE_TXTBOX, null, false);
         $this->initVar('product_unitmeasure1', XOBJ_DTYPE_TXTBOX, null, false);
         $this->initVar('product_url', XOBJ_DTYPE_TXTBOX, null, false);
+        $this->initVar('product_url2', XOBJ_DTYPE_TXTBOX, null, false);
+        $this->initVar('product_url3', XOBJ_DTYPE_TXTBOX, null, false);
         $this->initVar('product_image_url', XOBJ_DTYPE_TXTBOX, null, false);
         $this->initVar('product_thumb_url', XOBJ_DTYPE_TXTBOX, null, false);
         $this->initVar('product_submitter', XOBJ_DTYPE_INT, null, false);

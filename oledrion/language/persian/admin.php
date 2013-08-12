@@ -101,7 +101,9 @@ define('_AM_OLEDRION_IMAGE2_CHANGE', 'تعویض تصویر بند انگشتی'
 define('_AM_OLEDRION_ATTACHED_HLP', '');
 define('_AM_OLEDRION_CATEG_HLP', 'شاخهٔ محصول');
 define('_AM_OLEDRION_CATEG_TITLE', 'عنوان شاخه');
-define('_AM_OLEDRION_URL_HLP', 'لینک محصول (اختیاری)');
+define('_AM_OLEDRION_URL_HLP1', 'لینک محصول ۱ (اختیاری)');
+define('_AM_OLEDRION_URL_HLP2', 'لینک محصول ۲ (اختیاری)');
+define('_AM_OLEDRION_URL_HLP3', 'لینک محصول ۳ (اختیاری)');
 define('_AM_OLEDRION_SELECT_HLP', 'استفاده از کلید کنترل کننده (یا apple key در Mac) برای انتخاب بیش از یک مورد');
 define('_AM_OLEDRION_STOCK_HLP', 'ارسال یک ایمیل برای گروه وقتی که کیفیت کمتر باشد از ...');
 define('_AM_OLEDRION_DISCOUNT_HLP', 'تبلیغاتی قیمت (موقت) بدون ماليات');

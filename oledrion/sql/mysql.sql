@@ -27,6 +27,8 @@ CREATE TABLE `oledrion_products` (
   `product_length` varchar(50) NOT NULL,
   `product_unitmeasure1` varchar(20) NOT NULL,
   `product_url` varchar(255) NOT NULL,
+  `product_url2` varchar(255) NOT NULL,
+  `product_url3` varchar(255) NOT NULL,
   `product_image_url` varchar(255) NOT NULL,
   `product_thumb_url` varchar(255) NOT NULL,
   `product_submitter` int(11) unsigned NOT NULL default '0',

@@ -414,5 +414,20 @@ function xoops_module_update_oledrion($module, $version)
         oledrion_utils::addField('`cmd_packing_price` decimal(16,2) NOT NULL', $tableName);
     }
 
+    /**
+     * Add/update product urls
+     * @since 2.3.2013.08.03
+     */
+    $tableName = $xoopsDB->prefix('oledrion_products');
+    
+    if (!oledrion_utils::fieldExists('product_url2', $tableName)) {
+        oledrion_utils::addField('`product_url2` VARCHAR( 255 ) NOT NULL AFTER `product_url`', $tableName);
+    }
+
+    if (!oledrion_utils::fieldExists('product_url3', $tableName)) {
+        oledrion_utils::addField('`product_url3` VARCHAR( 255 ) NOT NULL AFTER `product_url`', $tableName);
+    }
+
+
 }
 ?>
