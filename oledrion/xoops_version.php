@@ -509,6 +509,15 @@ $cptt++;
 $modversion['templates'][$cptt]['file'] = 'oledrion_product_box.html';
 $modversion['templates'][$cptt]['description'] = "Product box";
 
+$cptt++;
+$modversion['templates'][$cptt]['file'] = 'oledrion_product_print.html';
+$modversion['templates'][$cptt]['description'] = "Product print";
+
+$cptt++;
+$modversion['templates'][$cptt]['file'] = 'oledrion_bill_print.html';
+$modversion['templates'][$cptt]['description'] = "Bill print";
+
+
 // ********************************************************************************************************************
 // ****************************************** SETTINGS ****************************************************************
 // ********************************************************************************************************************

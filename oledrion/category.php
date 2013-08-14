@@ -213,7 +213,7 @@ if (is_object($category) && $cat_cid > 0) { // On est sur une catégorie défini
     $xoopsTpl->assign('breadcrumb', $breadcrumb);
 
     // Meta ***************************************************************************************
-    $title = strip_tags($breadcrumb);
+    $title = $category->getVar('cat_title');
     if (!oledrion_utils::getModuleOption('manual_meta')) {
         oledrion_utils::setMetas($title, $title, str_replace('&raquo;', ',', $title));
     } else {

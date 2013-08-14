@@ -1,6 +1,6 @@
-Test site :
-Start test website at : http://show.faragostaresh.com
-
+---------------------------------------
+2.34
+---------------------------------------
 Needed options :
 1- Make a calculation of Shipping costs based on the weight of the package.
 2- Add PDF 
@@ -8,9 +8,8 @@ Needed options :
 4- User order / invoice history
 5- AJAX checkout levels 
 
-
 Bugs :
-1- Print page didnt work
+1- Print page didnt work (finish)
 2- Attachment didnt work
 3- Fix RSS page in debug mode
 4- Check Shopping cart be empty after add product
@@ -29,4 +28,3 @@ Bugs :
        - Most viewed lists
 7- Shipping price accumulate when buying multiple items. Example, if I buy two items, the addition contains 2 times the shipping price.
 8- Upload image in order steps on admin didnt work
-
