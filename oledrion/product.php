@@ -269,6 +269,10 @@ switch ($op) {
 		$tbl_tmp['attached_non_mp3_count'] = count($attachedFilesForTemplate) - count($mp3AttachedFilesList);
 		$tbl_tmp['attached_files'] = $attachedFilesForTemplate; // La liste complète de tous les fichiers attachés
 		
+		echo '<pre>';
+		print_r($attachedFilesForTemplate);
+		echo '</pre>';
+		
 		$tbl_tmp['product_category'] = $product_category->toArray();
 		$tbl_tmp['product_vendor'] = $product_vendor->toArray();
 		if (xoops_trim($product_user->getVar('name')) != '') {
@@ -464,7 +468,7 @@ switch ($op) {
 		              'product_new' => $item->isNewProduct(),
 		              'product_stock' => $item->getVar('product_stock'),
 		              'product_price' => $item->getVar('product_price'),
-		               'product_price_ttc' => oledrion_utils::getTTC($item->getVar('product_price'), ''),
+		              'product_price_ttc' => oledrion_utils::getTTC($item->getVar('product_price'), ''),
 		          );
 		        $xoopsTpl->append('product_current_categ', $datas);
 		    }

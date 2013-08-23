@@ -239,7 +239,7 @@
 						<{/if}>
 					</div>
 					<{if $product.product_attachment != ''}>
-						<a href="<{$smarty.const.XOOPS_UPLOAD_URL}>/<{$product.product_attachment}>" target="_blank" ><img src="<{$smarty.const.OLEDRION_IMAGES_URL}>attach.gif" alt="<{$smarty.const._OLEDRION_ATTACHED_FILE}>" width="9"  height="15" /> <{$smarty.const._OLEDRION_ATTACHED_FILE}></a>
+						<a href="<{$smarty.const.OLEDRION_ATTACHED_FILES_URL}>/<{$product.product_attachment}>" target="_blank" ><img src="<{$smarty.const.OLEDRION_IMAGES_URL}>attach.gif" alt="<{$smarty.const._OLEDRION_ATTACHED_FILE}>" width="9"  height="15" /> <{$smarty.const._OLEDRION_ATTACHED_FILE}></a>
 					<{/if}>
 					<{if $currentUserId > 0}>
 						<br /><a href="<{$smarty.const.OLEDRION_URL}>my-lists.php?op=addProduct&product_id=<{$product.product_id}>" ><img src="<{$addToWishList}>" alt="<{$smarty.const._OLEDRION_ADD_TO_LIST}>" /></a>
@@ -376,24 +376,32 @@
 	
 		<{if count($product_all_categs) > 0}>
 			<h2><img src="<{$smarty.const.OLEDRION_IMAGES_URL}>icon-product-person.png" alt="<{$smarty.const._OLEDRION_RECENT_CATEGS}>" /><{$smarty.const._OLEDRION_RECENT_CATEGS}></h2>
-			<table border='0' cellspacing='5' cellpadding='0' class='center oledrion_lastproducts'>
-			<{foreach item=oneitem from=$product_all_categs}>
+			<table class='center oledrion_lastproducts'>
 			<tr>
-				<td><img src="<{$smarty.const.OLEDRION_IMAGES_URL}>arrow-black2.png" alt="<{$oneitem.last_categs_product_href_title}>" width="13"  height="7" /><a href="<{$oneitem.last_categs_product_url_rewrited}>" title="<{$oneitem.last_categs_product_href_title}>"><{$oneitem.last_categs_product_title}></a></td>
-			</tr>
-			<{/foreach}>
+				<{foreach item=oneitem from=$product_all_categs}>
+					<td class="center top">
+			    		<{include file="db:oledrion_product_box.html" product=$oneitem}>
+		    		</td>
+		   			<{if $oneitem.count is div by $columnsCount}>
+		    			</tr><tr>
+		    		<{/if}>
+				<{/foreach}>
 			</tr>
 			</table>
 		<{/if}>
 	
 		<{if count($product_current_categ) > 0}>
 			<h2><img src="<{$smarty.const.OLEDRION_IMAGES_URL}>icon-product-person.png" alt="<{$smarty.const._OLEDRION_RECENT_CATEG}>" /><{$smarty.const._OLEDRION_RECENT_CATEG}></h2>
-			<table border='0' cellspacing='5' cellpadding='0' class='center oledrion_lastproducts'>
-			<{foreach item=oneitem from=$product_current_categ}>
+			<table class='center oledrion_lastproducts'>
 			<tr>
-				<td><img src="<{$smarty.const.OLEDRION_IMAGES_URL}>arrow-black2.png" alt="<{$oneitem.last_categ_product_href_title}>" width="13"  height="7" /><a href="<{$oneitem.last_categ_product_url_rewrited}>" title="<{$oneitem.last_categ_product_href_title}>"><{$oneitem.last_categ_product_title}></a></td>
-			</tr>
-			<{/foreach}>
+				<{foreach item=oneitem from=$product_current_categ}>
+					<td class="center top">
+			    		<{include file="db:oledrion_product_box.html" product=$oneitem}>
+		    		</td>
+		   			<{if $oneitem.count is div by $columnsCount}>
+		    			</tr><tr>
+		    		<{/if}>
+				<{/foreach}>
 			</tr>
 			</table>
 		<{/if}>

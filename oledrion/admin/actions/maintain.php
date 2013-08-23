@@ -31,7 +31,7 @@ switch ($action) {
         
     case 'confirm':
         xoops_cp_header();
-        require '../../xoops_version.php';
+        require OLEDRION_PATH . 'xoops_version.php';
         $tables = array();
         foreach ($modversion['tables'] as $table) {
             $tables[] = $xoopsDB->prefix($table);

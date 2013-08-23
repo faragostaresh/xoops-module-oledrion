@@ -8,7 +8,7 @@
 - Add new order level whit some options for setting (voltan)
 - Add packing system (voltan)
 - Add select location / delivery / payment method by user (voltan)
-- Add print page for user invoice (voltan)
+- Add final user invoice page and print page for user invoice (voltan)
 - Improve search (voltan)
 - Improve gateway ( checkout.php admin/gateways/gateway.php ) (voltan)
 - Improve admin order page (voltan)
@@ -17,12 +17,14 @@
 - Improve js image gallery, remove pretty Photo (voltan)
 - Improve code style (voltan)
 - Improve product print page (voltan)
+- Improve other product list (voltan)
 - Update SQL file and full support InnoDB (voltan)
 - Update copyright header  (voltan)
 - Update all files to utf-8 (voltan)
 - Update codes to support php 5.4.12 and mysql 5.5.30 (voltan)
 - Update language files (voltan)
 - Fix some errors in admin and user side (voltan)
+- Fix bug on attach file (voltan)
 - Remove Cache Lite Support(voltan)
 - Remove class/lite.php class/PEAR.php class/PEAR5.php admin/main.php files (voltan)
 
@@ -71,7 +73,7 @@ TODO:
 - Addition of a new block : Recently Sold
   This block shows the products that were recently sold
 - Addition of a new parameter in config.php, OLEDRION_CART_BUG, set this to true if you can't see products when you add them to the cart
-- Correction of several bugs in the cart, be sure to update your templates (Hervé/sailjapan)
+- Correction of several bugs in the cart, be sure to update your templates (Hervï¿½/sailjapan)
 - The product's page now uses a lightview effect to show the product's picture
 - You have a new tab, "blocks", to see the module's blocks
 - The module will automatically update the monetary fields in its tables to decimal(10,2) to accept billions
@@ -110,7 +112,7 @@ TODO:
 - In the module's administration, the count of products is now visible
 - When you add a product, in the module's administration, the module shows you an example for the "Path of the file to download" field
 - Correction of several bugs with the Paypal gateway and orders records on some hosts (burning/herve)
-- Bug correction in the shelf class (Bezoops/Hervé)
+- Bug correction in the shelf class (Bezoops/Hervï¿½)
 - There were 2 minor changes in the translations, see lang.diff
 
 
@@ -192,79 +194,79 @@ _MI_OLEDRION_SHIPPING_QUANTITY
 ---------------------------------------
 1.61 (Hervet)
 ---------------------------------------
-- Rajout d'une option permettant de désactiver la zone prix (des produits)
-- Dans la fiche d'un produit, la liste des produits récents ne contient plus le produit en cours
-- Ajout d'une zone cat_footer dans les catégories (pour pouvoir mettre un pied de page par catégorie)
+- Rajout d'une option permettant de dï¿½sactiver la zone prix (des produits)
+- Dans la fiche d'un produit, la liste des produits rï¿½cents ne contient plus le produit en cours
+- Ajout d'une zone cat_footer dans les catï¿½gories (pour pouvoir mettre un pied de page par catï¿½gorie)
 - Eclatement de l'administration en plusieurs fichiers
-- Ménage dans /admin/functions.php
+- Mï¿½nage dans /admin/functions.php
 - Ajout de cache aux flux RSS
-- Beaucoup de refactorisation du code (conventions d'écriture)
+- Beaucoup de refactorisation du code (conventions d'ï¿½criture)
 - Ajout de ExtJs pour la page qui liste tous les produits
-- Mise à jour de TCPDF
-- Modification de la page des catégories afin de pouvoir y afficher les catégories mères ou les catégories filles (selon le cas) sur paramétrage (cf config.php)
-- Introduction d'une nouvelle classe, une façade, pour traiter les produits (oledrion_shelf.php)
-- Mise à jour de Cache Lite
-- Ajout de l'écotaxe et du délai de livraison
+- Mise ï¿½ jour de TCPDF
+- Modification de la page des catï¿½gories afin de pouvoir y afficher les catï¿½gories mï¿½res ou les catï¿½gories filles (selon le cas) sur paramï¿½trage (cf config.php)
+- Introduction d'une nouvelle classe, une faï¿½ade, pour traiter les produits (oledrion_shelf.php)
+- Mise ï¿½ jour de Cache Lite
+- Ajout de l'ï¿½cotaxe et du dï¿½lai de livraison
 - Ajout de la persistance du panier
-- Ajout d'une option permettant de restreindre l'achat aux utilisateurs enregistrés
-- Passage à la librairie "wideimage" pour la gestion des images (notamment le redimensionnement)
-- Ajout d'une option permettant de redimensionner les images des produits et de créer automatiquement les vignettes
-- Ajout d'une option permettant de redimensionner les images des catégories et des fabricants (aux dimensions définies pour les produits)
-- Ajout d'options aux blocs pour qu'on puisse ne choisir comme période que le mois en cours
-- Ajout d'une nouvelle classe pour passer les paramètres à la façade
-- Changement de tous les entêtes Php afin d'être plus explicite sur la licence (à cause des voleurs de chez impress)
+- Ajout d'une option permettant de restreindre l'achat aux utilisateurs enregistrï¿½s
+- Passage ï¿½ la librairie "wideimage" pour la gestion des images (notamment le redimensionnement)
+- Ajout d'une option permettant de redimensionner les images des produits et de crï¿½er automatiquement les vignettes
+- Ajout d'une option permettant de redimensionner les images des catï¿½gories et des fabricants (aux dimensions dï¿½finies pour les produits)
+- Ajout d'options aux blocs pour qu'on puisse ne choisir comme pï¿½riode que le mois en cours
+- Ajout d'une nouvelle classe pour passer les paramï¿½tres ï¿½ la faï¿½ade
+- Changement de tous les entï¿½tes Php afin d'ï¿½tre plus explicite sur la licence (ï¿½ cause des voleurs de chez impress)
 
 ---------------------------------------
 1.6 (Hervet)
 ---------------------------------------
 - Refactorisation du code pour utiliser la classe oledrion_utils au lieu des fonctions contenues dans include/functions.php
-- Mise à jour de TCPDF
+- Mise ï¿½ jour de TCPDF
 - Remplacement des tous les book et livre par product et produit
-- Mise à jour du PersistableObjectHandler
-- Renommage des classes Lite et Pear avec le préfixe du module
-- Correction d'un bug dans la notation (on pouvait donner la note qu'on voulait à un produit !)
-- Possibilité de supprimer un produit depuis la fiche produit (côté utilisateur)
+- Mise ï¿½ jour du PersistableObjectHandler
+- Renommage des classes Lite et Pear avec le prï¿½fixe du module
+- Correction d'un bug dans la notation (on pouvait donner la note qu'on voulait ï¿½ un produit !)
+- Possibilitï¿½ de supprimer un produit depuis la fiche produit (cï¿½tï¿½ utilisateur)
 - Refactorisation du code pour la suppression des produits
-- Rajout de config.php pour pouvoir choisir l'emplacement des images, des fichiers attachés, du pays par défaut et autres
-- Dans les préférences du module (pour le séparateur des milliers), il est maintenant possible d'utiliser [space] pour "représenter" un espace (étant donné que Xoops supprime les espaces dans les options de modules)
-- Possibilité de choisir où les fichiers sont téléchargés
-- Rajout d'une option afin de pouvoir décider si on peut proposer à l'utilisateur de ne pas payer en ligne
-- L'adresse email Paypal sert aussi d'indicateur pour activer ou désactiver le paiement en ligne
-- Toutes les pages contiennent breadcrumb et publicité globale (ou de la catégorie)
+- Rajout de config.php pour pouvoir choisir l'emplacement des images, des fichiers attachï¿½s, du pays par dï¿½faut et autres
+- Dans les prï¿½fï¿½rences du module (pour le sï¿½parateur des milliers), il est maintenant possible d'utiliser [space] pour "reprï¿½senter" un espace (ï¿½tant donnï¿½ que Xoops supprime les espaces dans les options de modules)
+- Possibilitï¿½ de choisir oï¿½ les fichiers sont tï¿½lï¿½chargï¿½s
+- Rajout d'une option afin de pouvoir dï¿½cider si on peut proposer ï¿½ l'utilisateur de ne pas payer en ligne
+- L'adresse email Paypal sert aussi d'indicateur pour activer ou dï¿½sactiver le paiement en ligne
+- Toutes les pages contiennent breadcrumb et publicitï¿½ globale (ou de la catï¿½gorie)
 
 ---------------------------------------
 1.4 2007-12-06 (Hervet)
 ---------------------------------------
-- Correction d'un bug lors de l'envoi du mail au client, le lien vers la facture n'était pas affiché
-- Page d'accueil du module, il n'était pas possible d'afficher 0 produits
+- Correction d'un bug lors de l'envoi du mail au client, le lien vers la facture n'ï¿½tait pas affichï¿½
+- Page d'accueil du module, il n'ï¿½tait pas possible d'afficher 0 produits
 - Il manquait un espace dans la liste des revendeurs
-- Même lorsque l'option "afficher les liens vers les produits précédents et suivants" était décochée, le titre du bloc était quand même visible
-- La description courte et complète ne s'affichent plus si elles ne contiennent rien (le titre des blocs)
+- Mï¿½me lorsque l'option "afficher les liens vers les produits prï¿½cï¿½dents et suivants" ï¿½tait dï¿½cochï¿½e, le titre du bloc ï¿½tait quand mï¿½me visible
+- La description courte et complï¿½te ne s'affichent plus si elles ne contiennent rien (le titre des blocs)
 
 ---------------------------------------
 1.3 2007-11-17 (Hervet)
 ---------------------------------------
 - Ajout d'une gestion de cache avec Cache_Lite (de Pear)
-- Possibilité de supprimer images et fichiers attachés dans les catégories, fabricants et produits
+- Possibilitï¿½ de supprimer images et fichiers attachï¿½s dans les catï¿½gories, fabricants et produits
 - Modification de toutes les classes pour fonctionner avec Php5
 - Modification de l'ORM
 - Rajout bloc de visualisation du caddy
-- Correction d'un problème de formatage des montants dans la partie réductions (dans l'administratin)
-- Le type mime dans le script permettant de télécharger un fichier est enfin correctement détecté (avec finfo) et l'affichage
-  des fichiers envoyés est correct
+- Correction d'un problï¿½me de formatage des montants dans la partie rï¿½ductions (dans l'administratin)
+- Le type mime dans le script permettant de tï¿½lï¿½charger un fichier est enfin correctement dï¿½tectï¿½ (avec finfo) et l'affichage
+  des fichiers envoyï¿½s est correct
 
 ---------------------------------------
 1.2 2007-08-03 (Hervet)
 ---------------------------------------
-- Correction d'un bug dans l'administration du module, il était possible d'uploader n'importe quel type de fichier
+- Correction d'un bug dans l'administration du module, il ï¿½tait possible d'uploader n'importe quel type de fichier
 - Dans l'administration, les noms des produits sont maintenant cliquables
-- Mise à jour de tcpdf
+- Mise ï¿½ jour de tcpdf
 
 
 ---------------------------------------
 1.1 2007-07-26 (Hervet)
 ---------------------------------------
-- Ajout de nouvelles préférences afin de mieux gérer la monnaie (sa position par exemple)
+- Ajout de nouvelles prï¿½fï¿½rences afin de mieux gï¿½rer la monnaie (sa position par exemple)
 - Modification de tout le module pour tenir compte de la gestion de la monnaie
 - Ajout de la classe oledrion_currency.php
 

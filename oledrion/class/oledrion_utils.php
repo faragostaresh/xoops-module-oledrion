@@ -1372,12 +1372,10 @@ class oledrion_utils
     public function getMimeType($filename)
     {
         if (function_exists('finfo_open')) {
-            $pathToMagic = OLEDRION_PATH . 'mime/magic';
-            $finfo = new finfo(FILEINFO_MIME, $pathToMagic);
-            $mimetype = $finfo->file($filename);
-            @finfo_close($finfo);
-            unset($finfo);
-            return $mimetype;
+            $finfo = finfo_open();
+            $mimetype = finfo_file($finfo, $filename, FILEINFO_MIME_TYPE);
+            finfo_close($finfo);
+			return $mimetype;
         } else {
             if (function_exists('mime_content_type')) {
                 return mime_content_type($filename);
