@@ -9,6 +9,8 @@
 - Add packing system (voltan)
 - Add select location / delivery / payment method by user (voltan)
 - Add final user invoice page and print page for user invoice (voltan)
+- Add import test data option (voltan)
+- Add local setting for some preferences (voltan)
 - Improve search (voltan)
 - Improve gateway ( checkout.php admin/gateways/gateway.php ) (voltan)
 - Improve admin order page (voltan)

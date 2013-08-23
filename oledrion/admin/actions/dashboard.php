@@ -39,6 +39,15 @@ switch ($action) {
         $indexAdmin->addConfigBoxLine(array(OLEDRION_CSV_PATH, '777'), 'chmod');
         $indexAdmin->addConfigBoxLine(OLEDRION_CACHE_PATH, 'folder');
         $indexAdmin->addConfigBoxLine(array(OLEDRION_CACHE_PATH, '777'), 'chmod');
+		
+		$categories = $h_oledrion_cat->getCategoriesCount();
+		if($categories == 0) {
+			$link = OLEDRION_ADMIN_URL . 'index.php?op=maintain&action=import';	
+			$link = sprintf('<a href="%s">%s</a>', $link, _AM_OLEDRION_IMPORT_DATA_TITLE);
+			$text = sprintf(_AM_OLEDRION_IMPORT_DATA_TEXT, $link);
+			$indexAdmin->addInfoBox(_AM_OLEDRION_IMPORT_DATA);
+		    $indexAdmin->addInfoBoxLine(_AM_OLEDRION_IMPORT_DATA, $text);
+		}
 
         echo $indexAdmin->addNavigation('index.php');
         echo $indexAdmin->renderIndex();

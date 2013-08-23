@@ -96,6 +96,14 @@ define('_MI_OLEDRION_ADMENU19', 'محل');
 define('_MI_OLEDRION_ADMENU20', 'روش تحویل');
 define('_MI_OLEDRION_ADMENU21', 'روش پرداخت');
 
+// Settings
+define('_MI_OLEDRION_SETTING_1', 'ریال');
+define('_MI_OLEDRION_SETTING_2', '﷼');
+define('_MI_OLEDRION_SETTING_3', '0');
+define('_MI_OLEDRION_SETTING_4', '0');
+define('_MI_OLEDRION_SETTING_5', '');
+define('_MI_OLEDRION_SETTING_6', '');
+
 // Title of config items
 define('_MI_OLEDRION_NEWLINKS', 'بیشترین تعداد محصولاتی را که در صفحهٔ اول نمایش داده می‌شوند را انتخاب کنید');
 define('_MI_OLEDRION_PERPAGE', 'بیشترین تعداد محصولاتی را که در هر صفحه نمایش داده می‌شوند را انتخاب کنید');

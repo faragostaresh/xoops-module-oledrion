@@ -30,7 +30,7 @@ $modversion['credits'] = "Don Curioso, Voltan, Bezoops, Mariane Antoun, Defkon1,
 $modversion['help'] = 'page=help';
 $modversion['license'] = 'GNU GPL 2.0';
 $modversion['license_url'] = "www.gnu.org/licenses/gpl-2.0.html/";
-$modversion['official'] = 0;
+$modversion['official'] = 1;
 $modversion['image'] = 'images/oledrion_logo.png';
 $modversion['dirname'] = 'oledrion';
 // Modules scripts
@@ -571,7 +571,7 @@ $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_UPLOADFILESIZE';
 $modversion['config'][$cpto]['description'] = '';
 $modversion['config'][$cpto]['formtype'] = 'textbox';
 $modversion['config'][$cpto]['valuetype'] = 'int';
-$modversion['config'][$cpto]['default'] = 1048576;
+$modversion['config'][$cpto]['default'] = 10485760;
 
 /**
  * Do you want to enable your visitors to rate products ?
@@ -778,7 +778,7 @@ $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_MONEY_F';
 $modversion['config'][$cpto]['description'] = '';
 $modversion['config'][$cpto]['formtype'] = 'textbox';
 $modversion['config'][$cpto]['valuetype'] = 'text';
-$modversion['config'][$cpto]['default'] = 'euro(s)';
+$modversion['config'][$cpto]['default'] = _MI_OLEDRION_SETTING_1;
 
 /**
  * Money, short label
@@ -789,7 +789,7 @@ $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_MONEY_S';
 $modversion['config'][$cpto]['description'] = '';
 $modversion['config'][$cpto]['formtype'] = 'textbox';
 $modversion['config'][$cpto]['valuetype'] = 'text';
-$modversion['config'][$cpto]['default'] = '';
+$modversion['config'][$cpto]['default'] = _MI_OLEDRION_SETTING_2;
 
 /**
  * Decimals count
@@ -800,7 +800,7 @@ $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_DECIMAL';
 $modversion['config'][$cpto]['description'] = '';
 $modversion['config'][$cpto]['formtype'] = 'textbox';
 $modversion['config'][$cpto]['valuetype'] = 'int';
-$modversion['config'][$cpto]['default'] = '2';
+$modversion['config'][$cpto]['default'] = _MI_OLEDRION_SETTING_3;
 
 /**
  * Monnaie's place (left or right) ?
@@ -811,7 +811,7 @@ $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_CONF00';
 $modversion['config'][$cpto]['description'] = '_MI_OLEDRION_CONF00_DSC';
 $modversion['config'][$cpto]['formtype'] = 'yesno';
 $modversion['config'][$cpto]['valuetype'] = 'int';
-$modversion['config'][$cpto]['default'] = 1;
+$modversion['config'][$cpto]['default'] = _MI_OLEDRION_SETTING_4;
 
 /**
  * Thousands separator
@@ -822,7 +822,7 @@ $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_CONF04';
 $modversion['config'][$cpto]['description'] = '';
 $modversion['config'][$cpto]['formtype'] = 'textbox';
 $modversion['config'][$cpto]['valuetype'] = 'text';
-$modversion['config'][$cpto]['default'] = '[space]';
+$modversion['config'][$cpto]['default'] = _MI_OLEDRION_SETTING_5;
 
 /**
  * Decimal separator
@@ -833,7 +833,7 @@ $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_CONF05';
 $modversion['config'][$cpto]['description'] = '';
 $modversion['config'][$cpto]['formtype'] = 'textbox';
 $modversion['config'][$cpto]['valuetype'] = 'text';
-$modversion['config'][$cpto]['default'] = ',';
+$modversion['config'][$cpto]['default'] = _MI_OLEDRION_SETTING_6;
 
 
 $cpto++;
@@ -1021,7 +1021,7 @@ $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_IMAGES_WIDTH';
 $modversion['config'][$cpto]['description'] = '';
 $modversion['config'][$cpto]['formtype'] = 'textbox';
 $modversion['config'][$cpto]['valuetype'] = 'int';
-$modversion['config'][$cpto]['default'] = 600;
+$modversion['config'][$cpto]['default'] = 400;
 
 
 /**
@@ -1033,7 +1033,7 @@ $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_IMAGES_HEIGHT';
 $modversion['config'][$cpto]['description'] = '';
 $modversion['config'][$cpto]['formtype'] = 'textbox';
 $modversion['config'][$cpto]['valuetype'] = 'int';
-$modversion['config'][$cpto]['default'] = 600;
+$modversion['config'][$cpto]['default'] = 400;
 
 
 /**
@@ -1205,7 +1205,7 @@ $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_CHECKOUT_LEVEL';
 $modversion['config'][$cpto]['description'] = '';
 $modversion['config'][$cpto]['formtype'] = 'select';
 $modversion['config'][$cpto]['valuetype'] = 'int';
-$modversion['config'][$cpto]['default'] = 3;
+$modversion['config'][$cpto]['default'] = 1;
 $modversion['config'][$cpto]['options'] = array('_MI_OLEDRION_CHECKOUT_LEVEL_1' => 1, '_MI_OLEDRION_CHECKOUT_LEVEL_2' => 2, '_MI_OLEDRION_CHECKOUT_LEVEL_3' => 3);
 
 

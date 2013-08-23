@@ -300,4 +300,9 @@ define('_AM_OLEDRION_PACKING_WIDTH', 'Width');
 define('_AM_OLEDRION_PACKING_LENGTH', 'Length');
 define('_AM_OLEDRION_PACKING_WEIGHT', 'Weight');
 define('_AM_OLEDRION_PACKING_PRICE', 'Price');
+
+define('_AM_OLEDRION_IMPORT_DATA', 'Import test information');
+define('_AM_OLEDRION_IMPORT_DATA_TITLE', 'Import');
+define('_AM_OLEDRION_IMPORT_DATA_TEXT', 'If you want import test information click on : <b>%s</b>');
+define('_AM_OLEDRION_IMPORT_CONF', 'Do you want import test information?');
 ?>

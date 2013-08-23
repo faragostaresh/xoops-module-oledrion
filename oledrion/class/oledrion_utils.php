@@ -1495,6 +1495,7 @@ class oledrion_utils
             mkdir($folder, 0777);
             file_put_contents($folder . '/index.html', '<script>history.go(-1);</script>');
         }
+		chmod($folder, 0777);
     }
 
     /**

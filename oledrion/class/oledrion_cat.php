@@ -280,6 +280,17 @@ class OledrionOledrion_catHandler extends Oledrion_XoopsPersistableObjectHandler
         $ret = $this->getObjects($criteria);
         return $ret;
     }
+	
+	/**
+     * Get category count
+     *
+     * @return int    number of category
+     */
+    public function getCategoriesCount()
+    {
+        $criteria = new CriteriaCompo ();
+        return $this->getCount($criteria);
+    }
 }
 
 ?>

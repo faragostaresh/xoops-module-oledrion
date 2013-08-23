@@ -96,6 +96,14 @@ define('_MI_OLEDRION_ADMENU19', 'Location');
 define('_MI_OLEDRION_ADMENU20', 'Delivery');
 define('_MI_OLEDRION_ADMENU21', 'Payment');
 
+// Settings
+define('_MI_OLEDRION_SETTING_1', 'euro(s)');
+define('_MI_OLEDRION_SETTING_2', '$');
+define('_MI_OLEDRION_SETTING_3', '2');
+define('_MI_OLEDRION_SETTING_4', '1');
+define('_MI_OLEDRION_SETTING_5', '[space]');
+define('_MI_OLEDRION_SETTING_6', ',');
+
 // Title of config items
 define('_MI_OLEDRION_NEWLINKS', 'Select the maximum number of new products displayed on top page');
 define('_MI_OLEDRION_PERPAGE', 'Select the maximum number of products displayed in each page');
