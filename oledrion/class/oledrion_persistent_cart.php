@@ -177,4 +177,3 @@ class OledrionOledrion_persistent_cartHandler extends Oledrion_XoopsPersistableO
     }
 }
 
-?>

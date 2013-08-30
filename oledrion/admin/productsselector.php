@@ -155,4 +155,3 @@ $xoopsTpl->assign('searchCategory', $categoriesSelect);
 $xoopsTpl->assign('searchFieldSelected', $selectedSearchField);
 
 echo $xoopsTpl->fetch('db:oledrion_productsselector.html');
-?>

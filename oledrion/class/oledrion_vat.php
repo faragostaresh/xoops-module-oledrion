@@ -123,5 +123,3 @@ class OledrionOledrion_vatHandler extends Oledrion_XoopsPersistableObjectHandler
         return $h_oledrion_products->getVatProductsCount($vat_id);
     }
 }
-
-?>

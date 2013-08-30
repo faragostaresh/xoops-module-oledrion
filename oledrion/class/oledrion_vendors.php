@@ -102,5 +102,3 @@ class OledrionOledrion_vendorsHandler extends Oledrion_XoopsPersistableObjectHan
         return $ret;
     }
 }
-
-?>

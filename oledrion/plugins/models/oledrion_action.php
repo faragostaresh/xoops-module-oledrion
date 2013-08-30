@@ -33,5 +33,3 @@ abstract class oledrion_action
      */
     abstract static function registerEvents();
 }
-
-?>

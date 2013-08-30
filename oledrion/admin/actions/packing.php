@@ -192,4 +192,3 @@ switch ($action) {
         }
         break;
 }
-?>

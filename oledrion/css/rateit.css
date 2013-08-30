@@ -30,12 +30,12 @@ div.rateit div.rateit-range {
 
 div.rateit div.rateit-hover, div.rateit div.rateit-selected {
     position: absolute;
-    left: 0px;
+    left: 0;
 }
 
 div.rateit div.rateit-hover-rtl, div.rateit div.rateit-selected-rtl {
     left: auto;
-    right: 0px;
+    right: 0;
 }
 
 div.rateit div.rateit-hover {

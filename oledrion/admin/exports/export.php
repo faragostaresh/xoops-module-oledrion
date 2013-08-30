@@ -85,5 +85,3 @@ abstract class oledrion_export
 
     abstract function getDownloadPath();
 }
-
-?>

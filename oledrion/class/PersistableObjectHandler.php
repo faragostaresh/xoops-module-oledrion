@@ -821,5 +821,3 @@ class Oledrion_XoopsPersistableObjectHandler extends XoopsObjectHandler
         //$Cache_Lite->clean();
     }
 }
-
-?>

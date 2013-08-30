@@ -86,4 +86,3 @@ function b_oledrion_new_show_duplicatable($options)
     $tpl->display('db:oledrion_block_new.html');
 }
 
-?>

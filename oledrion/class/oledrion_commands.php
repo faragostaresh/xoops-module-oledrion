@@ -444,4 +444,3 @@ class OledrionOledrion_commandsHandler extends Oledrion_XoopsPersistableObjectHa
     }
 }
 
-?>

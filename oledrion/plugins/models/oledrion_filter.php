@@ -33,5 +33,3 @@ abstract class oledrion_filter
      */
     abstract static function registerEvents();
 }
-
-?>

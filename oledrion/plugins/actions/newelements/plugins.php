@@ -89,5 +89,3 @@ class newelementsAction extends oledrion_action
 
     }
 }
-
-?>

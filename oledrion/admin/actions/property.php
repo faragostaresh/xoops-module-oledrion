@@ -65,31 +65,31 @@ switch ($action) {
         $property5->addElement(new XoopsFormTextArea ('', 'product_property5', oledrion_utils::getModuleOption('product_property5'), 5, 90));
         $property5->setDescription(_AM_OLEDRION_PRODUCT_PROPERTY_DESC);
         $sform->addElement($property5);
-        
+
         $property6 = new XoopsFormElementTray (_AM_OLEDRION_PRODUCT_PROPERTY6, '<br />');
         $property6->addElement(new XoopsFormText(_AM_OLEDRION_PRODUCT_PROPERTY_TITLE, 'product_property6_title', 50, 255, oledrion_utils::getModuleOption('product_property6_title')));
         $property6->addElement(new XoopsFormTextArea ('', 'product_property6', oledrion_utils::getModuleOption('product_property6'), 5, 90));
         $property6->setDescription(_AM_OLEDRION_PRODUCT_PROPERTY_DESC);
         $sform->addElement($property6);
-        
+
         $property7 = new XoopsFormElementTray (_AM_OLEDRION_PRODUCT_PROPERTY7, '<br />');
         $property7->addElement(new XoopsFormText(_AM_OLEDRION_PRODUCT_PROPERTY_TITLE, 'product_property7_title', 50, 255, oledrion_utils::getModuleOption('product_property7_title')));
         $property7->addElement(new XoopsFormTextArea ('', 'product_property7', oledrion_utils::getModuleOption('product_property7'), 5, 90));
         $property7->setDescription(_AM_OLEDRION_PRODUCT_PROPERTY_DESC);
         $sform->addElement($property7);
-        
+
         $property8 = new XoopsFormElementTray (_AM_OLEDRION_PRODUCT_PROPERTY8, '<br />');
         $property8->addElement(new XoopsFormText(_AM_OLEDRION_PRODUCT_PROPERTY_TITLE, 'product_property8_title', 50, 255, oledrion_utils::getModuleOption('product_property8_title')));
         $property8->addElement(new XoopsFormTextArea ('', 'product_property8', oledrion_utils::getModuleOption('product_property8'), 5, 90));
         $property8->setDescription(_AM_OLEDRION_PRODUCT_PROPERTY_DESC);
         $sform->addElement($property8);
-        
+
         $property9 = new XoopsFormElementTray (_AM_OLEDRION_PRODUCT_PROPERTY9, '<br />');
         $property9->addElement(new XoopsFormText(_AM_OLEDRION_PRODUCT_PROPERTY_TITLE, 'product_property9_title', 50, 255, oledrion_utils::getModuleOption('product_property9_title')));
         $property9->addElement(new XoopsFormTextArea ('', 'product_property9', oledrion_utils::getModuleOption('product_property9'), 5, 90));
         $property9->setDescription(_AM_OLEDRION_PRODUCT_PROPERTY_DESC);
         $sform->addElement($property9);
-        
+
         $property10 = new XoopsFormElementTray (_AM_OLEDRION_PRODUCT_PROPERTY10, '<br />');
         $property10->addElement(new XoopsFormText(_AM_OLEDRION_PRODUCT_PROPERTY_TITLE, 'product_property10_title', 50, 255, oledrion_utils::getModuleOption('product_property10_title')));
         $property10->addElement(new XoopsFormTextArea ('', 'product_property10', oledrion_utils::getModuleOption('product_property10'), 5, 90));
@@ -308,7 +308,7 @@ switch ($action) {
                 $configHandler->insertConfig($config);
             }
         }
-    
+
         if (isset($_POST['product_property6'])) {
             if (oledrion_utils::getModuleOption('product_property6') != $_POST['product_property6']) {
                 $criteria = new CriteriaCompo();
@@ -348,7 +348,7 @@ switch ($action) {
                 $configHandler->insertConfig($config);
             }
         }
-    
+
         if (isset($_POST['product_property7'])) {
             if (oledrion_utils::getModuleOption('product_property7') != $_POST['product_property7']) {
                 $criteria = new CriteriaCompo();
@@ -388,7 +388,7 @@ switch ($action) {
                 $configHandler->insertConfig($config);
             }
         }
-    
+
         if (isset($_POST['product_property8'])) {
             if (oledrion_utils::getModuleOption('product_property8') != $_POST['product_property8']) {
                 $criteria = new CriteriaCompo();
@@ -428,7 +428,7 @@ switch ($action) {
                 $configHandler->insertConfig($config);
             }
         }
-    
+
         if (isset($_POST['product_property9'])) {
             if (oledrion_utils::getModuleOption('product_property9') != $_POST['product_property9']) {
                 $criteria = new CriteriaCompo();
@@ -468,7 +468,7 @@ switch ($action) {
                 $configHandler->insertConfig($config);
             }
         }
-    
+
         if (isset($_POST['product_property10'])) {
             if (oledrion_utils::getModuleOption('product_property10') != $_POST['product_property10']) {
                 $criteria = new CriteriaCompo();
@@ -513,4 +513,3 @@ switch ($action) {
         oledrion_utils::redirect(_AM_OLEDRION_SAVE_OK, $baseurl . '?op=property', 2);
         break;
 }
-?>

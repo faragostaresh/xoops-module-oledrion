@@ -17,7 +17,7 @@
  * @author      Hossein Azizabadi (AKA Voltan)
  * @version     $Id$
  */
- 
+
 $productid = isset($_GET['product_id']) ? intval($_GET['product_id']) : 0;
 $com_replytitle = '';
 if ($product_id > 0) {
@@ -28,4 +28,3 @@ if ($product_id > 0) {
         $com_replytitle = $product->getVar('product_title');
     }
 }
-?>

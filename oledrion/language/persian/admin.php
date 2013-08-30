@@ -305,4 +305,3 @@ define('_AM_OLEDRION_IMPORT_DATA', 'Import test information');
 define('_AM_OLEDRION_IMPORT_DATA_TITLE', 'Import');
 define('_AM_OLEDRION_IMPORT_DATA_TEXT', 'If you want import test information click on : <b>%s</b>');
 define('_AM_OLEDRION_IMPORT_CONF', 'Do you want import test information?');
-?>

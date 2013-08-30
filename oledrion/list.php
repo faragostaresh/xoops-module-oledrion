@@ -86,4 +86,3 @@ $xoopsTpl->assign('breadcrumb', oledrion_utils::breadcrumb($breadcrumb));
 $title = $list->getVar('list_title') . ' - ' . oledrion_utils::getModuleName();
 oledrion_utils::setMetas($title, $title, oledrion_utils::createMetaKeywords($list->getVar('list_description', 'n') . ' ' . $list->getVar('list_title', 'n')));
 require_once XOOPS_ROOT_PATH . '/footer.php';
-?>

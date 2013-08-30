@@ -521,7 +521,7 @@ switch ($action) {
             }
             $sform->addElement($property5select, false);
         }
-    
+
         if (oledrion_utils::getModuleOption('product_property6')) {
             $property6select = new XoopsFormSelect(oledrion_utils::getModuleOption('product_property6_title'), 'product_property6', $item->getVar('product_property6'));
             $property6Array = explode('|', oledrion_utils::getModuleOption('product_property6'));
@@ -530,7 +530,7 @@ switch ($action) {
             }
             $sform->addElement($property6select, false);
         }
-    
+
         if (oledrion_utils::getModuleOption('product_property7')) {
             $property7select = new XoopsFormSelect(oledrion_utils::getModuleOption('product_property7_title'), 'product_property7', $item->getVar('product_property7'));
             $property7Array = explode('|', oledrion_utils::getModuleOption('product_property7'));
@@ -539,7 +539,7 @@ switch ($action) {
             }
             $sform->addElement($property7select, false);
         }
-    
+
         if (oledrion_utils::getModuleOption('product_property8')) {
             $property8select = new XoopsFormSelect(oledrion_utils::getModuleOption('product_property8_title'), 'product_property8', $item->getVar('product_property8'));
             $property8Array = explode('|', oledrion_utils::getModuleOption('product_property8'));
@@ -548,7 +548,7 @@ switch ($action) {
             }
             $sform->addElement($property8select, false);
         }
-    
+
         if (oledrion_utils::getModuleOption('product_property9')) {
             $property9select = new XoopsFormSelect(oledrion_utils::getModuleOption('product_property9_title'), 'product_property9', $item->getVar('product_property9'));
             $property9Array = explode('|', oledrion_utils::getModuleOption('product_property9'));
@@ -557,7 +557,7 @@ switch ($action) {
             }
             $sform->addElement($property9select, false);
         }
-    
+
         if (oledrion_utils::getModuleOption('product_property10')) {
             $property10select = new XoopsFormSelect(oledrion_utils::getModuleOption('product_property10_title'), 'product_property10', $item->getVar('product_property10'));
             $property10Array = explode('|', oledrion_utils::getModuleOption('product_property10'));
@@ -801,4 +801,3 @@ switch ($action) {
         }
         break;
 }
-?>

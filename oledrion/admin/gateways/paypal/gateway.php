@@ -293,5 +293,3 @@ class oledrion_paypal extends oledrion_gateway
         }
     }
 }
-
-?>

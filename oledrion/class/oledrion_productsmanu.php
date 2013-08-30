@@ -104,5 +104,3 @@ class OledrionOledrion_productsmanuHandler extends Oledrion_XoopsPersistableObje
         return $this->deleteAll(new criteria('pm_product_id', $pm_product_id, '='));
     }
 }
-
-?>

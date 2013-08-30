@@ -107,7 +107,7 @@ class OledrionOledrion_paymentHandler extends Oledrion_XoopsPersistableObjectHan
         $categories = $this->getObjects($critere);
         return $categories;
     }
-    
+
     public function getThisDeliveryPayment($delivery_id)
     {
         global $h_oledrion_delivery_payment;
@@ -117,7 +117,7 @@ class OledrionOledrion_paymentHandler extends Oledrion_XoopsPersistableObjectHan
         foreach($delivery_payment as $payment) {
 	        	$id[] = $payment['dp_payment'];
         }
-        
+
         $critere = new CriteriaCompo ();
         $critere->add(new Criteria('payment_id', '(' . implode( ',', $id ) . ')', 'IN'));
         $critere->add(new Criteria('payment_online', 1));
@@ -132,5 +132,3 @@ class OledrionOledrion_paymentHandler extends Oledrion_XoopsPersistableObjectHan
         return $ret;
     }
 }
-
-?>

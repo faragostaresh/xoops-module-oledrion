@@ -39,4 +39,4 @@ oledrion_utils::setCSS();
 oledrion_utils::setLocalCSS($xoopsConfig['language']);
 oledrion_utils::setMetas(_OLEDRION_CGV . ' ' . oledrion_utils::getModuleName(), _OLEDRION_CGV . ' ' . oledrion_utils::getModuleName());
 require_once(XOOPS_ROOT_PATH . '/footer.php');
-?>
+

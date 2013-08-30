@@ -204,5 +204,3 @@ class oledrion_shelf_parameters
         return $this;
     }
 }
-
-?>

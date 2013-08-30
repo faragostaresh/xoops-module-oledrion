@@ -67,6 +67,3 @@ class RssfitOledrion
         return $ret;
     }
 }
-
-
-?>

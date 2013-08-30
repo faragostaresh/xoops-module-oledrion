@@ -300,5 +300,3 @@ class oledrion_plugins
         $_SESSION[self::PLUGIN_UNPLUG_SESSION_NAME] = $unplug;
     }
 }
-
-?>

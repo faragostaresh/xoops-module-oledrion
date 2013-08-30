@@ -133,7 +133,7 @@ class oledrion_pec24 extends oledrion_gateway
         if ($authority) {
             $save_ok = 1;
         }
-        // doing 
+        // doing
         if (($status == 0) && $save_ok) {
             if ((!$soapclient) || ($err = $soapclient->getError())) {
                 // this is unsucccessfull connection
@@ -215,5 +215,3 @@ class oledrion_pec24 extends oledrion_gateway
         return $user_log;
     }
 }
-
-?>

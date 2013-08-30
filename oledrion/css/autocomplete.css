@@ -4,10 +4,10 @@
 
 #results {
     border: 1px solid #BFBFBF;
-    border-bottom: 0px;
+    border-bottom: 0;
     font-size: 12px;
-    font-family: arial;
-    padding: 0px;
+    font-family: arial,sans-serif;
+    padding: 0;
     display: none;
 }
 

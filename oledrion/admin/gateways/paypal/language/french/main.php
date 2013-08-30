@@ -22,4 +22,3 @@ define('_OLEDRION_PAYPAL_EMAIL', "Adresse Email Paypal");
 define('_OLEDRION_PAYPAL_EMAILDSC', "Adresse Ã  utiliser pour les paiements et les notifications de commandes");
 define('_OLEDRION_PAYPAL_TEST', "Utilser Paypal en mode test (sandbox) ?");
 define('_OLEDRION_PAYPAL_MONEY_P', "Code de la monnaie pour Paypal");
-?>

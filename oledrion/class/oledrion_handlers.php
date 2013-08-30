@@ -86,5 +86,3 @@ class oledrion_handler
         return self::$instance;
     }
 }
-
-?>

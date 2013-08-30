@@ -240,4 +240,3 @@ if (is_object($category) && $cat_cid > 0) { // On est sur une catégorie défini
 oledrion_utils::setCSS();
 oledrion_utils::setLocalCSS($xoopsConfig['language']);
 require_once(XOOPS_ROOT_PATH . '/footer.php');
-?>

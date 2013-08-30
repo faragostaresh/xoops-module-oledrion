@@ -125,5 +125,3 @@ class OledrionOledrion_products_listHandler extends Oledrion_XoopsPersistableObj
         }
     }
 }
-
-?>

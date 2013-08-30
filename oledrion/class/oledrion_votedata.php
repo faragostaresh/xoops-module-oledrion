@@ -166,5 +166,3 @@ class OledrionOledrion_votedataHandler extends Oledrion_XoopsPersistableObjectHa
         return $this->insert($product);
     }
 }
-
-?>

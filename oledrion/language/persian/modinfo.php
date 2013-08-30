@@ -284,4 +284,3 @@ define('_MI_OLEDRION_BREAK_CHECKOUT', 'Checkout');
 define('_MI_OLEDRION_BREAK_VIEW', 'View');
 define('_MI_OLEDRION_BREAK_MONEY', 'Money');
 define('_MI_OLEDRION_BREAK_META', 'Meta');
-?>

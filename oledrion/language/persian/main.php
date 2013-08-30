@@ -314,4 +314,3 @@ define('_OLEDRION_AMOUNT_PRICE', 'قیمت مجموع محصولات');
 define('_OLEDRION_STEP_1', '۱- به روز رسانی سبد خرید');
 define('_OLEDRION_STEP_2', '۲- ورود اطلاعات');
 define('_OLEDRION_STEP_3', '۳- تایید نهایی');
-?>

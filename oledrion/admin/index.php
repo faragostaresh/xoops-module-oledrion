@@ -79,4 +79,3 @@ if (file_exists($controler)) {
 
 //xoops_cp_footer();
 include_once 'admin_footer.php';
-?>

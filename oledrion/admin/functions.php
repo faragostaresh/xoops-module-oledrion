@@ -95,5 +95,3 @@ function show_footer()
 {
 //	echo "<br /><br /><div align='center'><a href='http://www.herve-thouzard.com/' target='_blank'><img src='../images/instantzero.gif'></a></div>";
 }
-
-?>

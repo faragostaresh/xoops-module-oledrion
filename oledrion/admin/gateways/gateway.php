@@ -167,5 +167,3 @@ abstract class oledrion_gateway
         }
     }
 }
-
-?>

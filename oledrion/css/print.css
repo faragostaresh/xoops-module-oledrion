@@ -27,8 +27,8 @@ html, body {
 
 #xo-print {
     width: 730px;
-    border: 0px solid #222;
-    padding: 0px;
+    border: 0 solid #222;
+    padding: 0;
     margin: 0 auto;
 }
 

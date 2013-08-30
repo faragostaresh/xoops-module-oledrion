@@ -183,5 +183,3 @@ class OledrionOledrion_filesHandler extends Oledrion_XoopsPersistableObjectHandl
         }
     }
 }
-
-?>

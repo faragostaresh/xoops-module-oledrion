@@ -430,5 +430,3 @@ class OledrionOledrion_listsHandler extends Oledrion_XoopsPersistableObjectHandl
         //}
     }
 }
-
-?>

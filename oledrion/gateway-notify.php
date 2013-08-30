@@ -38,4 +38,3 @@ if (is_object($temporaryGateway)) {
     unset($temporaryGateway);
     echo $user_log;
 }
-?>

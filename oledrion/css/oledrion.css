@@ -12,7 +12,7 @@ img, .box_blue-clip_01, .box_blue-clip_03, .box_blue-clip_06, .box_blue-clip_08,
     background-color: #FFF;
     padding: 3px;
     text-align: center;
-    font-family: "Trebuchet MS";
+    font-family: "Trebuchet MS",sans-serif;
     font-size: 160%;
     font-weight: bold;
     width: 10px;
@@ -55,7 +55,7 @@ img, .box_blue-clip_01, .box_blue-clip_03, .box_blue-clip_06, .box_blue-clip_08,
 }
 
 .tableWidget td {
-    margin: 0px;
+    margin: 0;
     padding: 2px;
     border-bottom: 1px solid #EAE9E1; /* Border bottom of table data cells */
 }
@@ -65,7 +65,7 @@ img, .box_blue-clip_01, .box_blue-clip_03, .box_blue-clip_06, .box_blue-clip_08,
 }
 
 .tableWidget {
-    font-family: arial;
+    font-family: arial,sans-serif;
     font-size: 12px;
     width: 400px;
 }
@@ -92,8 +92,8 @@ html>body div.widget_tableDiv {
 
 .tableWidget thead tr {
     position: relative;
-    top: 0px;
-    bottom: 0px;
+    top: 0;
+    bottom: 0;
 }
 
 .tableWidget .scrollingContent {
@@ -106,61 +106,45 @@ html>body div.widget_tableDiv {
 /* New styles */
 
 .box_blue-clip_01 {
-    background-image: url('../images/welcome/welcome_01.png');
-    background-repeat: no-repeat;
-    background-position: left top;
+    background: url('../images/welcome/welcome_01.png') no-repeat left top;
     height: 52px;
     width: 44px;
 }
 
 .box_blue-clip_02 {
-    background-image: url('../images/welcome/welcome_02.gif');
-    background-repeat: repeat-x;
-    background-position: left top;
+    background: url('../images/welcome/welcome_02.gif') repeat-x left top;
     height: 19px;
 }
 
 .box_blue-clip_03 {
-    background-image: url('../images/welcome/welcome_03.png');
-    background-repeat: no-repeat;
-    background-position: right top;
+    background: url('../images/welcome/welcome_03.png') no-repeat right top;
     height: 52px;
     width: 33px;
 }
 
 .box_blue-clip_04 {
-    background-image: url('../images/welcome/welcome_04.gif');
-    background-repeat: repeat-y;
-    background-position: left top;
+    background: url('../images/welcome/welcome_04.gif') repeat-y left top;
     width: 44px;
 }
 
 .box_blue-clip_05 {
-    background-image: url('../images/welcome/welcome_05.gif');
-    background-repeat: repeat-y;
-    background-position: right top;
+    background: url('../images/welcome/welcome_05.gif') repeat-y right top;
     width: 33px;
 }
 
 .box_blue-clip_06 {
-    background-image: url('../images/welcome/welcome_06.png');
-    background-repeat: no-repeat;
-    background-position: left bottom;
+    background: url('../images/welcome/welcome_06.png') no-repeat left bottom;
     height: 24px;
     width: 44px;
 }
 
 .box_blue-clip_07 {
-    background-image: url('../images/welcome/welcome_07.gif');
-    background-repeat: repeat-x;
-    background-position: left bottom;
+    background: url('../images/welcome/welcome_07.gif') repeat-x left bottom;
     height: 17px;
 }
 
 .box_blue-clip_08 {
-    background-image: url('../images/welcome/welcome_08.png');
-    background-repeat: no-repeat;
-    background-position: right bottom;
+    background: url('../images/welcome/welcome_08.png') no-repeat right bottom;
     height: 24px;
     width: 33px;
 }
@@ -198,12 +182,12 @@ html>body div.widget_tableDiv {
 }
 
 .oledrion_productssummary {
-    padding: 0px 10px 10px 10px;
+    padding: 0 10px 10px 10px;
 }
 
 .oledrion_productssummary_view-product h3, .oledrion_description_view-product h3, .oledrion_otherinf h3 {
     color: #000000;
-    margin-top: 0px;
+    margin-top: 0;
 }
 
 .oledrion_producttitle {
@@ -224,7 +208,7 @@ html>body div.widget_tableDiv {
 }
 
 .oledrion_productauthor {
-    padding: 0px 10px 10px 10px;
+    padding: 0 10px 10px 10px;
     font-weight: bold;
     font-size: 90%;
 }
@@ -244,7 +228,7 @@ html>body div.widget_tableDiv {
 }
 
 .oledrion_productprice {
-    padding: 0px 10px 10px 10px;
+    padding: 0 10px 10px 10px;
 }
 
 .oledrion_productprice a {
@@ -259,7 +243,7 @@ html>body div.widget_tableDiv {
     background-image: url(../images/page-curl/page-curl_01-1.gif);
     background-color: #fcfcfc;
     border: 1px solid #E8E8E8;
-    padding: 0px 14px 10px 10px;
+    padding: 0 14px 10px 10px;
 }
 
 #oledrion_publicite-category {
@@ -274,69 +258,57 @@ html>body div.widget_tableDiv {
 }
 
 .oledrion_description {
-    padding: 0px 15px 10px 10px;
+    padding: 0 15px 10px 10px;
 }
 
 .oledrion_read-more {
     text-align: right;
-    padding: 0px 15px 10px 10px;
+    padding: 0 15px 10px 10px;
 }
 
 .oledrion_catdescription h2, .featured-blocks-titles h2 {
-    margin-top: 0px;
+    margin-top: 0;
 }
 
 /* View product*/
 
 .view-product-shad1_01 {
-    background-image: url(../images/view-product/view-product-shad1_01.png);
-    background-repeat: no-repeat;
-    background-position: right bottom;
+    background: url(../images/view-product/view-product-shad1_01.png) no-repeat right bottom;
     height: 4px;
     width: 4px;
 }
 
 .view-product-shad1_02 {
-    background-image: url(../images/view-product/view-product-shad1_02.png);
-    background-repeat: no-repeat;
-    background-position: left bottom;
+    background: url(../images/view-product/view-product-shad1_02.png) no-repeat left bottom;
     height: 4px;
 }
 
 .view-product-shad1_03 {
-    background-image: url(../images/view-product/view-product-shad1_03.png);
-    background-repeat: no-repeat;
-    background-position: right top;
+    background: url(../images/view-product/view-product-shad1_03.png) no-repeat right top;
     width: 4px;
 }
 
 .view-product-shad2_01 {
-    background-image: url(../images/view-product/view-product-shad2_01.png);
-    background-repeat: no-repeat;
-    background-position: left top;
+    background: url(../images/view-product/view-product-shad2_01.png) no-repeat left top;
     height: 4px;
     width: 4px;
 }
 
 .view-product-shad2_02 {
-    background-image: url(../images/view-product/view-product-shad2_02.png);
-    background-repeat: no-repeat;
-    background-position: right top;
+    background: url(../images/view-product/view-product-shad2_02.png) no-repeat right top;
     height: 4px;
 }
 
 .view-product-shad2_03 {
-    background-image: url(../images/view-product/view-product-shad2_03.png);
-    background-position: left bottom;
     width: 4px;
-    background-repeat: no-repeat;
+    background: url(../images/view-product/view-product-shad2_03.png) no-repeat left bottom;
 }
 
 /* end view product */
 
 .oledrion_productdescription {
     background-color: #FFFFFF;
-    padding: 0px 10px 10px 10px;
+    padding: 0 10px 10px 10px;
     color: #575757;
 }
 
@@ -349,15 +321,15 @@ html>body div.widget_tableDiv {
     background-color: #FCF7DA;
     border: 1px solid #F9EEB5;
     padding: 5px;
-    margin: 10px 0px 10px 0px;
+    margin: 10px 0 10px 0;
 }
 
 .oledrion_view-product_price {
-    padding: 0px 0px 4px 0px;
+    padding: 0 0 4px 0;
 }
 
 .oledrion_view-product_shipping-price {
-    padding: 4px 0px 0px 0px;
+    padding: 4px 0 0 0;
 }
 
 .oledrion_productdate {
@@ -424,22 +396,10 @@ html>body div.widget_tableDiv {
 }
 
 #oledrion_caddy td {
-    background-color: #fdfdfd;
-    background-image: url(../images/bg-degrad-soft-grey.gif);
-    background-repeat: repeat-x;
-    background-position: left top;
-    border-top-width: 1px;
-    border-right-width: 1px;
-    border-bottom-width: 1px;
-    border-left-width: 1px;
-    border-top-style: solid;
-    border-right-style: solid;
-    border-bottom-style: solid;
-    border-left-style: solid;
+    background: #fdfdfd url(../images/bg-degrad-soft-grey.gif) repeat-x left top;
+    border: 1px solid #ececec;
     border-top-color: #F2F2F2;
     border-right-color: #FFFFFF;
-    border-bottom-color: #ececec;
-    border-left-color: #ececec;
     padding: 3px;
     color: #000000;
 }
@@ -478,7 +438,7 @@ border-left-color: #b87c27;
     background-color: #FCF7DA;
     border: 1px solid #F9EEB5;
     padding: 5px;
-    margin: 10px 0px 10px 0px;
+    margin: 10px 0 10px 0;
     font-weight: normal;
     color: #4B4B4B;
     font-size: 11px;
@@ -521,7 +481,7 @@ background-position: left top;
     background-color: #bd420e;
     height: 2px;
     margin-top: 1px;
-    padding: 0px;
+    padding: 0;
     border-top-width: 1px;
     border-top-style: solid;
     border-top-color: #FFF;
@@ -544,7 +504,7 @@ background-position: left top;
 }
 
 .tablefix {
-    border-spacing: 0px !important;
+    border-spacing: 0 !important;
 }
 
 .oledrion_htmlform {
@@ -589,5 +549,5 @@ background-position: left top;
 }
 
 .oledrion_step_text {
-	
+
 }

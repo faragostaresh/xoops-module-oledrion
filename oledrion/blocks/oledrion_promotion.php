@@ -82,5 +82,3 @@ function b_oledrion_promotion_show_duplicatable($options)
     $tpl->assign('block', $block);
     $tpl->display('db:oledrion_block_promotion.html');
 }
-
-?>

@@ -75,5 +75,3 @@ function b_sitemap_oledrion()
     }
     return $sitemap;
 }
-
-?>

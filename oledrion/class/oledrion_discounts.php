@@ -681,4 +681,3 @@ class OledrionOledrion_discountsHandler extends Oledrion_XoopsPersistableObjectH
     }
 }
 
-?>

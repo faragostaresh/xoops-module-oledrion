@@ -67,5 +67,3 @@ function b_oledrion_cart_edit($options)
     $form .= '</table>';
     return $form;
 }
-
-?>

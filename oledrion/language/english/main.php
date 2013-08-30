@@ -314,4 +314,3 @@ define('_OLEDRION_AMOUNT_PRICE', 'Product price');
 define('_OLEDRION_STEP_1', '1- Add to cart');
 define('_OLEDRION_STEP_2', '2- Input personal information');
 define('_OLEDRION_STEP_3', '3- Confirm information');
-?>

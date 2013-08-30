@@ -153,4 +153,3 @@ switch ($action) {
         }
         break;
 }
-?>

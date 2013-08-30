@@ -109,4 +109,3 @@ class oledrion_parameters extends ArrayObject
     }
 }
 
-?>

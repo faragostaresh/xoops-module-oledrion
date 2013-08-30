@@ -128,4 +128,3 @@ switch ($action) {
         include_once OLEDRION_ADMIN_PATH . 'admin_footer.php';
         break;
 }
-?>

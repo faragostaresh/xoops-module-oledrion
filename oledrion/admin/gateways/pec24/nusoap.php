@@ -657,8 +657,6 @@ function usleepWindows($usec)
     } while ($timePassed < $usec);
 }
 
-?><?php
-
 
 
 /**
@@ -719,9 +717,6 @@ class soap_fault extends nusoap_base
         return $return_msg;
     }
 }
-
-
-?><?php
 
 
 
@@ -1498,9 +1493,6 @@ class XMLSchema extends nusoap_base
 }
 
 
-?><?php
-
-
 
 /**
  * for creating serializable abstractions of native PHP types
@@ -1725,7 +1717,7 @@ class soap_transport_http extends nusoap_base
             // recent versions of cURL turn on peer/host checking by default,
             // while PHP binaries are not compiled with a default location for the
             // CA cert bundle, so disable peer/host checking.
-//curl_setopt($this->ch, CURLOPT_CAINFO, 'f:\php-4.3.2-win32\extensions\curl-ca-bundle.crt');		
+//curl_setopt($this->ch, CURLOPT_CAINFO, 'f:\php-4.3.2-win32\extensions\curl-ca-bundle.crt');
 
             //addedd by mirzaei
 
@@ -2101,7 +2093,7 @@ class soap_transport_http extends nusoap_base
 
             // close filepointer
             if (
-                //(isset($this->incoming_headers['connection']) && $this->incoming_headers['connection'] == 'close') || 
+                //(isset($this->incoming_headers['connection']) && $this->incoming_headers['connection'] == 'close') ||
                 (!$this->persistentConnection) || feof($this->fp)) {
                 fclose($this->fp);
                 $this->fp = false;
@@ -2913,20 +2905,20 @@ class soap_server extends nusoap_base
 		<html><head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" /><title>NuSOAP: ' . $this->wsdl->serviceName . '</title>
 		<style type="text/css">
-		    body    { font-family: arial; color: #000000; background-color: #ffffff; margin: 0px 0px 0px 0px; }
-		    p       { font-family: arial; color: #000000; margin-top: 0px; margin-bottom: 12px; }
+		    body    { font-family: arial; color: #000000; background-color: #ffffff; margin: 0 0 0 0; }
+		    p       { font-family: arial; color: #000000; margin-top: 0; margin-bottom: 12px; }
 		    pre { background-color: silver; padding: 5px; font-family: Courier New; font-size: x-small; color: #000000;}
 		    ul      { margin-top: 10px; margin-left: 20px; }
 		    li      { list-style-type: none; margin-top: 10px; color: #000000; }
 		    .content{
-			margin-left: 0px; padding-bottom: 2em; }
+			margin-left: 0; padding-bottom: 2em; }
 		    .nav {
 			padding-top: 10px; padding-bottom: 10px; padding-left: 15px; font-size: .70em;
-			margin-top: 10px; margin-left: 0px; color: #000000;
+			margin-top: 10px; margin-left: 0; color: #000000;
 			background-color: #ccccff; width: 20%; margin-left: 20px; margin-top: 20px; }
 		    .title {
 			font-family: arial; font-size: 26px; color: #ffffff;
-			background-color: #999999; width: 105%; margin-left: 0px;
+			background-color: #999999; width: 105%; margin-left: 0;
 			padding-top: 10px; padding-bottom: 10px; padding-left: 15px;}
 		    .hidden {
 			position: absolute; visibility: hidden; z-index: 200; left: 250px; top: 100px;
@@ -3408,7 +3400,7 @@ class wsdl extends nusoap_base
                             $this->XMLSchemaVersion = $v;
                             $this->namespaces['xsi'] = $v . '-instance';
                         }
-                    } //  
+                    } //
                     // expand each attribute
                     $k = strpos($k, ':') ? $this->expandQname($k) : $k;
                     if ($k != 'location' && $k != 'soapAction' && $k != 'namespace') {
@@ -5157,7 +5149,7 @@ class soapclient extends nusoap_base
                 $this->wsdl->namespaces['ns1'] = $namespace;
             }
             // serialize envelope
-            // note: 
+            // note:
             $payload = '';
             if (is_array($params)) {
                 foreach ($params as $k => $v) {

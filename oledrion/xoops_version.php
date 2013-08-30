@@ -30,9 +30,9 @@ $modversion['credits'] = "Don Curioso, Voltan, Bezoops, Mariane Antoun, Defkon1,
 $modversion['help'] = 'page=help';
 $modversion['license'] = 'GNU GPL 2.0';
 $modversion['license_url'] = "www.gnu.org/licenses/gpl-2.0.html/";
-$modversion['official'] = 1;
+$modversion['official'] = 0;
 $modversion['image'] = 'images/oledrion_logo.png';
-$modversion['dirname'] = 'oledrion';
+$modversion['dirname'] = basename(dirname(__FILE__));
 // Modules scripts
 $modversion['onInstall'] = 'include/functions_install.php';
 $modversion['onUpdate'] = 'include/functions_update.php';

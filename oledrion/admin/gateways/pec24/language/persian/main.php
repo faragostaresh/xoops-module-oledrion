@@ -20,4 +20,3 @@
 define("_OLEDRION_SAMAN_PARAMETERS", "پارامترها");
 define('_OLEDRION_SAMAN_MID', "کد فروشنده");
 define('_OLEDRION_SAMAN_MIDDSC', "ترکيب Terminal ID و Acceptor ID که توسط بانک به فروشنده اختصاص مي‌يابد.");
-?>

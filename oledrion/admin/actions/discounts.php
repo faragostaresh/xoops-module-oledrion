@@ -281,7 +281,7 @@ switch ($action) {
         } else {
             oledrion_utils::redirect(_AM_OLEDRION_NOT_FOUND, $baseurl . '?op=' . $opRedirect, 5);
         }
-
+    break;
 
     // ****************************************************************************************************************
     case 'saveedit': // Enregistrement d'une réduction après modification ou ajout
@@ -339,4 +339,3 @@ switch ($action) {
         }
         break;
 }
-?>

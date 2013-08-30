@@ -140,31 +140,31 @@ if ((isset($_POST['op']) && $_POST['op'] == 'go') || isset($_GET['start'])) { //
                 $sql .= ' AND (b.product_property5 = "' . $_POST['product_property5'] . '")';
             }
         }
-    
+
         if (isset($_POST['product_property6'])) {
             if ($_POST['product_property6']) {
                 $sql .= ' AND (b.product_property6 = "' . $_POST['product_property6'] . '")';
             }
         }
-    
+
         if (isset($_POST['product_property7'])) {
             if ($_POST['product_property7']) {
                 $sql .= ' AND (b.product_property7 = "' . $_POST['product_property7'] . '")';
             }
         }
-    
+
         if (isset($_POST['product_property8'])) {
             if ($_POST['product_property8']) {
                 $sql .= ' AND (b.product_property8 = "' . $_POST['product_property8'] . '")';
             }
         }
-    
+
         if (isset($_POST['product_property9'])) {
             if ($_POST['product_property9']) {
                 $sql .= ' AND (b.product_property9 = "' . $_POST['product_property9'] . '")';
             }
         }
-    
+
         if (isset($_POST['product_property10'])) {
             if ($_POST['product_property10']) {
                 $sql .= ' AND (b.product_property10 = "' . $_POST['product_property10'] . '")';
@@ -297,4 +297,3 @@ oledrion_utils::setCSS();
 oledrion_utils::setLocalCSS($xoopsConfig['language']);
 
 require_once XOOPS_ROOT_PATH . '/footer.php';
-?>

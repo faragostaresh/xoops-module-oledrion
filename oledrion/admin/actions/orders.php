@@ -271,4 +271,3 @@ switch ($action) {
         xoops_cp_footer();
         break;
 }
-?>

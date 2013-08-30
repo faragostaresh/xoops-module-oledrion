@@ -79,7 +79,7 @@ class OledrionOledrion_locationHandler extends Oledrion_XoopsPersistableObjectHa
         $pid = $this->getObjects($critere);
         return $pid;
     }
-    
+
     public function getLocation($id)
     {
         $critere = new CriteriaCompo();
@@ -90,7 +90,7 @@ class OledrionOledrion_locationHandler extends Oledrion_XoopsPersistableObjectHa
         $location = $this->getObjects($critere);
         return $location;
     }
-    
+
     public function haveChild($id)
     {
         $critere = new CriteriaCompo();
@@ -98,9 +98,8 @@ class OledrionOledrion_locationHandler extends Oledrion_XoopsPersistableObjectHa
         $critere->add(new Criteria('location_type', 'location'));
         $critere->add(new Criteria('location_pid', $id));
         $location = $this->getCount($critere);
-        
+
         return $location;
-    }	
+    }
 }
 
-?>

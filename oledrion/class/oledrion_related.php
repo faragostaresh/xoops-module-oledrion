@@ -68,5 +68,3 @@ class OledrionOledrion_relatedHandler extends Oledrion_XoopsPersistableObjectHan
         return $ret;
     }
 }
-
-?>

@@ -93,11 +93,11 @@ switch ($action) {
         foreach ($payments as $oneitem) {
             $payments_d[$oneitem->getVar('payment_id')] = xoops_trim($oneitem->getVar('payment_title'));
         }
-        
+
         if (empty($payments_d)) {
-            oledrion_utils::redirect(_AM_OLEDRION_DELIVERY_PAYMENTADD, $baseurl, 5);	
+            oledrion_utils::redirect(_AM_OLEDRION_DELIVERY_PAYMENTADD, $baseurl, 5);
         }
-        
+
         if ($edit) {
             $criteria = new CriteriaCompo();
             $criteria->add(new Criteria('dp_delivery', $item->getVar('delivery_id'), '='));
@@ -110,7 +110,7 @@ switch ($action) {
         $paymentSelect->addOptionArray($payments_d);
         $paymentSelect->setDescription(_AM_OLEDRION_SELECT_HLP);
         $sform->addElement($paymentSelect, true);
-        
+
         if ($action == 'edit' && $item->pictureExists()) {
             $pictureTray = new XoopsFormElementTray(_AM_OLEDRION_CURRENT_PICTURE, '<br />');
             $pictureTray->addElement(new XoopsFormLabel('', "<img src='" . $item->getPictureUrl() . "' alt='' border='0' />"));
@@ -237,4 +237,3 @@ switch ($action) {
         }
         break;
 }
-?>

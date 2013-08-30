@@ -74,5 +74,3 @@ function b_oledrion_recent_lists_duplicatable($options)
     $tpl->assign('block', $block);
     $tpl->display('db:oledrion_block_recent_lists.html');
 }
-
-?>

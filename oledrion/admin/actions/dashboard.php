@@ -179,4 +179,3 @@ switch ($action) {
         }
         break;
 }
-?>

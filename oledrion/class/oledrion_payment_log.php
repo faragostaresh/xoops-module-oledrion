@@ -46,5 +46,3 @@ class OledrionOledrion_payment_logHandler extends Oledrion_XoopsPersistableObjec
         parent::__construct($db, 'oledrion_payment_log', 'oledrion_payment_log', 'log_id');
     }
 }
-
-?>

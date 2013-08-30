@@ -142,4 +142,3 @@ class OledrionOledrion_gateways_optionsHandler extends Oledrion_XoopsPersistable
     }
 }
 
-?>

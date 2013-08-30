@@ -39,4 +39,3 @@ define('_MB_OLEDRION_LISTS_TYPE', 'Lists of the type');
 define('_MB_OLEDRION_SEE_ALL_LISTS', 'See all lists');
 define('_MB_OLEDRION_USE_STYLE_JS', 'Use module style/js ?');
 define('_MB_OLEDRION_CART', 'Shopping Cart');
-?>
