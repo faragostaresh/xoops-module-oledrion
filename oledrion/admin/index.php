@@ -59,16 +59,16 @@ define("OLEDRION_ADMIN", true);
 
 $op = 'dashboard';
 if (isset($_POST['op'])) {
-    $op = $_POST['op'];
+    $op = filter_input(INPUT_POST, 'op', FILTER_SANITIZE_STRING);
 } elseif (isset($_GET['op'])) {
-    $op = $_GET['op'];
+    $op = filter_input(INPUT_GET, 'op', FILTER_SANITIZE_STRING);
 }
 
 $action = 'default';
 if (isset($_POST['action'])) {
-    $action = $_POST['action'];
+    $action = filter_input(INPUT_POST, 'action', FILTER_SANITIZE_STRING);
 } elseif (isset($_GET['action'])) {
-    $action = $_GET['action'];
+    $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING);
 }
 
 $op = str_replace('..', '', $op);
