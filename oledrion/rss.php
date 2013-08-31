@@ -91,4 +91,3 @@ if (!$tpl->is_cached('db:oledrion_rss.html', $cat_cid)) {
     }
 }
 $tpl->display('db:oledrion_rss.html', $cat_cid);
-?>

@@ -119,4 +119,3 @@ $mod_pref = array(
     'restrict_orders' => oledrion_utils::getModuleOption('restrict_orders'),
     'isAdmin' => oledrion_utils::isAdmin()
 );
-?>

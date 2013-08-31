@@ -224,4 +224,3 @@ class OledrionOledrion_caddy_attributesHandler extends Oledrion_XoopsPersistable
     }
 }
 
-?>

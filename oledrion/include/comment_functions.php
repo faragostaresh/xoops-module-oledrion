@@ -39,4 +39,3 @@ function oledrion_com_approve(&$comment)
     // notification mail here
 }
 
-?>

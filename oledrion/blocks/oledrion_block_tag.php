@@ -42,4 +42,3 @@ function oledrion_tag_block_top_edit($options)
     return tag_block_top_edit($options);
 }
 
-?>

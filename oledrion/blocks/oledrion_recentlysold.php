@@ -76,5 +76,3 @@ function b_oledrion_recentlysold_duplicatable($options)
     $tpl->assign('block', $block);
     $tpl->display('db:oledrion_block_recentlysold.html');
 }
-
-?>

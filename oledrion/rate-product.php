@@ -121,4 +121,3 @@ oledrion_utils::setLocalCSS($xoopsConfig['language']);
 */
 
 require_once XOOPS_ROOT_PATH . '/footer.php';
-?>

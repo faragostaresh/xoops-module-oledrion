@@ -75,5 +75,3 @@ function b_oledrion_random_lists_duplicatable($options)
     $tpl->assign('block', $block);
     $tpl->display('db:oledrion_block_random_lists.html');
 }
-
-?>

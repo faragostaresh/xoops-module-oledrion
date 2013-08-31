@@ -554,4 +554,3 @@ switch ($action) {
         exit;
         break;
 }
-?>

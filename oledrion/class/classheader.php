@@ -29,4 +29,3 @@ include_once XOOPS_ROOT_PATH . '/kernel/object.php';
 if (!class_exists('Oledrion_XoopsPersistableObjectHandler')) {
     include_once XOOPS_ROOT_PATH . '/modules/oledrion/class/PersistableObjectHandler.php';
 }
-?>

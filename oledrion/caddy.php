@@ -225,4 +225,3 @@ $xoopsTpl->assign('breadcrumb', oledrion_utils::breadcrumb(array(OLEDRION_URL . 
 $title = _MI_OLEDRION_SMNAME1 . ' - ' . oledrion_utils::getModuleName();
 oledrion_utils::setMetas($title, $title);
 require_once XOOPS_ROOT_PATH . '/footer.php';
-?>

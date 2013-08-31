@@ -219,7 +219,7 @@
 			cells[no].className = 'tableWidget_headerCell';
 			cells[no].onselectstart = cancelTableWidgetEvent;
 			if(no==cells.length-1){
-				cells[no].style.borderRight = '0px';
+				cells[no].style.borderRight = '0';
 			}
 			if(sortArray[no]){
 				cells[no].onmouseover = highlightTableHeader;

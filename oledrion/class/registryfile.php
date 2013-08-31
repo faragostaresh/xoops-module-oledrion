@@ -63,7 +63,7 @@ class oledrion_registryfile
         } else {
             $fw = OLEDRION_TEXT_PATH . $fichier;
         }
-        
+
         if (file_exists($fw)) {
             return file_get_contents($fw);
         } else {
@@ -88,5 +88,3 @@ class oledrion_registryfile
         return true;
     }
 }
-
-?>

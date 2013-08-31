@@ -79,5 +79,3 @@ function b_oledrion_bestsales_duplicatable($options)
     $tpl->assign('block', $block);
     $tpl->display('db:oledrion_block_bestsales.html');
 }
-
-?>

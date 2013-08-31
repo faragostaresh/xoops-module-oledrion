@@ -96,4 +96,3 @@ switch ($action) {
 		oledrion_utils::redirect(_AM_OLEDRION_SAVE_OK, $baseurl, 2);
 		break;
 }
-?>    

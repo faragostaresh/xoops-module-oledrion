@@ -24,18 +24,18 @@
 
 // Location of attached files (url and physical path on your disk)
 if (!defined("OLEDRION_ATTACHED_FILES_URL")) {
-    
-    // Define oledrion dirname 
+
+    // Define oledrion dirname
     define("OLEDRION_DIRNAME", 'oledrion');
-    
+
     // Define oledrion URL and PATH
     define("OLEDRION_URL", XOOPS_URL . '/modules/' . OLEDRION_DIRNAME . '/');
     define("OLEDRION_PATH", XOOPS_ROOT_PATH . '/modules/' . OLEDRION_DIRNAME . DIRECTORY_SEPARATOR);
 
     // Set class path
     define("OLEDRION_CLASS_PATH", OLEDRION_PATH . 'class/');
-     
-    // Set image , js and css url 
+
+    // Set image , js and css url
     define("OLEDRION_IMAGES_URL", OLEDRION_URL . 'images/');
     define("OLEDRION_JS_URL", OLEDRION_URL . 'js/');
     define("OLEDRION_CSS_URL", OLEDRION_URL . 'css/');
@@ -43,20 +43,20 @@ if (!defined("OLEDRION_ATTACHED_FILES_URL")) {
     // Set admin URL and PATH
     define("OLEDRION_ADMIN_URL", OLEDRION_URL . 'admin/');
     define("OLEDRION_ADMIN_PATH", OLEDRION_PATH . 'admin' . DIRECTORY_SEPARATOR);
-    
+
     // Set gateways path
     define("OLEDRION_GATEWAY_PATH", OLEDRION_ADMIN_PATH . 'gateways' . DIRECTORY_SEPARATOR);
-    
+
     // Set plugin URL and PATH
     define("OLEDRION_PLUGINS_PATH", OLEDRION_PATH . 'plugins/');
     define("OLEDRION_PLUGINS_URL", OLEDRION_URL . 'plugins/');
-    
+
     // Set text path
     define("OLEDRION_TEXT_PATH", XOOPS_UPLOAD_PATH . DIRECTORY_SEPARATOR . OLEDRION_DIRNAME . DIRECTORY_SEPARATOR . 'text' . DIRECTORY_SEPARATOR);
-    
+
     // Set cache path
     define("OLEDRION_CACHE_PATH", XOOPS_UPLOAD_PATH . DIRECTORY_SEPARATOR . OLEDRION_DIRNAME . DIRECTORY_SEPARATOR . 'cache' . DIRECTORY_SEPARATOR);
-    
+
     // Define here the place where main upload path
     define("OLEDRION_UPLOAD_URL", XOOPS_UPLOAD_URL . '/oledrion'); // WITHOUT Trailing slash
     define("OLEDRION_UPLOAD_PATH", XOOPS_UPLOAD_PATH . '/oledrion'); // WITHOUT Trailing slash
@@ -140,7 +140,7 @@ if (!defined("OLEDRION_ATTACHED_FILES_URL")) {
 
     // Set this option to true if your theme uses jQuery, else, set it to false
     define("OLEDRION_MY_THEME_USES_JQUERY", true);
-    
+
     // Set Text file names
     define("OLEDRION_TEXTFILE1", 'oledrion_index.txt');
     define("OLEDRION_TEXTFILE2", 'oledrion_cgv.txt');
@@ -150,4 +150,3 @@ if (!defined("OLEDRION_ATTACHED_FILES_URL")) {
     define("OLEDRION_TEXTFILE6", 'oledrion_checkout1.txt');
     define("OLEDRION_TEXTFILE7", 'oledrion_checkout2.txt');
 }
-?>

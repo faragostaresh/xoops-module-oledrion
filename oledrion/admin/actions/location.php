@@ -85,9 +85,9 @@ switch ($action) {
         // Get delivery methods
         $deliveres = $h_oledrion_delivery->getLocationDelivery(new oledrion_parameters(array('limit' => $limit, 'location' => $id)));
         if (empty($deliveres)) {
-            oledrion_utils::redirect(_AM_OLEDRION_LOCATION_DELIVERYADD, $baseurl, 5);	
+            oledrion_utils::redirect(_AM_OLEDRION_LOCATION_DELIVERYADD, $baseurl, 5);
         }
-        	
+
         $sform = new XoopsThemeForm($title, 'frmaddlocation', $baseurl);
         $sform->addElement(new XoopsFormHidden('op', 'location'));
         $sform->addElement(new XoopsFormHidden('action', 'save'));
@@ -102,7 +102,7 @@ switch ($action) {
         $product_type->addOption('parent', _AM_OLEDRION_LOCATION_PARENT);
         $sform->addElement($product_type, true);
         $sform->addElement(new XoopsFormRadioYN(_OLEDRION_ONLINE_HLP, 'location_online', $item->getVar('location_online')), true);
-        
+
         $delivery_options = new XoopsFormElementTray(_AM_OLEDRION_LOCATION_DELIVERY, '<br />');
         foreach ($deliveres as $delivery) {
             if (isset($delivery['ld_id']) && is_array($delivery['ld_id'])) {
@@ -162,9 +162,9 @@ switch ($action) {
         $item->setVars($post);
         if($post['location_type'] == 'parent') {
 	        $item->setVar('location_pid', 0);
-        }	
+        }
         $res = $h_oledrion_location->insert($item);
-            
+
         $location_id = $item->getVar('location_id');
         // Save payments for each delivery type
         if ($edit) {
@@ -184,7 +184,7 @@ switch ($action) {
             }
         }
 
-        if ($res) {    
+        if ($res) {
             oledrion_utils::updateCache();
             oledrion_utils::redirect(_AM_OLEDRION_SAVE_OK, $baseurl . '?op=' . $opRedirect, 2);
         } else {
@@ -238,4 +238,3 @@ switch ($action) {
         }
         break;
 }
-?>

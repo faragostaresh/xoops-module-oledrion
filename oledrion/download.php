@@ -80,4 +80,3 @@ if (trim($parameters['fileContent']) != '') {
 header("Content-Type: " . oledrion_utils::getMimeType($file));
 header('Content-disposition: inline; filename="' . basename($file) . '"');
 echo $fileContent;
-?>

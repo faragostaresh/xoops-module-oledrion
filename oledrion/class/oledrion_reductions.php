@@ -707,4 +707,3 @@ class oledrion_reductions {
 	}
 
 }
-?>

@@ -113,5 +113,3 @@ class oledrion_csv_export extends oledrion_export
         }
     }
 }
-
-?>

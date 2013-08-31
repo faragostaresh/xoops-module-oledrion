@@ -88,12 +88,12 @@ $manufacturers = $h_oledrion_manufacturer->getManufacturersFromIds($tmp);
 switch ($op) {
 	case 'print':
       require_once XOOPS_ROOT_PATH . '/header.php';
-      
+
 		// Informations sur la commande ***************************************************************************************
 		$xoopsTpl->assign('order', $order->toArray());
 		$xoopsTpl->assign('ask_vatnumber', oledrion_utils::getModuleOption('ask_vatnumber'));
 		$handlers = oledrion_handler::getInstance();
-		
+
 		// Boucle sur le caddy ************************************************************************************************
 		foreach ($caddy as $itemCaddy) {
 		    $productForTemplate = $tblJoin = $productManufacturers = $productAttributes = array();
@@ -104,7 +104,7 @@ switch ($op) {
 		        $productAttributes = $handlers->h_oledrion_caddy_attributes->getFormatedAttributesForCaddy($itemCaddy->getVar('caddy_id'), $product);
 		    }
 		    $productForTemplate['product_attributes'] = $productAttributes;
-		
+
 		    $productManufacturers = $productsManufacturers[$product->getVar('product_id')];
 		    foreach ($productManufacturers as $oledrion_productsmanu) {
 		        if (isset($manufacturers[$oledrion_productsmanu->getVar('pm_manu_id')])) {
@@ -122,7 +122,7 @@ switch ($op) {
 		echo $xoopsTpl->fetch(OLEDRION_PATH . '/templates/oledrion_bill_print.html');
 		break;
 
-	case 'default': 
+	case 'default':
 	default:
 		/**
 		 * Visualisation d'une facture à l'écran
@@ -134,9 +134,9 @@ switch ($op) {
 		$xoopsTpl->assign('order', $order->toArray());
 		$xoopsTpl->assign('ask_vatnumber', oledrion_utils::getModuleOption('ask_vatnumber'));
 		$xoopsTpl->assign('printurl', OLEDRION_URL . basename(__FILE__) . '?op=print&id=' . $order->getVar('cmd_id') . '&pass=' . $order->getVar('cmd_password'));
-		
+
 		$handlers = oledrion_handler::getInstance();
-		
+
 		// Boucle sur le caddy ************************************************************************************************
 		foreach ($caddy as $itemCaddy) {
 		    $productForTemplate = $tblJoin = $productManufacturers = $productAttributes = array();
@@ -147,7 +147,7 @@ switch ($op) {
 		        $productAttributes = $handlers->h_oledrion_caddy_attributes->getFormatedAttributesForCaddy($itemCaddy->getVar('caddy_id'), $product);
 		    }
 		    $productForTemplate['product_attributes'] = $productAttributes;
-		
+
 		    $productManufacturers = $productsManufacturers[$product->getVar('product_id')];
 		    foreach ($productManufacturers as $oledrion_productsmanu) {
 		        if (isset($manufacturers[$oledrion_productsmanu->getVar('pm_manu_id')])) {
@@ -169,4 +169,3 @@ switch ($op) {
 		require_once XOOPS_ROOT_PATH . '/footer.php';
 		break;
 }
-?>

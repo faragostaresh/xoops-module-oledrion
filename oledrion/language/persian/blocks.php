@@ -39,4 +39,3 @@ define('_MB_OLEDRION_LISTS_TYPE', 'فهرست ها از نوع');
 define('_MB_OLEDRION_SEE_ALL_LISTS', 'مشاهده تمام فهرست ها');
 define('_MB_OLEDRION_USE_STYLE_JS', 'Use module style/js ?');
 define('_MB_OLEDRION_CART', 'مشاهده سبد خرید');
-?>

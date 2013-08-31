@@ -7,8 +7,8 @@
 			var formContent = jQuery("#frmCart").serialize();
 			jQuery('#oledrion_final_price_ttc').load('ajax.php', {op: 'updatePrice', product_id: <{$product.product_id}>, formcontent: formContent});
 		}
-		
-		jQuery().ready(function() {	
+
+		jQuery().ready(function() {
 			// Changement de prix
 			jQuery('.oledrion_attribute').change(function() {
 				updatePrice();
@@ -17,10 +17,10 @@
 				updatePrice();
 			});
 			updatePrice();
-			
+
 			// Champs obligatoires
 			jQuery.validator.messages.required = "";
-			
+
 			jQuery("#frmCart").validate({
 				invalidHandler: function(e, validator) {
 					var errors = validator.numberOfInvalids();
@@ -32,7 +32,7 @@
 						jQuery("div.error").hide();
 				}},
 			});
-		});	
+		});
 	</script>
 	<{/if}>
 
@@ -41,12 +41,12 @@
 		<{elseif $mod_pref.advertisement != ''}>
 		<div id="oledrion_publicite"><{$mod_pref.advertisement}></div>
 		<{/if}>
-	
+
 	<!--********* BREADCRUMB ******-->
 	<div class="breadcrumb"><{$breadcrumb}></div>
 	<!--********* /BREADCRUMB ******-->
-	
-	
+
+
 	<!--**** PRODUCT INFORMATION *****-->
 	<table cellspacing="0" width="100%" class="tablefix">
 	<tr>
@@ -101,9 +101,9 @@
 					<{if $product.product_thumb_full_url != ''}>
 					<div class="oledrion_productthumb-big">
 							<img src="<{$product.product_image_full_url}>" alt="<{$product.product_href_title}>" />
-					</div>		
-					<{/if}>  				
-				</td>			  			
+					</div>
+					<{/if}>
+				</td>
 				<td class="top width45">
 					<{if $product.product_sku != ''}>
 						<div class="oledrion_productdescription">
@@ -122,13 +122,13 @@
 							<{if $product.product_stock ==  0 }>
 							<{$mod_pref.nostock_msg}>
 							<{elseif count($product.product_attributes) == 0 }>
-							<span class="oledrion_productdescription-contentTitles"><{$smarty.const._OLEDRION_PRICE}></span>: 
+							<span class="oledrion_productdescription-contentTitles"><{$smarty.const._OLEDRION_PRICE}></span>:
 							<span class="bold">
            <{if $product.product_discount_price_ttc != ''}>
 							<s><{$product.product_price_ttc_long}> </s> <{$product.product_discount_price_ttc}>
 							<{else}>
 							<{$product.product_price_ttc_long}>
-							<{/if}>							
+							<{/if}>
 							</span>
 							<a href="<{$smarty.const.OLEDRION_URL}>caddy.php?op=addproduct&product_id=<{$product.product_id}>" title="<{$smarty.const._OLEDRION_ADD_TO_CART}>"><img src="<{$smarty.const.OLEDRION_IMAGES_URL}>cartadd.png" alt="" /></a>
 							<{if $product.product_ecotaxe != ''}>
@@ -137,9 +137,9 @@
 							<{else}>
 							<div class="oledrion_view-product_price_frmcart">
 								<form method="post" name="frmCart" id="frmCart" action="<{$smarty.const.OLEDRION_URL}>caddy.php?op=addproduct&product_id=<{$product.product_id}>">
-									<table class="tablefix">								
+									<table class="tablefix">
 										<tr>
-											<td>	
+											<td>
 												<{foreach item=attribute from=$product.product_attributes}>
 												<div class="pad2"><{$attribute}></div>
 												<{/foreach}>
@@ -154,13 +154,13 @@
 												<{if $product.product_ecotaxe != ''}>
 												<div class="oledrion_view-product_price_ecotaxe"><span class="oledrion_productdescription-contentTitles"><{$smarty.const._OLEDRION_ECOTAXE}></span> : <{$product.product_ecotaxe_formated}></div>
 												<{/if}>
-												<br /><br />										
+												<br /><br />
 												<input type="image" src="<{$addToCartImage}>" id="buy_button" alt="<{$smarty.const._OLEDRION_ADD_TO_CART}>" title="<{$smarty.const._OLEDRION_ADD_TO_CART}>" value="<{$smarty.const._OLEDRION_ADD_TO_CART}>" />
 												<div class="error" style="display: none;">
-													<br /><img src="<{$smarty.const.OLEDRION_IMAGES_URL}>warning.png" width="24" height="24" style="float:left; margin: -5px 10px 0px 0px; " /><span></span>.<br clear="all" />
-												</div>											
+													<br /><img src="<{$smarty.const.OLEDRION_IMAGES_URL}>warning.png" width="24" height="24" style="float:left; margin: -5px 10px 0 0; " /><span></span>.<br clear="all" />
+												</div>
 											</td>
-										</tr>											
+										</tr>
 									</table>
 								</form>
 							</div>
@@ -261,7 +261,7 @@
 		    				<td class="oledrion_catdescription">
 			    				<{if $product.product_summary != ''}><div class="oledrion_productssummary_view-product"><h3><{$smarty.const._OLEDRION_SUMMARY}></h3><{$product.product_summary}></div><{/if}>
 			    				<{if $product.product_description!= ''}><div class="oledrion_description_view-product"><h3><{$smarty.const._OLEDRION_DESCRIPTION}></h3><{$product.product_description}></div><{/if}>
-		    				</td>		    				
+		    				</td>
 		    				<td class="box_blue-clip_05"></td>
 		  				</tr>
 		  				<tr>
@@ -272,7 +272,7 @@
 						</table>
 					<{/if}>
 					<!-- /product summary and description-->
-	
+
 					<{if $product.product_width != '' || $product.product_weight != 0 || $product.product_url != '' || $product.product_url2 != '' || $product.product_url3 != ''}>
 		        		<div class="oledrion_otherinf">
 	        				<h3><{$smarty.const._OLEDRION_OTHER_INFORMATIONS}></h3>
@@ -283,34 +283,34 @@
 							<{if $product.product_url3 != ''}><div><span class="oledrion_productdescription-contentTitles"><{$smarty.const._OLEDRION_SITEURL}></span>: <a href="<{$product.product_url3}>" target="_blank"><{$smarty.const._OLEDRION_URL}></a></div><{/if}>
 						</div>
 					<{/if}>
-	
+
 					<{if count($product.attached_files) > 0}>
 		        		<div class="oledrion_otherinf">
 	    	    			<h3><{$smarty.const._OLEDRION_ATTACHED_FILES}></h3>
 			    			<{if $product.attached_mp3_count > 0}>
 				    			<div>
 			    					<span class="oledrion_productdescription-contentTitles"><{$smarty.const._OLEDRION_MUSIC}></span>
-			    					<div class='left' id='DewPlayerContainer'></div> 
+			    					<div class='left' id='DewPlayerContainer'></div>
 			    				</div>
 								<script type="text/javascript">
 									var paramsDew = {
 										wmode: "transparent"
 									};
-								
-									jQuery().ready(function() {	
+
+									jQuery().ready(function() {
 										jQuery('#DewPlayerContainer').flash({
 											swf: '<{$smarty.const.OLEDRION_URL}>dewplayer/<{if $product.attached_mp3_count > 1}>dewplayer-multi.swf<{else}>dewplayer.swf<{/if}>',
 											hasVersion: 9,
 											height: <{$smarty.const.OLEDRION_DEWPLAYER_HEIGHT}>,
 											width : <{$smarty.const.OLEDRION_DEWPLAYER_WIDTH}>,
-											params: paramsDew, 
+											params: paramsDew,
 											flashvars: {
-												mp3: '<{$mp3FilesList}>'											
-											}										
+												mp3: '<{$mp3FilesList}>'
+											}
 										});
-									});	
+									});
 								</script>
-			    				
+
 			    			<{/if}>
 			    			<{if $product.attached_non_mp3_count > 0}>
 				    			<br />
@@ -336,7 +336,7 @@
 	</tr>
 	</table>
 	<!--**** /product INFORMATIONS *****-->
-	
+
 	<!--***** RELATED PRODUCTS *****-->
 	<{if count($product_related_products) > 0}>
 		<div id="oledrion_related">
@@ -356,7 +356,7 @@
 		</div>
 	<{/if}>
 	<!--***** /RELATED PRODUCTS *****-->
-	
+
 	<!--******** OTHER PRODUCTS *********-->
 	<{if $showprevnextlink  || $summarylast > 0 || $summarycategory > 0 || $better_together > 0}>
 	<div id="oledrion_otherproducts">
@@ -369,11 +369,11 @@
 		<{if $next_product_id != 0}>
 			<br /><a href="<{$next_product_url_rewrited}>" title="<{$next_product_href_title}>"><img src="<{$smarty.const.OLEDRION_IMAGES_URL}>go-next.png" alt="<{$next_product_title}>" /> <{$smarty.const._OLEDRION_NEXT_PRODUCT}>: <{$next_product_title}></a>
 		<{/if}>
-	
+
 		<{if $better_together > 0 && $bestwith}>
 			<br /><img src="<{$smarty.const.OLEDRION_IMAGES_URL}>icon-star.png" alt="<{$bestwith.product_title}>" /> <{$smarty.const._OLEDRION_BEST_WITH}> <a href="<{$bestwith.product_url_rewrited}>" title="<{$bestwith.product_href_title}>"><{$bestwith.product_title}></a>
 		<{/if}>
-	
+
 		<{if count($product_all_categs) > 0}>
 			<h2><img src="<{$smarty.const.OLEDRION_IMAGES_URL}>icon-product-person.png" alt="<{$smarty.const._OLEDRION_RECENT_CATEGS}>" /><{$smarty.const._OLEDRION_RECENT_CATEGS}></h2>
 			<table class='center oledrion_lastproducts'>
@@ -389,7 +389,7 @@
 			</tr>
 			</table>
 		<{/if}>
-	
+
 		<{if count($product_current_categ) > 0}>
 			<h2><img src="<{$smarty.const.OLEDRION_IMAGES_URL}>icon-product-person.png" alt="<{$smarty.const._OLEDRION_RECENT_CATEG}>" /><{$smarty.const._OLEDRION_RECENT_CATEG}></h2>
 			<table class='center oledrion_lastproducts'>
@@ -408,12 +408,12 @@
 	</div>
 	<{/if}>
 	<!--******** /OTHER PRODUCTS *********-->
-	
+
 	<{* TAGS *}>
 	<{if isset($tagbar) }>
 		<br /><{include file="db:tag_bar.html"}>
 	<{/if}>
-	
+
 	<!--********* CADDY ******-->
 	<div id="oledrion_caddy" class="right">
 		<br />
@@ -434,13 +434,13 @@
 
 	<{* Pour afficher le pied de page de la catégorie du produit *}>
 	<{* <{$product.product_category.cat_footer}> *}>
-	
+
 	<!--******** COMMENTS ***-->
 	<div style="text-class: center; padding: 3px; margin:3px;">
 		<{$commentsnav}>
 		<{$lang_notice}>
 	</div>
-	
+
 	<div style="margin:3px; padding: 3px;">
 	<{if $comment_mode == "flat"}>
 		<{include file="db:system_comments_flat.html"}>
