@@ -482,9 +482,7 @@ background-position: left top;
     height: 2px;
     margin-top: 1px;
     padding: 0;
-    border-top-width: 1px;
-    border-top-style: solid;
-    border-top-color: #FFF;
+    border-top: 1px solid #FFF;
 }
 
 .oledrion {
