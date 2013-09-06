@@ -500,5 +500,3 @@ class OledrionOledrion_caddyHandler extends Oledrion_XoopsPersistableObjectHandl
         return $this->deleteAll(new criteria('caddy_cmd_id', $caddy_cmd_id, '='));
     }
 }
-
-?>

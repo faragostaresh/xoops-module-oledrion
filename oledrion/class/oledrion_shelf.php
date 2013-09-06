@@ -314,5 +314,3 @@ class oledrion_shelf
         return $ret;
     }
 }
-
-?>

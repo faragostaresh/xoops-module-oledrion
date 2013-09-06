@@ -80,5 +80,3 @@ function oledrion_tag_synchronization($mid)
     }
 
 }
-
-?>

@@ -48,4 +48,3 @@ oledrion_utils::setMetas($title, $title);
 oledrion_utils::setCSS();
 oledrion_utils::setLocalCSS($xoopsConfig['language']);
 require_once(XOOPS_ROOT_PATH . '/footer.php');
-?>

@@ -1327,5 +1327,3 @@ class OledrionOledrion_productsHandler extends Oledrion_XoopsPersistableObjectHa
         return $productTray;
     }
 }
-
-?>

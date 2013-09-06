@@ -100,4 +100,3 @@ $xoopsTpl->assign('breadcrumb', oledrion_utils::breadcrumb($breadcrumb));
 $title = $manufacturer->getVar('manu_name') . ' ' . $manufacturer->getVar('manu_commercialname');
 oledrion_utils::setMetas($title, $title, oledrion_utils::createMetaKeywords($manufacturer->getVar('manu_name') . ' ' . $manufacturer->getVar('manu_commercialname') . ' ' . $manufacturer->getVar('manu_bio')));
 require_once XOOPS_ROOT_PATH . '/footer.php';
-?>

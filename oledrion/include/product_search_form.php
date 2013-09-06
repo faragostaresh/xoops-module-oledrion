@@ -185,4 +185,3 @@ $button_tray = new XoopsFormElementTray('', '');
 $submit_btn = new XoopsFormButton('', 'post', _SUBMIT, 'submit');
 $button_tray->addElement($submit_btn);
 $sform->addElement($button_tray);
-?>

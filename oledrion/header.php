@@ -19,4 +19,3 @@
  */
 require '../../mainfile.php';
 require_once XOOPS_ROOT_PATH . '/modules/oledrion/include/common.php';
-?>

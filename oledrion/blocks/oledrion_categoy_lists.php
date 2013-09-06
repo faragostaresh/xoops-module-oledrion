@@ -75,5 +75,3 @@ function b_oledrion_category_lists_duplicatable($options)
     $tpl->assign('block', $block);
     $tpl->display('oledrion_block_category_lists.html');
 }
-
-?>

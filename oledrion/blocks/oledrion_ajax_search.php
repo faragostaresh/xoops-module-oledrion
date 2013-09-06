@@ -24,7 +24,7 @@
 function b_oledrion_ajax_search_show($options)
 {
     global $xoopsConfig, $xoTheme;
-    
+
     include XOOPS_ROOT_PATH . '/modules/oledrion/include/common.php';
 
     if ($options[0] == 1) {
@@ -50,5 +50,5 @@ function b_oledrion__ajax_search_edit($options)
     return $form;
 }
 
-?>
-	 
+
+

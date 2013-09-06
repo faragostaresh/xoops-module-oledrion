@@ -19,4 +19,3 @@
  */
 
 exit("Your module is not up to date");
-?>

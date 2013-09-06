@@ -263,5 +263,3 @@ class OledrionOledrion_manufacturerHandler extends Oledrion_XoopsPersistableObje
         return $ret;
     }
 }
-
-?>

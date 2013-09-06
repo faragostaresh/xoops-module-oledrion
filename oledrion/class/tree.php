@@ -270,5 +270,3 @@ class Oledrion_XoopsObjectTree
         return $ret;
     }
 }
-
-?>

@@ -27,27 +27,65 @@ switch ($action) {
     case 'default': // Affichage du dashboard
         // ****************************************************************************************************************
         xoops_cp_header();
+
+        include_once dirname(dirname(dirname(__FILE__))) . '/include/directorychecker.php';
+
         oledrion_utils::htitle(_MI_OLEDRION_ADMENU10, 4);
         $indexAdmin = new ModuleAdmin();
-        $indexAdmin->addConfigBoxLine(OLEDRION_UPLOAD_PATH, 'folder');
-        $indexAdmin->addConfigBoxLine(array(OLEDRION_UPLOAD_PATH, '777'), 'chmod');
-        $indexAdmin->addConfigBoxLine(OLEDRION_ATTACHED_FILES_PATH, 'folder');
-        $indexAdmin->addConfigBoxLine(array(OLEDRION_ATTACHED_FILES_PATH, '777'), 'chmod');
-        $indexAdmin->addConfigBoxLine(OLEDRION_PICTURES_PATH, 'folder');
-        $indexAdmin->addConfigBoxLine(array(OLEDRION_PICTURES_PATH, '777'), 'chmod');
-        $indexAdmin->addConfigBoxLine(OLEDRION_CSV_PATH, 'folder');
-        $indexAdmin->addConfigBoxLine(array(OLEDRION_CSV_PATH, '777'), 'chmod');
-        $indexAdmin->addConfigBoxLine(OLEDRION_CACHE_PATH, 'folder');
-        $indexAdmin->addConfigBoxLine(array(OLEDRION_CACHE_PATH, '777'), 'chmod');
-		
+//        $indexAdmin->addConfigBoxLine(OLEDRION_UPLOAD_PATH, 'folder');
+        //$indexAdmin->addConfigBoxLine(array(OLEDRION_UPLOAD_PATH, '777'), 'chmod');
+        //$indexAdmin->addConfigBoxLine(OLEDRION_ATTACHED_FILES_PATH, 'folder');
+        //$indexAdmin->addConfigBoxLine(array(OLEDRION_ATTACHED_FILES_PATH, '777'), 'chmod');
+        //$indexAdmin->addConfigBoxLine(OLEDRION_PICTURES_PATH, 'folder');
+        //$indexAdmin->addConfigBoxLine(array(OLEDRION_PICTURES_PATH, '777'), 'chmod');
+        //$indexAdmin->addConfigBoxLine(OLEDRION_CSV_PATH, 'folder');
+        //$indexAdmin->addConfigBoxLine(array(OLEDRION_CSV_PATH, '777'), 'chmod');
+        //$indexAdmin->addConfigBoxLine(OLEDRION_CACHE_PATH, 'folder');
+        //$indexAdmin->addConfigBoxLine(array(OLEDRION_CACHE_PATH, '777'), 'chmod');
+
 		$categories = $h_oledrion_cat->getCategoriesCount();
 		if($categories == 0) {
-			$link = OLEDRION_ADMIN_URL . 'index.php?op=maintain&action=import';	
+			$link = OLEDRION_ADMIN_URL . 'index.php?op=maintain&action=import';
 			$link = sprintf('<a href="%s">%s</a>', $link, _AM_OLEDRION_IMPORT_DATA_TITLE);
 			$text = sprintf(_AM_OLEDRION_IMPORT_DATA_TEXT, $link);
 			$indexAdmin->addInfoBox(_AM_OLEDRION_IMPORT_DATA);
 		    $indexAdmin->addInfoBoxLine(_AM_OLEDRION_IMPORT_DATA, $text);
 		}
+
+
+//------ check directories ---------------
+
+$indexAdmin->addConfigBoxLine('');
+$redirectFile = $_SERVER['PHP_SELF'];
+
+$languageConstants = array(_AM_OLEDRION_AVAILABLE,_AM_OLEDRION_NOTAVAILABLE, _AM_OLEDRION_CREATETHEDIR, _AM_OLEDRION_NOTWRITABLE, _AM_OLEDRION_SETMPERM, _AM_OLEDRION_DIRCREATED,_AM_OLEDRION_DIRNOTCREATED,_AM_OLEDRION_PERMSET,_AM_OLEDRION_PERMNOTSET);
+
+//$path =  $xoopsModuleConfig['uploaddir'] . '/';
+$indexAdmin->addConfigBoxLine(DirectoryChecker::getDirectoryStatus(OLEDRION_UPLOAD_PATH,0777,$languageConstants,$redirectFile));
+
+//$path = XOOPS_ROOT_PATH . '/' . $xoopsModuleConfig['screenshots'] . '/';
+$indexAdmin->addConfigBoxLine(DirectoryChecker::getDirectoryStatus(OLEDRION_ATTACHED_FILES_PATH,0777,$languageConstants,$redirectFile));
+
+//$path = XOOPS_ROOT_PATH . '/' . $xoopsModuleConfig['catimage'] . '/';
+$indexAdmin->addConfigBoxLine(DirectoryChecker::getDirectoryStatus(OLEDRION_PICTURES_PATH,0777,$languageConstants,$redirectFile));
+
+
+//$path = XOOPS_ROOT_PATH . '/' . $xoopsModuleConfig['mainimagedir'] . '/';
+$indexAdmin->addConfigBoxLine(DirectoryChecker::getDirectoryStatus(OLEDRION_CSV_PATH,0777,$languageConstants,$redirectFile));
+
+//$path = XOOPS_ROOT_PATH . '/' . $xoopsModuleConfig['catimage'] . '/';
+$indexAdmin->addConfigBoxLine(DirectoryChecker::getDirectoryStatus(OLEDRION_CACHE_PATH,0777,$languageConstants,$redirectFile));
+
+
+//$path = XOOPS_ROOT_PATH . '/' . $xoopsModuleConfig['mainimagedir'] . '/';
+$indexAdmin->addConfigBoxLine(DirectoryChecker::getDirectoryStatus(OLEDRION_TEXT_PATH,0777,$languageConstants,$redirectFile));
+
+//echo $indexAdmin->addNavigation('index.php');
+//echo $indexAdmin->renderIndex();
+//echo wfd_serverstats();
+//---------------------------
+
+
 
         echo $indexAdmin->addNavigation('index.php');
         echo $indexAdmin->renderIndex();
@@ -179,4 +217,3 @@ switch ($action) {
         }
         break;
 }
-?>

@@ -1,22 +1,22 @@
 <?php
 	/**
     This file is part of WideImage.
-		
+
     WideImage is free software; you can redistribute it and/or modify
     it under the terms of the GNU Lesser General Public License as published by
     the Free Software Foundation; either version 2.1 of the License, or
     (at your option) any later version.
-		
+
     WideImage is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU Lesser General Public License for more details.
-		
+
     You should have received a copy of the GNU Lesser General Public License
     along with WideImage; if not, write to the Free Software
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
   **/
-	
+
 	class wioApplyMask
 	{
 		function execute($image, $mask, $left = 0, $top = 0)
@@ -24,15 +24,15 @@
 			$width = $image->getWidth();
 			if ($width > $mask->getWidth())
 				$width = $mask->getWidth();
-			
+
 			$height = $image->getHeight();
 			if ($height > $mask->getHeight())
 				$height = $mask->getHeight();
-			
+
 			$result = $image->asTrueColor();
 			$result->alphaBlending(false);
 			$result->saveAlpha(true);
-			
+
 			$srcTransparentColor = $image->getTransparentColor();
 			if ($srcTransparentColor >= 0)
 			{
@@ -43,7 +43,7 @@
 			}
 			else
 				$destTransparentColor = $result->allocateColorAlpha(255, 255, 255, 127);
-			
+
 			for ($x = 0; $x < $width; $x++)
 				for ($y = 0; $y < $height; $y++)
 					if ($left + $x < $image->getWidth() && $top + $y < $image->getHeight())
@@ -71,8 +71,7 @@
 						}
 						$result->setColorAt($left + $x, $top + $y, $destColor);
 					}
-			
+
 			return $result;
 		}
 	}
-?>

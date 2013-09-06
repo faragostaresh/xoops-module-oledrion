@@ -71,7 +71,7 @@ class OledrionOledrion_location_deliveryHandler extends Oledrion_XoopsPersistabl
         }
         return $ret;
     }
-    
+
     public function getDelivery($ld_delivery, $ld_location)
     {
         $ret = array();
@@ -89,5 +89,3 @@ class OledrionOledrion_location_deliveryHandler extends Oledrion_XoopsPersistabl
         return $ret;
     }
 }
-
-?>

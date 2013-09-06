@@ -113,5 +113,3 @@ function b_oledrion_category_duplicatable($options)
     $tpl->assign('block', $block);
     $tpl->display('db:oledrion_block_categories.html');
 }
-
-?>

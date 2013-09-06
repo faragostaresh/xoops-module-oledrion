@@ -82,7 +82,7 @@ class oledrion_packing extends Oledrion_Object
      */
     public function toArray($format = 's')
     {
-        $oledrion_Currency = oledrion_Currency::getInstance();        
+        $oledrion_Currency = oledrion_Currency::getInstance();
         $ret = array();
         $ret = parent::toArray($format);
         $ret['packing_price_fordisplay'] = $oledrion_Currency->amountForDisplay($this->getVar('packing_price'));
@@ -111,7 +111,7 @@ class OledrionOledrion_packingHandler extends Oledrion_XoopsPersistableObjectHan
         $packings = $this->getObjects($critere);
         return $packings;
     }
-    
+
     public function getPacking()
     {
         $ret = array();
@@ -122,9 +122,7 @@ class OledrionOledrion_packingHandler extends Oledrion_XoopsPersistableObjectHan
 	        	$tab = array();
 	        	$tab = $root->toArray();
 	        	$ret[] = $tab;
-        }	
+        }
         return $ret;
     }
 }
-
-?>

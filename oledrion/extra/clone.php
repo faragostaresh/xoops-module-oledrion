@@ -77,5 +77,3 @@ cloneFileFolder('modules/oledrion');
 echo "Happy cloning...\n";
 echo "check directory modules/" . $patterns['oledrion'] . " for cloned module \n";
 echo "Consider modifying new module by editing language/english/modinfo.php and images/oledrion_logo.png manually (if you care)\n";
-
-?>

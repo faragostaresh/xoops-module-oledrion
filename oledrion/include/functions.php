@@ -17,4 +17,3 @@
  * @author      Hervé Thouzard (http://www.herve-thouzard.com/)
  * @version     $Id$
  */
-?>

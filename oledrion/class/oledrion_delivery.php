@@ -139,7 +139,7 @@ class OledrionOledrion_deliveryHandler extends Oledrion_XoopsPersistableObjectHa
         }
         return $ret;
     }
-    
+
     public function getThisLocationDelivery($location_id)
     {
         global $h_oledrion_location_delivery;
@@ -150,7 +150,7 @@ class OledrionOledrion_deliveryHandler extends Oledrion_XoopsPersistableObjectHa
         foreach($location_delivery as $location) {
 	        	$id[] = $location['ld_delivery'];
         }
-        
+
         $critere = new CriteriaCompo ();
         $critere->add(new Criteria('delivery_id', '(' . implode( ',', $id ) . ')', 'IN'));
         $critere->add(new Criteria('delivery_online', 1));
@@ -167,7 +167,7 @@ class OledrionOledrion_deliveryHandler extends Oledrion_XoopsPersistableObjectHa
         }
         return $ret;
     }
-    
+
     public function getThisLocationThisDelivery($location_id, $delivery_id)
     {
         global $h_oledrion_location_delivery;
@@ -177,8 +177,7 @@ class OledrionOledrion_deliveryHandler extends Oledrion_XoopsPersistableObjectHa
 	     $ret = $obj->toArray();
 	     $ret['delivery_price'] = $location_delivery['ld_price'];
 	     $ret['delivery_time'] = $location_delivery['ld_delivery_time'];
-	     return $ret;	
+	     return $ret;
     }
 }
 
-?>

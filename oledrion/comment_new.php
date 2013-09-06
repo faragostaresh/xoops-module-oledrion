@@ -32,4 +32,3 @@ if ($com_itemid > 0) {
         exit();
     }
 }
-?>

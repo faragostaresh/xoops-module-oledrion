@@ -942,4 +942,3 @@ class OledrionOledrion_attributesHandler extends Oledrion_XoopsPersistableObject
         return $ret;
 	}
 }
-?>
