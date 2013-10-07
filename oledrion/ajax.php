@@ -155,21 +155,21 @@ switch ($op) {
                 //if( strpos($item['title'], $key) === 0 || strpos($item['title'], ucfirst($key)) === 0 ){
                 if ($item['type'] == 'product') {
                     $results[] = '<div class="searchbox">
-						 <div class="searchboxright"><img src="' . $item['image'] . '" alt="" /></div>
-						 <div class="searchboxleft">
-							 <div class="searchboxitem"><a href="' . $item['link'] . '">' . $item['title'] . '</a></div>
-							 <div class="searchboxcat"><a href="' . XOOPS_URL . '/modules/oledrion/category.php?cat_cid=' . $item['cat_cid'] . '">' . $item['cat_title'] . '</a></div>
-						 </div>
-						 <div class="clear"></div>
-					 </div>';
+                         <div class="searchboxright"><a href="' . $item['link'] . '"><img src="' . $item['image'] . '" alt="" /></a></div>
+                         <div class="searchboxleft">
+                             <div class="searchboxitem"><a href="' . $item['link'] . '">' . $item['title'] . '</a></div>
+                             <div class="searchboxcat"><a href="' . XOOPS_URL . '/modules/oledrion/category.php?cat_cid=' . $item['cat_cid'] . '">' . $item['cat_title'] . '</a></div>
+                         </div>
+                         <div class="clear"></div>
+                     </div>';
                 } else {
                     $results[] = '<div class="searchbox">
-						 <div class="searchboxright"><img src="' . $item['image'] . '" alt="" /></div>
-						 <div class="searchboxleft">
-							 <div class="searchboxitem"><a href="' . $item['link'] . '">' . $item['title'] . '</a></div>
-						 </div>
-						 <div class="clear"></div>
-					 </div>';
+                         <div class="searchboxright"><a href="' . $item['link'] . '"><img src="' . $item['image'] . '" alt="" /></a></div>
+                         <div class="searchboxleft">
+                             <div class="searchboxitem"><a href="' . $item['link'] . '">' . $item['title'] . '</a></div>
+                         </div>
+                         <div class="clear"></div>
+                     </div>';
                 }
                 //}
             }
@@ -235,6 +235,40 @@ switch ($op) {
             }
             $return = json_encode($ret);
         }
+        break;
+
+    // Product output as json
+    case 'price':
+        $product_id = intval($_GET['product_id']);
+        $product = $h_oledrion_products->get($product_id);
+        if (is_object($product)) {
+            if ($product->getVar('product_online') && $product->getVar('product_stock') > 0) {
+                $product_price = $product->getVar('product_price');
+                if ($h_oledrion_attributes->getProductAttributesCount($product->getVar('product_id')) > 0) {
+                    $criteria = new CriteriaCompo ();
+                    $criteria->add(new Criteria('attribute_product_id', $product->getVar('product_id')));
+                    $attribute = $h_oledrion_attributes->getObjects($criteria, false);
+                    foreach ($attribute as $root) {
+                        $product_price = $root->getVar('attribute_default_value');
+                    }
+                }
+                $ret = array(
+                    'product_id' => $product->getVar('product_id'),
+                    'product_price' => $product_price,
+                ); 
+            } else {
+                $ret = array(
+                    'product_id' => $product->getVar('product_id'),
+                    'product_price' => 0,
+                ); 
+            }
+        } else {
+            $ret = array(
+                'product_id' => 0,
+                'product_price' => 0,
+            );  
+        }
+        $return = json_encode($ret);
         break;
 
     // Ajax rate

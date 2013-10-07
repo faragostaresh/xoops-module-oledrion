@@ -401,11 +401,46 @@ switch ($op) {
 		// x derniers produits toutes catégories confondues *************************************************
 		$count = oledrion_utils::getModuleOption('summarylast');
 		$xoopsTpl -> assign('summarylast', $count);
-		if ($count > 0) {
+        if ($count > 0) {
 			$tblTmp = array();
 			$tblTmp = $h_oledrion_products -> getRecentProducts(new oledrion_parameters( array('start' => 0, 'limit' => $count, 'category' => 0, 'sort' => 'product_submitted DESC, product_title', 'order' => '', 'excluded' => $product_id)));
 			foreach ($tblTmp as $item) {
-				$datas = array('last_categ_product_title' => $item -> getVar('product_title'), 'last_categ_product_url_rewrited' => $item -> getLink(), 'last_categ_product_href_title' => oledrion_utils::makeHrefTitle($item -> getVar('product_title')), 'product_thumb_url' => $item -> getVar('product_thumb_url'), 'product_thumb_full_url' => $item -> getThumbUrl(), 'product_url_rewrited' => $item -> getLink(), 'product_href_title' => oledrion_utils::makeHrefTitle($item -> getVar('product_title')), 'product_title' => $item -> getVar('product_title'), 'product_property1' => $item -> getVar('product_property1'), 'product_property2' => $item -> getVar('product_property2'), 'product_property3' => $item -> getVar('product_property3'), 'product_property4' => $item -> getVar('product_property4'), 'product_property5' => $item -> getVar('product_property5'), 'product_property6' => $item -> getVar('product_property6'), 'product_property7' => $item -> getVar('product_property7'), 'product_property8' => $item -> getVar('product_property8'), 'product_property9' => $item -> getVar('product_property9'), 'product_property10' => $item -> getVar('product_property10'), 'product_id' => $item -> getVar('product_id'), 'product_new' => $item -> isNewProduct(), 'product_stock' => $item -> getVar('product_stock'), 'product_price' => $item -> getVar('product_price'), 'product_price_ttc' => oledrion_utils::getTTC($item -> getVar('product_price'), ''), );
+				$product_price = $item->getVar('product_price');
+                $product_price_ttc = oledrion_utils::getTTC($item -> getVar('product_price'), '');
+				if ($h_oledrion_attributes->getProductAttributesCount($item->getVar('product_id')) > 0) {
+                    $criteria = new CriteriaCompo ();
+                    $criteria->add(new Criteria('attribute_product_id', $item->getVar('product_id')));
+                    $attribute = $h_oledrion_attributes->getObjects($criteria, false);
+                    foreach ($attribute as $root) {
+                        $product_price = $root->getVar('attribute_default_value');
+                        $product_price_ttc = oledrion_utils::getTTC($root->getVar('attribute_default_value'), '');
+                    }
+                }
+				$datas = array(
+					'last_categ_product_title' => $item -> getVar('product_title'), 
+					'last_categ_product_url_rewrited' => $item -> getLink(), 
+					'last_categ_product_href_title' => oledrion_utils::makeHrefTitle($item -> getVar('product_title')), 
+					'product_thumb_url' => $item -> getVar('product_thumb_url'), 
+					'product_thumb_full_url' => $item -> getThumbUrl(), 
+					'product_url_rewrited' => $item -> getLink(), 
+					'product_href_title' => oledrion_utils::makeHrefTitle($item -> getVar('product_title')), 
+					'product_title' => $item -> getVar('product_title'), 
+					'product_property1' => $item -> getVar('product_property1'), 
+					'product_property2' => $item -> getVar('product_property2'), 
+					'product_property3' => $item -> getVar('product_property3'), 
+					'product_property4' => $item -> getVar('product_property4'), 
+					'product_property5' => $item -> getVar('product_property5'), 
+					'product_property6' => $item -> getVar('product_property6'), 
+					'product_property7' => $item -> getVar('product_property7'), 
+					'product_property8' => $item -> getVar('product_property8'), 
+					'product_property9' => $item -> getVar('product_property9'), 
+					'product_property10' => $item -> getVar('product_property10'), 
+					'product_id' => $item -> getVar('product_id'), 
+					'product_new' => $item -> isNewProduct(), 
+					'product_stock' => $item -> getVar('product_stock'), 
+					'product_price' => $product_price, 
+					'product_price_ttc' => $product_price_ttc, 
+				);
 				$xoopsTpl -> append('product_all_categs', $datas);
 			}
 			unset($tblTmp);
@@ -418,7 +453,42 @@ switch ($op) {
 			$tblTmp = array();
 			$tblTmp = $h_oledrion_products -> getRecentProducts(new oledrion_parameters( array('start' => 0, 'limit' => $count, 'category' => $product -> getVar('product_cid'), 'sort' => 'product_submitted DESC, product_title', 'order' => '', 'excluded' => $product_id)));
 			foreach ($tblTmp as $item) {
-				$datas = array('last_categ_product_title' => $item -> getVar('product_title'), 'last_categ_product_url_rewrited' => $item -> getLink(), 'last_categ_product_href_title' => oledrion_utils::makeHrefTitle($item -> getVar('product_title')), 'product_thumb_url' => $item -> getVar('product_thumb_url'), 'product_thumb_full_url' => $item -> getThumbUrl(), 'product_url_rewrited' => $item -> getLink(), 'product_href_title' => oledrion_utils::makeHrefTitle($item -> getVar('product_title')), 'product_title' => $item -> getVar('product_title'), 'product_property1' => $item -> getVar('product_property1'), 'product_property2' => $item -> getVar('product_property2'), 'product_property3' => $item -> getVar('product_property3'), 'product_property4' => $item -> getVar('product_property4'), 'product_property5' => $item -> getVar('product_property5'), 'product_property6' => $item -> getVar('product_property6'), 'product_property7' => $item -> getVar('product_property7'), 'product_property8' => $item -> getVar('product_property8'), 'product_property9' => $item -> getVar('product_property9'), 'product_property10' => $item -> getVar('product_property10'), 'product_id' => $item -> getVar('product_id'), 'product_new' => $item -> isNewProduct(), 'product_stock' => $item -> getVar('product_stock'), 'product_price' => $item -> getVar('product_price'), 'product_price_ttc' => oledrion_utils::getTTC($item -> getVar('product_price'), ''), );
+				$product_price = $item->getVar('product_price');
+                $product_price_ttc = oledrion_utils::getTTC($item -> getVar('product_price'), '');
+				if ($h_oledrion_attributes->getProductAttributesCount($item->getVar('product_id')) > 0) {
+                    $criteria = new CriteriaCompo ();
+                    $criteria->add(new Criteria('attribute_product_id', $item->getVar('product_id')));
+                    $attribute = $h_oledrion_attributes->getObjects($criteria, false);
+                    foreach ($attribute as $root) {
+                        $product_price = $root->getVar('attribute_default_value');
+                        $product_price_ttc = oledrion_utils::getTTC($root->getVar('attribute_default_value'), '');
+                    }
+                }
+				$datas = array(
+					'last_categ_product_title' => $item -> getVar('product_title'), 
+					'last_categ_product_url_rewrited' => $item -> getLink(), 
+					'last_categ_product_href_title' => oledrion_utils::makeHrefTitle($item -> getVar('product_title')), 
+					'product_thumb_url' => $item -> getVar('product_thumb_url'), 
+					'product_thumb_full_url' => $item -> getThumbUrl(), 
+					'product_url_rewrited' => $item -> getLink(), 
+					'product_href_title' => oledrion_utils::makeHrefTitle($item -> getVar('product_title')), 
+					'product_title' => $item -> getVar('product_title'), 
+					'product_property1' => $item -> getVar('product_property1'), 
+					'product_property2' => $item -> getVar('product_property2'), 
+					'product_property3' => $item -> getVar('product_property3'), 
+					'product_property4' => $item -> getVar('product_property4'), 
+					'product_property5' => $item -> getVar('product_property5'), 
+					'product_property6' => $item -> getVar('product_property6'), 
+					'product_property7' => $item -> getVar('product_property7'), 
+					'product_property8' => $item -> getVar('product_property8'), 
+					'product_property9' => $item -> getVar('product_property9'), 
+					'product_property10' => $item -> getVar('product_property10'), 
+					'product_id' => $item -> getVar('product_id'), 
+					'product_new' => $item -> isNewProduct(), 
+					'product_stock' => $item -> getVar('product_stock'), 
+					'product_price' => $product_price, 
+					'product_price_ttc' => $product_price_ttc, 
+				);
 				$xoopsTpl -> append('product_current_categ', $datas);
 			}
 			unset($tblTmp);

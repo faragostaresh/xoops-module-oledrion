@@ -1158,6 +1158,46 @@ $modversion['config'][$cpto]['valuetype'] = 'int';
 $modversion['config'][$cpto]['default'] = 1;
 
 $cpto++;
+$modversion['config'][$cpto]['name'] = 'search_property6';
+$modversion['config'][$cpto]['title'] = '_MI_OLEDRION_SEARCH_PROPERTY6';
+$modversion['config'][$cpto]['description'] = '';
+$modversion['config'][$cpto]['formtype'] = 'yesno';
+$modversion['config'][$cpto]['valuetype'] = 'int';
+$modversion['config'][$cpto]['default'] = 1;
+
+$cpto++;
+$modversion['config'][$cpto]['name'] = 'search_property7';
+$modversion['config'][$cpto]['title'] = '_MI_OLEDRION_SEARCH_PROPERTY7';
+$modversion['config'][$cpto]['description'] = '';
+$modversion['config'][$cpto]['formtype'] = 'yesno';
+$modversion['config'][$cpto]['valuetype'] = 'int';
+$modversion['config'][$cpto]['default'] = 1;
+
+$cpto++;
+$modversion['config'][$cpto]['name'] = 'search_property8';
+$modversion['config'][$cpto]['title'] = '_MI_OLEDRION_SEARCH_PROPERTY8';
+$modversion['config'][$cpto]['description'] = '';
+$modversion['config'][$cpto]['formtype'] = 'yesno';
+$modversion['config'][$cpto]['valuetype'] = 'int';
+$modversion['config'][$cpto]['default'] = 1;
+
+$cpto++;
+$modversion['config'][$cpto]['name'] = 'search_property9';
+$modversion['config'][$cpto]['title'] = '_MI_OLEDRION_SEARCH_PROPERTY9';
+$modversion['config'][$cpto]['description'] = '';
+$modversion['config'][$cpto]['formtype'] = 'yesno';
+$modversion['config'][$cpto]['valuetype'] = 'int';
+$modversion['config'][$cpto]['default'] = 1;
+
+$cpto++;
+$modversion['config'][$cpto]['name'] = 'search_property10';
+$modversion['config'][$cpto]['title'] = '_MI_OLEDRION_SEARCH_PROPERTY10';
+$modversion['config'][$cpto]['description'] = '';
+$modversion['config'][$cpto]['formtype'] = 'yesno';
+$modversion['config'][$cpto]['valuetype'] = 'int';
+$modversion['config'][$cpto]['default'] = 1;
+
+$cpto++;
 $modversion['config'][$cpto]['name'] = 'break' . $cpto;
 $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_BREAK_CHECKOUT';
 $modversion['config'][$cpto]['description'] = '';
