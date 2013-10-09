@@ -149,4 +149,7 @@ if (!defined("OLEDRION_ATTACHED_FILES_URL")) {
     define("OLEDRION_TEXTFILE5", 'oledrion_restrictorders.txt');
     define("OLEDRION_TEXTFILE6", 'oledrion_checkout1.txt');
     define("OLEDRION_TEXTFILE7", 'oledrion_checkout2.txt');
+
+    // Set SMS gateway
+    define("OLEDRION_SMS_GATEWAY", 'example');
 }

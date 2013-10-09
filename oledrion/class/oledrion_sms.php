@@ -37,9 +37,7 @@ class oledrion_sms
      */
     public static function getSmsGateway()
     {
-        //$return = xoops_trim(oledrion_utils::getModuleOption('sms_gateway'));
-        //return $return;
-        return 'nanopars';
+        return OLEDRION_SMS_GATEWAY;
     }
 
     /**
