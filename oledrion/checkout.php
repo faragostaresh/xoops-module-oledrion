@@ -710,6 +710,13 @@ switch ($op) {
 		$button_tray -> addElement($submit_btn);
 		$sform -> addElement($button_tray);
 		$xoopsTpl -> assign('form', $sform -> render());
+
+		// Send sms
+		if (oledrion_utils::getModuleOption('sms_checkout')) {
+			$information['to'] = ltrim($commande -> getVar('cmd_mobile'), 0);
+            $information['text'] = oledrion_utils::getModuleOption('sms_checkout_text');
+			$sms = oledrion_sms::sendSms($information);
+		}
 		break;
 }
 

@@ -32,7 +32,7 @@ switch ($action) {
 
         oledrion_utils::htitle(_MI_OLEDRION_ADMENU10, 4);
         $indexAdmin = new ModuleAdmin();
-//        $indexAdmin->addConfigBoxLine(OLEDRION_UPLOAD_PATH, 'folder');
+        //$indexAdmin->addConfigBoxLine(OLEDRION_UPLOAD_PATH, 'folder');
         //$indexAdmin->addConfigBoxLine(array(OLEDRION_UPLOAD_PATH, '777'), 'chmod');
         //$indexAdmin->addConfigBoxLine(OLEDRION_ATTACHED_FILES_PATH, 'folder');
         //$indexAdmin->addConfigBoxLine(array(OLEDRION_ATTACHED_FILES_PATH, '777'), 'chmod');
@@ -84,9 +84,6 @@ $indexAdmin->addConfigBoxLine(DirectoryChecker::getDirectoryStatus(OLEDRION_TEXT
 //echo $indexAdmin->renderIndex();
 //echo wfd_serverstats();
 //---------------------------
-
-
-
         echo $indexAdmin->addNavigation('index.php');
         echo $indexAdmin->renderIndex();
 

@@ -41,6 +41,7 @@ require_once OLEDRION_CLASS_PATH . 'oledrion_reductions.php';
 require_once OLEDRION_CLASS_PATH . 'oledrion_gateways.php';
 require_once OLEDRION_ADMIN_PATH . 'gateways/gateway.php'; // La classe abstraite
 require_once OLEDRION_CLASS_PATH . 'oledrion_lists.php';
+require_once OLEDRION_CLASS_PATH . 'oledrion_sms.php';
 
 
 

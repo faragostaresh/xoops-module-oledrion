@@ -147,6 +147,13 @@ switch ($action) {
         if (is_object($item)) {
             $res = $h_oledrion_commands->validateOrder($item);
             if ($res) {
+                // Send sms
+                if (oledrion_utils::getModuleOption('sms_validate')) {
+                    $information['to'] = ltrim($item -> getVar('cmd_mobile'), 0);
+                    $information['text'] = oledrion_utils::getModuleOption('sms_validate_text');
+                    $sms = oledrion_sms::sendSms($information);
+                }    
+                //
                 oledrion_utils::redirect(_AM_OLEDRION_SAVE_OK, $baseurl . '?op=' . $opRedirect, 2);
             } else {
                 oledrion_utils::redirect(_AM_OLEDRION_SAVE_PB, $baseurl . '?op=' . $opRedirect, 5);

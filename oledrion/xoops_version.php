@@ -1288,6 +1288,46 @@ $modversion['config'][$cpto]['default'] = 1;
 
 $cpto++;
 $modversion['config'][$cpto]['name'] = 'break' . $cpto;
+$modversion['config'][$cpto]['title'] = '_MI_OLEDRION_BREAK_SMS';
+$modversion['config'][$cpto]['description'] = '';
+$modversion['config'][$cpto]['formtype'] = 'line_break';
+$modversion['config'][$cpto]['valuetype'] = 'textbox';
+$modversion['config'][$cpto]['default'] = 'head';
+
+$cpto++;
+$modversion['config'][$cpto]['name'] = 'sms_checkout';
+$modversion['config'][$cpto]['title'] = '_MI_OLEDRION_SMS_CHECKOUT';
+$modversion['config'][$cpto]['description'] = '';
+$modversion['config'][$cpto]['formtype'] = 'yesno';
+$modversion['config'][$cpto]['valuetype'] = 'int';
+$modversion['config'][$cpto]['default'] = 0;
+
+$cpto++;
+$modversion['config'][$cpto]['name'] = 'sms_checkout_text';
+$modversion['config'][$cpto]['title'] = '_MI_OLEDRION_SMS_CHECKOUT_TEXT';
+$modversion['config'][$cpto]['description'] = '';
+$modversion['config'][$cpto]['formtype'] = 'textarea';
+$modversion['config'][$cpto]['valuetype'] = 'text';
+$modversion['config'][$cpto]['default'] = '';
+
+$cpto++;
+$modversion['config'][$cpto]['name'] = 'sms_validate';
+$modversion['config'][$cpto]['title'] = '_MI_OLEDRION_SMS_VALIDATE';
+$modversion['config'][$cpto]['description'] = '';
+$modversion['config'][$cpto]['formtype'] = 'yesno';
+$modversion['config'][$cpto]['valuetype'] = 'int';
+$modversion['config'][$cpto]['default'] = 0;
+
+$cpto++;
+$modversion['config'][$cpto]['name'] = 'sms_validate_text';
+$modversion['config'][$cpto]['title'] = '_MI_OLEDRION_SMS_VALIDATE_TEXT';
+$modversion['config'][$cpto]['description'] = '';
+$modversion['config'][$cpto]['formtype'] = 'textarea';
+$modversion['config'][$cpto]['valuetype'] = 'text';
+$modversion['config'][$cpto]['default'] = '';
+
+$cpto++;
+$modversion['config'][$cpto]['name'] = 'break' . $cpto;
 $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_BREAK_COMMENT_NOTIFICATION';
 $modversion['config'][$cpto]['description'] = '';
 $modversion['config'][$cpto]['formtype'] = 'line_break';
