@@ -181,7 +181,6 @@ switch ($action) {
                 $result = $export->export();
                 if ($result === true) {
                     echo "<a href='" . $export->getDownloadUrl() . "'>" . _AM_OLEDRION_EXPORT_READY . '</a>';
-                    //echo "<a href='$baseurl?op=orders&action=deleteexport&file=".$export->getDownloadPath()."'>".
                 }
             }
         } else {
