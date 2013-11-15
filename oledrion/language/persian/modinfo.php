@@ -282,6 +282,10 @@ define('_MI_OLEDRION_SMS_CHECKOUT_TEXT', 'Sms checkout text');
 define('_MI_OLEDRION_SMS_VALIDATE', 'Send sms after validate order by admin?');
 define('_MI_OLEDRION_SMS_VALIDATE_TEXT', 'Sms validate text');
 
+define('_MI_OLEDRION_ADMINGROUPS', 'Groups than have access to all admin parts');
+define('_MI_OLEDRION_ADMINGROUPS_DSC', 'Other groups just have access to seleted parts');
+define('_MI_OLEDRION_ADMINGROUPS_PARTS', 'Set just allowed parts for access by selected group');
+
 define('_MI_OLEDRION_BREAK_COMMENT_NOTIFICATION', 'Comments and Notifications');
 define('_MI_OLEDRION_BREAK_SEARCH', 'Search');
 define('_MI_OLEDRION_BREAK_IMAGE', 'Image');

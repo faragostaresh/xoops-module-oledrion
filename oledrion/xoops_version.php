@@ -708,6 +708,31 @@ $modversion['config'][$cpto]['formtype'] = 'yesno';
 $modversion['config'][$cpto]['valuetype'] = 'int';
 $modversion['config'][$cpto]['default'] = 1;
 
+// Get Admin groups
+$criteria = new CriteriaCompo();
+$criteria->add(new Criteria('group_type', 'Admin'));
+$member_handler = xoops_gethandler('member');
+$admin_xoopsgroups = $member_handler->getGroupList($criteria);
+foreach ($admin_xoopsgroups as $key => $admin_group) {
+    $admin_groups[$admin_group] = $key;
+}
+$cpto++;
+$modversion['config'][$cpto]['name'] = 'admin_groups';
+$modversion['config'][$cpto]['title'] = '_MI_OLEDRION_ADMINGROUPS';
+$modversion['config'][$cpto]['description'] = '_MI_OLEDRION_ADMINGROUPS_DSC';
+$modversion['config'][$cpto]['formtype'] = 'select_multi';
+$modversion['config'][$cpto]['valuetype'] = 'array';
+$modversion['config'][$cpto]['options'] = $admin_groups;
+$modversion['config'][$cpto]['default'] = $admin_groups;
+
+$cpto++;
+$modversion['config'][$cpto]['name'] = 'admin_groups_part';
+$modversion['config'][$cpto]['title'] = '_MI_OLEDRION_ADMINGROUPS_PARTS';
+$modversion['config'][$cpto]['description'] = '';
+$modversion['config'][$cpto]['formtype'] = 'textarea';
+$modversion['config'][$cpto]['valuetype'] = 'text';
+$modversion['config'][$cpto]['default'] = 'attributes|delivery|gateways|location|manufacturers|packing|property|vendors|categories|discounts|lowstock|newsletter|payment|texts|dashboard|files|lists|maintain|products|vat';
+
 $cpto++;
 $modversion['config'][$cpto]['name'] = 'break' . $cpto;
 $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_BREAK_META';

@@ -71,6 +71,17 @@ if (isset($_POST['action'])) {
     $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING);
 }
 
+// Check admin have access to this page
+$part = oledrion_utils::getModuleOption('admin_groups_part');
+$part = explode('|', $part);
+if (!in_array($op, $part)) {
+	$group = $xoopsUser->getGroups ();
+	$groups = oledrion_utils::getModuleOption('admin_groups');
+	if (count(array_intersect($group, $groups)) <= 0) {
+		redirect_header('index.php', 3, _NOPERM);
+	}
+}
+
 $op = str_replace('..', '', $op);
 $controler = OLEDRION_ADMIN_PATH . 'actions/' . $op . '.php';
 if (file_exists($controler)) {
