@@ -291,26 +291,33 @@ switch ($op) {
                     }
                 }
                 if ($canRate) {
-                    if ($_POST['rating'] == '--') {
+                    /* if ($_POST['rating'] == '--') {
                         oledrion_utils::redirect(_OLEDRION_NORATING, OLEDRION_URL . 'product.php?product_id=' . $product->getVar('product_id'), 4);
-                    }
+                    } */
                     $rating = intval($_POST['rating']);
-                    if ($rating < 1 || $rating > 10) {
+                    /* if ($rating < 1 || $rating > 10) {
                         exit(_ERRORS);
+                    } */
+                    if ($rating == 1 || $rating == -1) {
+                        $result = $h_oledrion_votedata->createRating($product->getVar('product_id'), $ratinguser, $rating);
+
+                        $totalVotes = 0;
+                        $sumRating = 0;
+                        $ret = 0;
+                        $ret = $h_oledrion_votedata->getCountRecordSumRating($product->getVar('product_id'), $totalVotes, $sumRating);
+
+                        //$finalrating = $sumRating / $totalVotes;
+                        //$finalrating = number_format($finalrating, 4);
+
+                        $h_oledrion_products->updateRating($product_id, $sumRating, $totalVotes);
+                        //$ratemessage = _OLEDRION_VOTEAPPRE . '<br />' . sprintf(_OLEDRION_THANKYOU, $xoopsConfig['sitename']);
+                        //oledrion_utils::redirect($ratemessage, OLEDRION_URL . 'product.php?product_id=' . $product->getVar('product_id'), 2);
+                    } else {
+                        $return = false;
+
                     }
-                    $result = $h_oledrion_votedata->createRating($product->getVar('product_id'), $ratinguser, $rating);
-
-                    // Calcul du nombre de votes et du total des votes pour mettre à jour les informations du produit
-                    $totalVotes = 0;
-                    $sumRating = 0;
-                    $ret = 0;
-                    $ret = $h_oledrion_votedata->getCountRecordSumRating($product->getVar('product_id'), $totalVotes, $sumRating);
-
-                    $finalrating = $sumRating / $totalVotes;
-                    $finalrating = number_format($finalrating, 4);
-                    $h_oledrion_products->updateRating($product_id, $finalrating, $totalVotes);
-                    $ratemessage = _OLEDRION_VOTEAPPRE . '<br />' . sprintf(_OLEDRION_THANKYOU, $xoopsConfig['sitename']);
-                    oledrion_utils::redirect($ratemessage, OLEDRION_URL . 'product.php?product_id=' . $product->getVar('product_id'), 2);
+                } else {
+                    $return = false;
                 }
             }
         }

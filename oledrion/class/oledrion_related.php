@@ -30,6 +30,7 @@ class oledrion_related extends Oledrion_Object
         $this->initVar('related_id', XOBJ_DTYPE_INT, null, false);
         $this->initVar('related_product_id', XOBJ_DTYPE_INT, null, false);
         $this->initVar('related_product_related', XOBJ_DTYPE_INT, null, false);
+        $this->initVar('related_product_percent', XOBJ_DTYPE_INT, null, false);
     }
 }
 
@@ -66,5 +67,21 @@ class OledrionOledrion_relatedHandler extends Oledrion_XoopsPersistableObjectHan
             $ret = $this->getObjects($criteria, true, true, '*', false);
         }
         return $ret;
+    }
+
+    /**
+     * Update product percent
+     *
+     * @param 
+     * @return 
+     */
+    public function updatePercent($id, $related, $percent)
+    {
+        if ($percent > 100) {
+            return false;
+        } else {
+            $sql = 'UPDATE ' . $this->table . ' SET `related_product_percent` = ' . intval($percent) . ' WHERE (related_product_id = ' . intval($id) . ') AND (related_product_related = ' . intval($related) . ')';
+            return $this->db->queryF($sql);
+        }
     }
 }

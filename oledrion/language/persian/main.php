@@ -314,3 +314,12 @@ define('_OLEDRION_AMOUNT_PRICE', 'قیمت مجموع محصولات');
 define('_OLEDRION_STEP_1', '۱- به روز رسانی سبد خرید');
 define('_OLEDRION_STEP_2', '۲- ورود اطلاعات');
 define('_OLEDRION_STEP_3', '۳- تایید نهایی');
+
+define('_OLEDRION_USER', 'اطلاعات خرید کاربر');
+define('_OLEDRION_USER_ID', 'شماره');
+define('_OLEDRION_USER_DATA', 'تاریخ');
+define('_OLEDRION_USER_NAME', 'نام');
+define('_OLEDRION_USER_TOTAL', 'مجموع');
+define('_OLEDRION_USER_STATE', 'وضعیت');
+define('_OLEDRION_USER_ACTION', 'عمل');
+define('_OLEDRION_USER_VIEW', 'مشاهده سفارش');

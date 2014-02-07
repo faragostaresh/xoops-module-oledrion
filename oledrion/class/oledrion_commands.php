@@ -29,6 +29,9 @@ define("OLEDRION_STATE_PENDING", 2); // En attente
 define("OLEDRION_STATE_FAILED", 3); // Echec
 define("OLEDRION_STATE_CANCELED", 4); // Annulée
 define("OLEDRION_STATE_FRAUD", 5); // Fraude
+define("OLEDRION_STATE_PACKED", 6); 
+define("OLEDRION_STATE_SUBMITED", 7);
+define("OLEDRION_STATE_DELIVERYED", 8);
 
 class oledrion_commands extends Oledrion_Object
 {
@@ -68,6 +71,7 @@ class oledrion_commands extends Oledrion_Object
         $this->initVar('cmd_payment', XOBJ_DTYPE_TXTBOX, null, false);
         $this->initVar('cmd_payment_id', XOBJ_DTYPE_INT, null, false);
         $this->initVar('cmd_status', XOBJ_DTYPE_INT, null, false);
+        $this->initVar('cmd_track', XOBJ_DTYPE_TXTBOX, null, false);
     }
 
 
@@ -258,6 +262,54 @@ class OledrionOledrion_commandsHandler extends Oledrion_XoopsPersistableObjectHa
             $this->updateStocks($order);
             $this->notifyOrderValidated($order, $comment);
         }
+        return $retval;
+    }
+
+    /**
+     * pack d'une commande et mise à jour des stocks
+     *
+     * @param object $order        La commande à traiter
+     * @param string $comment    Optionel, un commentaire pour le mail envoyé au webmaster
+     * @return boolean Indique si la validation de la commande s'est bien faite ou pas
+     */
+    public function packOrder(oledrion_commands $order, $comment = '')
+    {
+        $retval = false;
+        $order->setVar('cmd_state', OLEDRION_STATE_PACKED);
+        $order->setVar('cmd_comment', $comment);
+        $retval = $this->insert($order, true);
+        return $retval;
+    }
+
+    /**
+     * submit d'une commande et mise à jour des stocks
+     *
+     * @param object $order        La commande à traiter
+     * @param string $comment    Optionel, un commentaire pour le mail envoyé au webmaster
+     * @return boolean Indique si la validation de la commande s'est bien faite ou pas
+     */
+    public function submitOrder(oledrion_commands $order, $comment = '')
+    {
+        $retval = false;
+        $order->setVar('cmd_state', OLEDRION_STATE_SUBMITED);
+        $order->setVar('cmd_comment', $comment);
+        $retval = $this->insert($order, true);
+        return $retval;
+    }
+
+    /**
+     * delivery d'une commande et mise à jour des stocks
+     *
+     * @param object $order        La commande à traiter
+     * @param string $comment    Optionel, un commentaire pour le mail envoyé au webmaster
+     * @return boolean Indique si la validation de la commande s'est bien faite ou pas
+     */
+    public function deliveryOrder(oledrion_commands $order, $comment = '')
+    {
+        $retval = false;
+        $order->setVar('cmd_state', OLEDRION_STATE_DELIVERYED);
+        $order->setVar('cmd_comment', $comment);
+        $retval = $this->insert($order, true);
         return $retval;
     }
 

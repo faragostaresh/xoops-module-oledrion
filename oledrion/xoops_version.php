@@ -517,6 +517,10 @@ $cptt++;
 $modversion['templates'][$cptt]['file'] = 'oledrion_bill_print.html';
 $modversion['templates'][$cptt]['description'] = "Bill print";
 
+$cptt++;
+$modversion['templates'][$cptt]['file'] = 'oledrion_user.html';
+$modversion['templates'][$cptt]['description'] = "User page";
+
 
 // ********************************************************************************************************************
 // ****************************************** SETTINGS ****************************************************************
@@ -1346,6 +1350,70 @@ $modversion['config'][$cpto]['default'] = 0;
 $cpto++;
 $modversion['config'][$cpto]['name'] = 'sms_validate_text';
 $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_SMS_VALIDATE_TEXT';
+$modversion['config'][$cpto]['description'] = '';
+$modversion['config'][$cpto]['formtype'] = 'textarea';
+$modversion['config'][$cpto]['valuetype'] = 'text';
+$modversion['config'][$cpto]['default'] = '';
+
+$cpto++;
+$modversion['config'][$cpto]['name'] = 'sms_pack';
+$modversion['config'][$cpto]['title'] = '_MI_OLEDRION_SMS_PACK';
+$modversion['config'][$cpto]['description'] = '';
+$modversion['config'][$cpto]['formtype'] = 'yesno';
+$modversion['config'][$cpto]['valuetype'] = 'int';
+$modversion['config'][$cpto]['default'] = 0;
+
+$cpto++;
+$modversion['config'][$cpto]['name'] = 'sms_pack_text';
+$modversion['config'][$cpto]['title'] = '_MI_OLEDRION_SMS_PACK_TEXT';
+$modversion['config'][$cpto]['description'] = '';
+$modversion['config'][$cpto]['formtype'] = 'textarea';
+$modversion['config'][$cpto]['valuetype'] = 'text';
+$modversion['config'][$cpto]['default'] = '';
+
+$cpto++;
+$modversion['config'][$cpto]['name'] = 'sms_submit';
+$modversion['config'][$cpto]['title'] = '_MI_OLEDRION_SMS_SUBMIT';
+$modversion['config'][$cpto]['description'] = '';
+$modversion['config'][$cpto]['formtype'] = 'yesno';
+$modversion['config'][$cpto]['valuetype'] = 'int';
+$modversion['config'][$cpto]['default'] = 0;
+
+$cpto++;
+$modversion['config'][$cpto]['name'] = 'sms_submit_text';
+$modversion['config'][$cpto]['title'] = '_MI_OLEDRION_SMS_SUBMIT_TEXT';
+$modversion['config'][$cpto]['description'] = '';
+$modversion['config'][$cpto]['formtype'] = 'textarea';
+$modversion['config'][$cpto]['valuetype'] = 'text';
+$modversion['config'][$cpto]['default'] = '';
+
+$cpto++;
+$modversion['config'][$cpto]['name'] = 'sms_delivery';
+$modversion['config'][$cpto]['title'] = '_MI_OLEDRION_SMS_DELIVERY';
+$modversion['config'][$cpto]['description'] = '';
+$modversion['config'][$cpto]['formtype'] = 'yesno';
+$modversion['config'][$cpto]['valuetype'] = 'int';
+$modversion['config'][$cpto]['default'] = 0;
+
+$cpto++;
+$modversion['config'][$cpto]['name'] = 'sms_delivery_text';
+$modversion['config'][$cpto]['title'] = '_MI_OLEDRION_SMS_DELIVERY_TEXT';
+$modversion['config'][$cpto]['description'] = '';
+$modversion['config'][$cpto]['formtype'] = 'textarea';
+$modversion['config'][$cpto]['valuetype'] = 'text';
+$modversion['config'][$cpto]['default'] = '';
+
+$cpto++;
+$modversion['config'][$cpto]['name'] = 'sms_track';
+$modversion['config'][$cpto]['title'] = '_MI_OLEDRION_SMS_TRACK';
+$modversion['config'][$cpto]['description'] = '';
+$modversion['config'][$cpto]['formtype'] = 'yesno';
+$modversion['config'][$cpto]['valuetype'] = 'int';
+$modversion['config'][$cpto]['default'] = 0;
+
+$cpto++;
+$modversion['config'][$cpto]['name'] = 'sms_track_text';
+$modversion['config'][$cpto]['title'] = '_MI_OLEDRION_SMS_TRACK_TEXT';
 $modversion['config'][$cpto]['description'] = '';
 $modversion['config'][$cpto]['formtype'] = 'textarea';
 $modversion['config'][$cpto]['valuetype'] = 'text';

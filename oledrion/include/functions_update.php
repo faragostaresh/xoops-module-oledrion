@@ -429,4 +429,23 @@ function xoops_module_update_oledrion($module, $version)
     }
 
 
+    /**
+     * Add cmd_track
+     * @since 2014.01.03
+     */
+    $tableName = $xoopsDB->prefix('oledrion_commands');
+
+    if (!oledrion_utils::fieldExists('cmd_track', $tableName)) {
+        oledrion_utils::addField('`cmd_track` VARCHAR( 255 ) NOT NULL', $tableName);
+    }
+
+    /**
+     * Add cmd_track
+     * @since 2014.01.10
+     */
+    $tableName = $xoopsDB->prefix('oledrion_related');
+
+    if (!oledrion_utils::fieldExists('related_product_percent', $tableName)) {
+        oledrion_utils::addField('`related_product_percent` INT( 4 ) NOT NULL', $tableName);
+    }
 }
