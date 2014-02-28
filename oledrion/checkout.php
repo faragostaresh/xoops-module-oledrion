@@ -350,6 +350,7 @@ switch ($op) {
 			$sform -> addElement(new XoopsFormRadioYN(_OLEDRION_INVOICE, 'cmd_bill', 0), true);
 		}
 		$sform -> addElement(new XoopsFormTextArea(_OLEDRION_STREET, 'cmd_adress', $commande -> getVar('cmd_adress', 'e'), 3, 50), true);
+		$sform -> addElement(new XoopsFormText(_OLEDRION_GIFT, 'cmd_gift', 15, 30, $commande -> getVar('cmd_gift', 'e')), false);
 		$button_tray = new XoopsFormElementTray('', '');
 		$submit_btn = new XoopsFormButton('', 'post', _OLEDRION_SAVE_NEXT, 'submit');
 		$button_tray -> addElement($submit_btn);
@@ -679,6 +680,7 @@ switch ($op) {
 		$sform -> addElement(new XoopsFormLabel(_OLEDRION_PHONE, $commande -> getVar('cmd_telephone')));
 		$sform -> addElement(new XoopsFormLabel(_OLEDRION_MOBILE, $commande -> getVar('cmd_mobile')));
 		$sform -> addElement(new XoopsFormLabel(_OLEDRION_EMAIL, $commande -> getVar('cmd_email')));
+		$sform -> addElement(new XoopsFormLabel(_OLEDRION_GIFT, $commande -> getVar('cmd_gift')));
 		if ($commande -> getVar('cmd_packing')) {
 			$sform -> addElement(new XoopsFormLabel(_OLEDRION_PACKING, $commande -> getVar('cmd_packing')));
 		}

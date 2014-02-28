@@ -100,8 +100,9 @@ switch ($action) {
             $actions[] = "<a href='$baseurl?op=orders&action=submit&id=" . $id . "' " . $confSubmitOrder . " title='" . _OLEDRION_SUBMIT . "'>" . $icones['submit'] . '</a>';
             $actions[] = "<a href='$baseurl?op=orders&action=delivery&id=" . $id . "' " . $confDeliveryOrder . " title='" . _OLEDRION_DELIVERY . "'>" . $icones['delivery'] . '</a>';
             $actions[] = "<a href='$baseurl?op=orders&action=track&id=" . $id . "' title='" . _OLEDRION_TRACK . "'>" . $icones['track'] . '</a>';
+            $gift = ($item->getVar('cmd_gift')) ? $item->getVar('cmd_gift') : '';
             echo "<tr class='" . $class . "'>\n";
-            echo "<td align='center'>" . $id . "</td><td align='center'>" . $date . "</td><td align='center'>" . $item->getVar('cmd_lastname') . ' ' . $item->getVar('cmd_firstname') . "</td><td align='center'>" . $oledrion_Currency->amountForDisplay($item->getVar('cmd_total', 'n')) . ' / ' . $oledrion_Currency->amountForDisplay($item->getVar('cmd_shipping')) . "</td><td align='center'>" . implode(' ', $actions) . "</td>\n";
+            echo "<td align='center'>" . $id . "</td><td align='center'>" . $date . "</td><td align='center'>" . $item->getVar('cmd_lastname') . ' ' . $item->getVar('cmd_firstname') . ' ' . $gift . "</td><td align='center'>" . $oledrion_Currency->amountForDisplay($item->getVar('cmd_total', 'n')) . ' / ' . $oledrion_Currency->amountForDisplay($item->getVar('cmd_shipping')) . "</td><td align='center'>" . implode(' ', $actions) . "</td>\n";
             echo "<tr>\n";
             $totalOrder += floatval($item->getVar('cmd_total', 'n'));
         }
@@ -336,7 +337,7 @@ switch ($action) {
             // Send sms
             if (oledrion_utils::getModuleOption('sms_track')) {
                 $information['to'] = ltrim($item -> getVar('cmd_mobile'), 0);
-                $information['text'] = oledrion_utils::getModuleOption('sms_track_text');
+                $information['text'] = sprintf(oledrion_utils::getModuleOption('sms_track_text'), $_POST['cmd_track']);
                 $sms = oledrion_sms::sendSms($information);
             } 
             oledrion_utils::redirect(_AM_OLEDRION_SAVE_OK, $baseurl . '?op=' . $opRedirect, 2);

@@ -72,6 +72,7 @@ class oledrion_commands extends Oledrion_Object
         $this->initVar('cmd_payment_id', XOBJ_DTYPE_INT, null, false);
         $this->initVar('cmd_status', XOBJ_DTYPE_INT, null, false);
         $this->initVar('cmd_track', XOBJ_DTYPE_TXTBOX, null, false);
+        $this->initVar('cmd_gift', XOBJ_DTYPE_TXTBOX, null, false);
     }
 
 
