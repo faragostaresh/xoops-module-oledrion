@@ -32,6 +32,8 @@
 - Fix bug on attach file (voltan)
 - Remove Cache Lite Support(voltan)
 - Remove class/lite.php class/PEAR.php class/PEAR5.php admin/main.php files (voltan)
+- moved all images, CSS, and JS files to /assets (mamba)
+- renamed .html Smarty templates to .tpl (mamba)
 
 TODO:
 - Rebuild admin files and add template

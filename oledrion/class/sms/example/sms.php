@@ -20,19 +20,19 @@
 
 class sms
 {
-	public static function sendSms($information = array(), $option = array())
+    public static function sendSms($information = array(), $option = array())
     {
-    	$parameters = array();
-    	$parameters['username'] = $option['username'];
-    	$parameters['password'] = $option['password'];
-    	$parameters['from'] = $option['number'];
-    	$parameters['to'] = $information['to'];
-    	$parameters['text'] =  $information['text'];
-    	$parameters['isflash'] =false;
+        $parameters = array();
+        $parameters['username'] = $option['username'];
+        $parameters['password'] = $option['password'];
+        $parameters['from'] = $option['number'];
+        $parameters['to'] = $information['to'];
+        $parameters['text'] =  $information['text'];
+        $parameters['isflash'] =false;
 
-    	//ini_set("soap.wsdl_cache_enabled", "0");
-    	//$sms_client = new SoapClient('http://sms.payamakyab.com/post/send.asmx?wsdl', array('encoding'=>'UTF-8'));
-    	//return $sms_client->SendSimpleSMS2($parameters)->SendSimpleSMS2Result;
+        //ini_set("soap.wsdl_cache_enabled", "0");
+        //$sms_client = new SoapClient('http://sms.payamakyab.com/post/send.asmx?wsdl', array('encoding'=>'UTF-8'));
+        //return $sms_client->SendSimpleSMS2($parameters)->SendSimpleSMS2Result;
         return '';
-    }	
+    }
 }
