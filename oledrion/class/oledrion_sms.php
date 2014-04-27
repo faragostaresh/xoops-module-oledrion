@@ -15,19 +15,17 @@
  * @copyright   The XOOPS Project http://sourceforge.net/projects/xoops/
  * @license     http://www.fsf.org/copyleft/gpl.html GNU public license
  * @author      Hossein Azizabadi (azizabadi@faragostaresh.com)
- * @version     $Id$
+ * @version     $Id: oledrion_sms.php 12290 2014-02-07 11:05:17Z beckmi $
  */
 
-if (!defined('XOOPS_ROOT_PATH')) {
-    die("XOOPS root path not defined");
-}
+defined('XOOPS_ROOT_PATH') || die('XOOPS root path not defined');
 
 /*
 $information = array();
 $information['to'] = '9365965795';
 $information['text'] = 'ewrewr we sdf sdfdsf sdfasda sd asd asd';
 $sms = oledrion_sms::sendSms($information);
-*/        
+*/
 
 class oledrion_sms
 {
@@ -37,12 +35,11 @@ class oledrion_sms
      */
     public static function getSmsGateway()
     {
-        //return OLEDRION_SMS_GATEWAY;
-        return 'faragostaresh';
+        return OLEDRION_SMS_GATEWAY;
     }
 
     /**
-     * @param string $smsGatewayName
+     * @param  string $smsGatewayName
      * @return string
      */
     public static function getSmsGatewayPath($smsGatewayName)
@@ -51,12 +48,13 @@ class oledrion_sms
     }
 
     /**
-     * @param string $smsGatewayName
+     * @param  string $smsGatewayName
      * @return string
      */
     public static function getSmsGatewayFullClassPath($smsGatewayName)
     {
         $smsGatewayPath = self::getSmsGatewayPath($smsGatewayName);
+
         return $smsGatewayPath . DIRECTORY_SEPARATOR . 'sms.php';
     }
 
@@ -69,9 +67,8 @@ class oledrion_sms
         require_once $smsGatewayClassPath;
     }
 
-
     /**
-     * @param string $smsGatewayName
+     * @param  string $smsGatewayName
      * @return array
      */
     public static function getSmsGatewayOption($smsGatewayName)
@@ -79,6 +76,7 @@ class oledrion_sms
         $option = array();
         $smsGatewayPath = self::getSmsGatewayPath($smsGatewayName);
         require_once $smsGatewayPath . DIRECTORY_SEPARATOR . 'option.php';
+
         return $option;
     }
 
@@ -87,9 +85,10 @@ class oledrion_sms
      */
     public static function sendSms($information = array())
     {
-    	$smsGatewayName = self::getSmsGateway();
-    	$option = self::getSmsGatewayOption($smsGatewayName);
-    	self::includeSmsGatewayClass($smsGatewayName);
+        $smsGatewayName = self::getSmsGateway();
+        $option = self::getSmsGatewayOption($smsGatewayName);
+        self::includeSmsGatewayClass($smsGatewayName);
+
         return sms::sendSms($information, $option);
-    } 
-}	
+    }
+}

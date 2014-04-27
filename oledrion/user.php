@@ -18,8 +18,8 @@
  * @version     $Id$
  */
 
-require 'header.php'; 
-$xoopsOption['template_main'] = 'oledrion_user.html';
+require 'header.php';
+$xoopsOption['template_main'] = 'oledrion_user.tpl';
 require_once XOOPS_ROOT_PATH . '/header.php';
 // Check is user
 $uid = oledrion_utils::getCurrentUserID();
@@ -37,19 +37,19 @@ $criteria->setOrder('DESC');
 $orders = $handlers->h_oledrion_commands->getObjects($criteria, false);
 if (!empty($orders)) {
     foreach ($orders as $item) {
-    	$command = $item->toArray();
-    	/* $caddy = $h_oledrion_caddy->getCaddyFromCommand($command['cmd_id']);
-    	foreach ($caddy as $item) {
-        	$tmp[] = $item->getVar('caddy_product_id');
-    	}
-    	$tmp = array_unique($tmp);
-		foreach ($caddy as $itemCaddy) {
+        $command = $item->toArray();
+        /* $caddy = $h_oledrion_caddy->getCaddyFromCommand($command['cmd_id']);
+        foreach ($caddy as $item) {
+            $tmp[] = $item->getVar('caddy_product_id');
+        }
+        $tmp = array_unique($tmp);
+        foreach ($caddy as $itemCaddy) {
             $products = $h_oledrion_products->getProductsFromIDs($tmp, true);
-		    $product = $products[$itemCaddy->getVar('caddy_product_id')];
-		    $productForTemplate[] = $product->toArray(); // Produit
-		}
-		$command['all_products'] = $productForTemplate; */
-		$command['cmd_url'] = OLEDRION_URL . 'invoice.php?id=' . $command['cmd_id'] . '&pass=' . $command['cmd_password'];
+            $product = $products[$itemCaddy->getVar('caddy_product_id')];
+            $productForTemplate[] = $product->toArray(); // Produit
+        }
+        $command['all_products'] = $productForTemplate; */
+        $command['cmd_url'] = OLEDRION_URL . 'invoice.php?id=' . $command['cmd_id'] . '&pass=' . $command['cmd_password'];
         switch ($command['cmd_state']) {
             case 0:
                 $command['cmd_state_title'] = _OLEDRION_USER_STATE0;
@@ -57,7 +57,7 @@ if (!empty($orders)) {
 
             case 1:
                 $command['cmd_state_title'] = _OLEDRION_USER_STATE1;
-                break;    
+                break;
 
             case 2:
                 $command['cmd_state_title'] = _OLEDRION_USER_STATE2;
@@ -74,7 +74,7 @@ if (!empty($orders)) {
             case 5:
                 $command['cmd_state_title'] = _OLEDRION_USER_STATE5;
                 break;
-                
+
             case 6:
                 $command['cmd_state_title'] = _OLEDRION_USER_STATE6;
                 break;

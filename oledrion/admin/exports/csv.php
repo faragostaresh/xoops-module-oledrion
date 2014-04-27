@@ -15,15 +15,13 @@
  * @copyright   The XOOPS Project http://sourceforge.net/projects/xoops/
  * @license     http://www.fsf.org/copyleft/gpl.html GNU public license
  * @author      Hervé Thouzard (http://www.herve-thouzard.com/)
- * @version     $Id$
+ * @version     $Id: csv.php 12290 2014-02-07 11:05:17Z beckmi $
  */
 
 /**
  * Export au format CSV
  */
-if (!defined('XOOPS_ROOT_PATH')) {
-    die("XOOPS root path not defined");
-}
+defined('XOOPS_ROOT_PATH') || die('XOOPS root path not defined');
 
 class oledrion_csv_export extends oledrion_export
 {
@@ -41,7 +39,7 @@ class oledrion_csv_export extends oledrion_export
 
     /**
      * Export des données
-     * @return boolean    Vrai si l'export a réussi sinon faux
+     * @return boolean Vrai si l'export a réussi sinon faux
      */
     function export()
     {
@@ -49,6 +47,7 @@ class oledrion_csv_export extends oledrion_export
         $fp = fopen($file, 'w');
         if (!$fp) {
             $this->success = false;
+
             return false;
         }
 
@@ -88,20 +87,21 @@ class oledrion_csv_export extends oledrion_export
                 $list[] = $ligne;
             }
         }
-        
+
         // import information on csv file
         foreach ($list as $fields) {
             fputcsv($fp, $fields);
         }
- 
+
         fclose($fp);
         $this->success = true;
+
         return true;
     }
 
     /**
      * Retourne le lien à utiliser pour télécharger le fichier d'export
-     * @return string    Le lien à utiliser
+     * @return string Le lien à utiliser
      */
     function getDownloadUrl()
     {

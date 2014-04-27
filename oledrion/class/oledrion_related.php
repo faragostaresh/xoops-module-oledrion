@@ -15,7 +15,7 @@
  * @copyright   The XOOPS Project http://sourceforge.net/projects/xoops/
  * @license     http://www.fsf.org/copyleft/gpl.html GNU public license
  * @author      Hervé Thouzard (http://www.herve-thouzard.com/)
- * @version     $Id$
+ * @version     $Id: oledrion_related.php 12290 2014-02-07 11:05:17Z beckmi $
  */
 
 /**
@@ -34,7 +34,6 @@ class oledrion_related extends Oledrion_Object
     }
 }
 
-
 class OledrionOledrion_relatedHandler extends Oledrion_XoopsPersistableObjectHandler
 {
     public function __construct($db)
@@ -45,7 +44,7 @@ class OledrionOledrion_relatedHandler extends Oledrion_XoopsPersistableObjectHan
     /**
      * Supprime les produits relatifs rattachés à un produit
      *
-     * @param integer $related_product_id    L'identifiant du produit pour lequel il faut faire la suppression
+     * @param integer $related_product_id L'identifiant du produit pour lequel il faut faire la suppression
      */
     public function deleteProductRelatedProducts($related_product_id)
     {
@@ -56,8 +55,8 @@ class OledrionOledrion_relatedHandler extends Oledrion_XoopsPersistableObjectHan
     /**
      * Retourne la liste des produits relatifs d'une liste de produits
      *
-     * @param array $ids    Les ID des produits dont on recherche les produits relatifs
-     * @return array    Objets de type oledrion_related
+     * @param  array $ids Les ID des produits dont on recherche les produits relatifs
+     * @return array Objets de type oledrion_related
      */
     public function getRelatedProductsFromProductsIds($ids)
     {
@@ -66,14 +65,15 @@ class OledrionOledrion_relatedHandler extends Oledrion_XoopsPersistableObjectHan
             $criteria = new Criteria('related_product_id', '(' . implode(',', $ids) . ')', 'IN');
             $ret = $this->getObjects($criteria, true, true, '*', false);
         }
+
         return $ret;
     }
 
     /**
      * Update product percent
      *
-     * @param 
-     * @return 
+     * @param
+     * @return
      */
     public function updatePercent($id, $related, $percent)
     {
@@ -81,6 +81,7 @@ class OledrionOledrion_relatedHandler extends Oledrion_XoopsPersistableObjectHan
             return false;
         } else {
             $sql = 'UPDATE ' . $this->table . ' SET `related_product_percent` = ' . intval($percent) . ' WHERE (related_product_id = ' . intval($id) . ') AND (related_product_related = ' . intval($related) . ')';
+
             return $this->db->queryF($sql);
         }
     }

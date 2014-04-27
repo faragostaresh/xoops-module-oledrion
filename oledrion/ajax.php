@@ -15,7 +15,7 @@
  * @copyright   The XOOPS Project http://sourceforge.net/projects/xoops/
  * @license     http://www.fsf.org/copyleft/gpl.html GNU public license
  * @author      Hervé Thouzard (http://www.herve-thouzard.com/)
- * @version     $Id$
+ * @version     $Id: ajax.php 12290 2014-02-07 11:05:17Z beckmi $
  */
 
 /**
@@ -34,7 +34,6 @@ if ($op == '') {
 $return = '';
 $uid = oledrion_utils::getCurrentUserID();
 $isAdmin = oledrion_utils::isAdmin();
-
 
 switch ($op) {
     // ****************************************************************************************************************
@@ -113,7 +112,7 @@ switch ($op) {
             }
             $templateProduct['product_vat_amount_formated_long'] = $oledrion_Currency->amountForDisplay($productPriceTTC - $productPrice, 'l');
             $template->assign('product', $templateProduct);
-            $return = $template->fetch('db:oledrion_product_price.html');
+            $return = $template->fetch('db:oledrion_product_price.tpl');
         }
         break;
     // ajax search
@@ -152,7 +151,7 @@ switch ($op) {
             // search colors
             foreach ($items as $item) {
                 // if it starts with 'part' add to results
-                //if( strpos($item['title'], $key) === 0 || strpos($item['title'], ucfirst($key)) === 0 ){
+                //if ( strpos($item['title'], $key) === 0 || strpos($item['title'], ucfirst($key)) === 0 ) {
                 if ($item['type'] == 'product') {
                     $results[] = '<div class="searchbox">
                          <div class="searchboxright"><a href="' . $item['link'] . '"><img src="' . $item['image'] . '" alt="" /></a></div>
@@ -255,18 +254,18 @@ switch ($op) {
                 $ret = array(
                     'product_id' => $product->getVar('product_id'),
                     'product_price' => $product_price,
-                ); 
+                );
             } else {
                 $ret = array(
                     'product_id' => $product->getVar('product_id'),
                     'product_price' => 0,
-                ); 
+                );
             }
         } else {
             $ret = array(
                 'product_id' => 0,
                 'product_price' => 0,
-            );  
+            );
         }
         $return = json_encode($ret);
         break;
@@ -291,26 +290,33 @@ switch ($op) {
                     }
                 }
                 if ($canRate) {
-                    if ($_POST['rating'] == '--') {
+                    /* if ($_POST['rating'] == '--') {
                         oledrion_utils::redirect(_OLEDRION_NORATING, OLEDRION_URL . 'product.php?product_id=' . $product->getVar('product_id'), 4);
-                    }
+                    } */
                     $rating = intval($_POST['rating']);
-                    if ($rating < 1 || $rating > 10) {
+                    /* if ($rating < 1 || $rating > 10) {
                         exit(_ERRORS);
+                    } */
+                    if ($rating == 1 || $rating == -1) {
+                        $result = $h_oledrion_votedata->createRating($product->getVar('product_id'), $ratinguser, $rating);
+
+                        $totalVotes = 0;
+                        $sumRating = 0;
+                        $ret = 0;
+                        $ret = $h_oledrion_votedata->getCountRecordSumRating($product->getVar('product_id'), $totalVotes, $sumRating);
+
+                        //$finalrating = $sumRating / $totalVotes;
+                        //$finalrating = number_format($finalrating, 4);
+
+                        $h_oledrion_products->updateRating($product_id, $sumRating, $totalVotes);
+                        //$ratemessage = _OLEDRION_VOTEAPPRE . '<br />' . sprintf(_OLEDRION_THANKYOU, $xoopsConfig['sitename']);
+                        //oledrion_utils::redirect($ratemessage, OLEDRION_URL . 'product.php?product_id=' . $product->getVar('product_id'), 2);
+                    } else {
+                        $return = false;
+
                     }
-                    $result = $h_oledrion_votedata->createRating($product->getVar('product_id'), $ratinguser, $rating);
-
-                    // Calcul du nombre de votes et du total des votes pour mettre à jour les informations du produit
-                    $totalVotes = 0;
-                    $sumRating = 0;
-                    $ret = 0;
-                    $ret = $h_oledrion_votedata->getCountRecordSumRating($product->getVar('product_id'), $totalVotes, $sumRating);
-
-                    $finalrating = $sumRating / $totalVotes;
-                    $finalrating = number_format($finalrating, 4);
-                    $h_oledrion_products->updateRating($product_id, $finalrating, $totalVotes);
-                    $ratemessage = _OLEDRION_VOTEAPPRE . '<br />' . sprintf(_OLEDRION_THANKYOU, $xoopsConfig['sitename']);
-                    oledrion_utils::redirect($ratemessage, OLEDRION_URL . 'product.php?product_id=' . $product->getVar('product_id'), 2);
+                } else {
+                    $return = false;
                 }
             }
         }
@@ -361,7 +367,7 @@ switch ($op) {
                     $product_price = $root->getVar('attribute_default_value');
                 }
             }
-            if ($product->getVar('product_online') && $product->getVar('product_stock') > 0) { 
+            if ($product->getVar('product_online') && $product->getVar('product_stock') > 0) {
                 // Set parameter
                 $password = md5(xoops_makepass());
                 $passwordCancel = md5(xoops_makepass());
@@ -478,10 +484,10 @@ switch ($op) {
                 }
             } else {
                 $ret['status'] = 0;
-                $ret['message'] = _OLEDRION_ERROR10; 
+                $ret['message'] = _OLEDRION_ERROR10;
             }
         }
         $return = json_encode($ret);
-        break;    
+        break;
 }
 echo $return;

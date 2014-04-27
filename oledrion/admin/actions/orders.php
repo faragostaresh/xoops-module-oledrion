@@ -38,7 +38,7 @@ switch ($action) {
             $filter3 = 1;
         }
         $_SESSION['filter3'] = $filter3;
-        $selected = array('', '', '', '', '', '', '', '', '');
+        $selected = array('', '', '', '', '', '');
         $conditions = array(OLEDRION_STATE_NOINFORMATION, OLEDRION_STATE_VALIDATED, OLEDRION_STATE_PENDING, OLEDRION_STATE_FAILED, OLEDRION_STATE_CANCELED, OLEDRION_STATE_FRAUD, OLEDRION_STATE_PACKED, OLEDRION_STATE_SUBMITED, OLEDRION_STATE_DELIVERYED);
         $selected[$filter3] = " selected='selected'";
 
@@ -68,7 +68,7 @@ switch ($action) {
         <option value='8'" . $selected[8] . ">" . _OLEDRION_CMD_STATE9 . "</option>
         </select> <input type='hidden' name='op' id='op' value='orders' /><input type='submit' name='btnfilter' id='btnfilter' value='" . _AM_OLEDRION_FILTER . "' /></form>";
         $confValidateOrder = oledrion_utils::javascriptLinkConfirm(_AM_OLEDRION_CONF_VALIDATE);
-        $confPackOrder = oledrion_utils::javascriptLinkConfirm(_AM_OLEDRION_CONF_PACK);
+        $confPackOrder = oledrion_utils::javascriptLinkConfirm(_AM_OLEDRION_CONF_Pack);
         $confSubmitOrder = oledrion_utils::javascriptLinkConfirm(_AM_OLEDRION_CONF_SUBMIT);
         $confDeliveryOrder = oledrion_utils::javascriptLinkConfirm(_AM_OLEDRION_CONF_DELIVERY);
         echo "<tr><td colspan='2' align='left'>";
@@ -170,7 +170,7 @@ switch ($action) {
                     $information['to'] = ltrim($item -> getVar('cmd_mobile'), 0);
                     $information['text'] = oledrion_utils::getModuleOption('sms_validate_text');
                     $sms = oledrion_sms::sendSms($information);
-                }    
+                }
                 //
                 oledrion_utils::redirect(_AM_OLEDRION_SAVE_OK, $baseurl . '?op=' . $opRedirect, 2);
             } else {
@@ -199,7 +199,7 @@ switch ($action) {
                     $information['to'] = ltrim($item -> getVar('cmd_mobile'), 0);
                     $information['text'] = oledrion_utils::getModuleOption('sms_pack_text');
                     $sms = oledrion_sms::sendSms($information);
-                }    
+                }
                 //
                 oledrion_utils::redirect(_AM_OLEDRION_SAVE_OK, $baseurl . '?op=' . $opRedirect, 2);
             } else {
@@ -228,7 +228,7 @@ switch ($action) {
                     $information['to'] = ltrim($item -> getVar('cmd_mobile'), 0);
                     $information['text'] = oledrion_utils::getModuleOption('sms_submit_text');
                     $sms = oledrion_sms::sendSms($information);
-                }    
+                }
                 //
                 oledrion_utils::redirect(_AM_OLEDRION_SAVE_OK, $baseurl . '?op=' . $opRedirect, 2);
             } else {
@@ -257,7 +257,7 @@ switch ($action) {
                     $information['to'] = ltrim($item -> getVar('cmd_mobile'), 0);
                     $information['text'] = oledrion_utils::getModuleOption('sms_delivery_text');
                     $sms = oledrion_sms::sendSms($information);
-                }    
+                }
                 //
                 oledrion_utils::redirect(_AM_OLEDRION_SAVE_OK, $baseurl . '?op=' . $opRedirect, 2);
             } else {
@@ -339,7 +339,7 @@ switch ($action) {
                 $information['to'] = ltrim($item -> getVar('cmd_mobile'), 0);
                 $information['text'] = sprintf(oledrion_utils::getModuleOption('sms_track_text'), $_POST['cmd_track']);
                 $sms = oledrion_sms::sendSms($information);
-            } 
+            }
             oledrion_utils::redirect(_AM_OLEDRION_SAVE_OK, $baseurl . '?op=' . $opRedirect, 2);
         } else {
             oledrion_utils::redirect(_AM_OLEDRION_SAVE_PB, $baseurl . '?op=' . $opRedirect, 5);
@@ -430,7 +430,7 @@ switch ($action) {
         $order = $order->toArray();
         $xoopsTpl->assign('order', $order);
         // Call template file
-        $xoopsTpl->display(XOOPS_ROOT_PATH . '/modules/oledrion/templates/admin/oledrion_order_print.html');
+        $xoopsTpl->display(XOOPS_ROOT_PATH . '/modules/oledrion/templates/admin/oledrion_order_print.tpl');
         exit();
         xoops_cp_footer();
         break;
