@@ -37,7 +37,8 @@ class oledrion_sms
      */
     public static function getSmsGateway()
     {
-        return OLEDRION_SMS_GATEWAY;
+        //return OLEDRION_SMS_GATEWAY;
+        return 'faragostaresh';
     }
 
     /**

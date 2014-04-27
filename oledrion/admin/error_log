@@ -1,0 +1,1 @@
+[26-Mar-2014 16:50:58 America/New_York] PHP Strict Standards:  Non-static method ProtectorFilterHandler::getInstance() should not be called statically, assuming $this from incompatible context in /home/liliume/xoops_lib/modules/protector/class/protector.php on line 1139

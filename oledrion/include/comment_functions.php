@@ -24,14 +24,14 @@ if (!defined('XOOPS_ROOT_PATH')) {
 
 function oledrion_com_update($product_id, $total_num)
 {
-    include XOOPS_ROOT_PATH . '/modules/oledrion/include/common.php';
-    global $h_oledrion_products;
-    if (!is_object($h_oledrion_products)) {
-        $handlers = oledrion_handler::getInstance();
-        $h_oledrion_products = $handlers->oledrion_products;
+    //include XOOPS_ROOT_PATH . '/modules/oledrion/include/common.php';
+    //global $h_oledrion_products;
+    //if (!is_object($h_oledrion_products)) {
+        //$handlers = oledrion_handler::getInstance();
+        //$h_oledrion_products = $handlers->oledrion_products;
 
-    }
-    $h_oledrion_products->updateCommentsCount($product_id, $total_num);
+    //}
+    //$h_oledrion_products->updateCommentsCount($product_id, $total_num);
 }
 
 function oledrion_com_approve(&$comment)

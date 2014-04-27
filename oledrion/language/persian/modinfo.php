@@ -294,3 +294,14 @@ define('_MI_OLEDRION_BREAK_VIEW', 'View');
 define('_MI_OLEDRION_BREAK_MONEY', 'Money');
 define('_MI_OLEDRION_BREAK_META', 'Meta');
 define('_MI_OLEDRION_BREAK_SMS', 'SMS');
+
+define('_MI_OLEDRION_SMS_PACK', 'Pack');
+define('_MI_OLEDRION_SMS_PACK_TEXT', 'Pack text');
+define('_MI_OLEDRION_SMS_SUBMIT', 'Submit');
+define('_MI_OLEDRION_SMS_SUBMIT_TEXT', 'Submit text');
+define('_MI_OLEDRION_SMS_DELIVERY', 'Delivery');
+define('_MI_OLEDRION_SMS_DELIVERY_TEXT', 'Delivery text');
+define('_MI_OLEDRION_SMS_TRACK', 'Track');
+define('_MI_OLEDRION_SMS_TRACK_TEXT', 'Track text');
+define('_OLEDRION_SUBMIT', 'ارسال شده');
+define('_OLEDRION_PACK', 'بسته بندی');
