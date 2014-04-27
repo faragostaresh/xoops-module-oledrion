@@ -38,7 +38,7 @@ switch ($action) {
             $filter3 = 1;
         }
         $_SESSION['filter3'] = $filter3;
-        $selected = array('', '', '', '', '', '');
+        $selected = array('', '', '', '', '', '', '', '', '');
         $conditions = array(OLEDRION_STATE_NOINFORMATION, OLEDRION_STATE_VALIDATED, OLEDRION_STATE_PENDING, OLEDRION_STATE_FAILED, OLEDRION_STATE_CANCELED, OLEDRION_STATE_FRAUD, OLEDRION_STATE_PACKED, OLEDRION_STATE_SUBMITED, OLEDRION_STATE_DELIVERYED);
         $selected[$filter3] = " selected='selected'";
 
@@ -68,7 +68,7 @@ switch ($action) {
         <option value='8'" . $selected[8] . ">" . _OLEDRION_CMD_STATE9 . "</option>
         </select> <input type='hidden' name='op' id='op' value='orders' /><input type='submit' name='btnfilter' id='btnfilter' value='" . _AM_OLEDRION_FILTER . "' /></form>";
         $confValidateOrder = oledrion_utils::javascriptLinkConfirm(_AM_OLEDRION_CONF_VALIDATE);
-        $confPackOrder = oledrion_utils::javascriptLinkConfirm(_AM_OLEDRION_CONF_Pack);
+        $confPackOrder = oledrion_utils::javascriptLinkConfirm(_AM_OLEDRION_CONF_PACK);
         $confSubmitOrder = oledrion_utils::javascriptLinkConfirm(_AM_OLEDRION_CONF_SUBMIT);
         $confDeliveryOrder = oledrion_utils::javascriptLinkConfirm(_AM_OLEDRION_CONF_DELIVERY);
         echo "<tr><td colspan='2' align='left'>";

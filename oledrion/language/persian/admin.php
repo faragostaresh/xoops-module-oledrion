@@ -317,3 +317,10 @@ define('_AM_OLEDRION_DIRCREATED','The directory has been created');
 define('_AM_OLEDRION_DIRNOTCREATED','The directory can not be created');
 define('_AM_OLEDRION_PERMSET','The permission has been set');
 define('_AM_OLEDRION_PERMNOTSET','The permission can not be set');
+
+//define('_OLEDRION_PACK', 'بسته بندی شده');
+//define('_OLEDRION_SUBMIT', 'ارسال شده');
+define('_AM_OLEDRION_CONF_PACK', 'آیا وضعیت این مورد به بسته بندی شده تغییر یابد؟');
+define('_AM_OLEDRION_CONF_SUBMIT', 'آیا وضعیت این مورد به ارسال شده تغییر یابد؟');
+define('_AM_OLEDRION_CONF_DELIVERY', 'آیا وضعیت این مورد به تحویل شده تغییر یابد؟');
+//define('_OLEDRION_TRACK', 'کد رهگیری پستی');
